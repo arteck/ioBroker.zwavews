@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "news": {
+      "0.0.6": {
+        "en": "update title",
+        "de": "update titel",
+        "ru": "обновить название",
+        "pt": "atualizar título",
+        "nl": "titel bijwerken",
+        "fr": "titre de la mise à jour",
+        "it": "titolo di aggiornamento",
+        "es": "título de actualización",
+        "pl": "aktualizacja tytułu",
+        "uk": "назва оновлення",
+        "zh-cn": "更新标题"
+      },
       "0.0.5": {
         "en": "add online status",
         "de": "online-status hinzufügen",
@@ -44,18 +57,19 @@
       }
     },
     "messages": [],
+    "title": "Z-Wave WS",
     "titleLang": {
-      "en": "zwavews",
-      "de": "zwavews",
-      "ru": "zwavews",
-      "pt": "zwavews",
-      "nl": "zwavews",
-      "fr": "zwavews",
-      "it": "zwavews",
-      "es": "zwavews",
-      "pl": "zwavews",
-      "zh-cn": "zwavews",
-      "uk": "zwavews"
+      "en": "Z-Wave WS",
+      "de": "Z-Wave WS",
+      "ru": "Z-Wave WS",
+      "pt": "Z-Wave WS",
+      "nl": "Z-Wave WS",
+      "fr": "Z-Wave WS",
+      "it": "Z-Wave WS",
+      "es": "Z-Wave WS",
+      "pl": "Z-Wave WS",
+      "zh-cn": "Z-Wave WS",
+      "uk": "Z-Wave WS"
     },
     "desc": {
       "en": "zwavews adapter for ioBroker",

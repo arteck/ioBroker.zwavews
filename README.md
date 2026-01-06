@@ -32,6 +32,9 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### 0.0.6 (2026-01-06)
+* (arteck) update title
+
 ### 0.0.5 (2026-01-06)
 * (arteck) add online status
 
