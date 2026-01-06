@@ -138,7 +138,7 @@
     "connectionType": "ws",
     "wsScheme": "ws",
     "wsServerIP": "",
-    "wsServerPort": 8080,
+    "wsServerPort": 3000,
     "wsTokenEnabled": false,
     "wsToken": "",
     "dummyMqtt": false,
