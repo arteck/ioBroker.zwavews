@@ -1,0 +1,259 @@
+{
+  "common": {
+    "name": "zwaveWS",
+    "version": "0.0.4",
+    "news": {
+      "0.0.4": {
+        "en": "fix undefined overrideState DP",
+        "de": "undefiniertes Override beheben Staat",
+        "ru": "исправление неопределенного переопределения Государство ДП",
+        "pt": "corrigir sobreposição indefinida Estado DP",
+        "nl": "ongedefinieerde override repareren Staat DP",
+        "fr": "correction d'une redéfinition non définie État DP",
+        "it": "correzione di override non definita Stato DP",
+        "es": "fijar la anulación indefinida State DP",
+        "pl": "fix nieokreślone sterowanie Państwo DP",
+        "uk": "виправити undefined override Державний ДП",
+        "zh-cn": "修复未定义的覆盖 国家DP"
+      },
+      "0.0.3": {
+        "en": "add Firmware update process\nadd wakeup info\nnewTypeEvent as warning is configurable",
+        "de": "firmware-Update-Prozess hinzufügen\nweck-info hinzufügen\nneue TypeEvent als Warnung konfigurierbar",
+        "ru": "добавить процесс обновления прошивки\nдобавить информацию о пробуждении\nновый TypeEvent как предупреждение настраивается",
+        "pt": "adicionar processo de atualização do Firmware\nadicionar informações de wakeup\nnovo TipoEvento como aviso é configurável",
+        "nl": "firmware-updateproces toevoegen\nwakeup-info toevoegen\nnieuw TypeEvent als waarschuwing is configureerbaar",
+        "fr": "ajouter le processus de mise à jour du firmware\najouter des informations de réveil\nnouveaux TypeEvent comme avertissement est configurable",
+        "it": "aggiungere processo di aggiornamento firmware\naggiungi informazioni su wakeup\nnuovo TipoEvent come avviso è configurabile",
+        "es": "añadir proceso de actualización de firmware\nañadir información de despertar\nnuevo TipoEvent como advertencia es configurable",
+        "pl": "dodaj proces aktualizacji oprogramowania\ndodaj informacje o budzeniu\nnowy TypeEvent jako ostrzeżenie jest konfigurowalne",
+        "uk": "додати процес оновлення прошивки\nдодати інформацію про про розпуск\nновини TypeEvent як попередження",
+        "zh-cn": "添加固件更新进程\n添加提醒信息\n新设 将 Event 作为警告类型可配置"
+      },
+      "0.0.2": {
+        "en": "beta",
+        "de": "beta",
+        "ru": "бета",
+        "pt": "beta",
+        "nl": "beta",
+        "fr": "bêta",
+        "it": "beta",
+        "es": "beta",
+        "pl": "beta",
+        "uk": "бета",
+        "zh-cn": "贝塔"
+      },
+      "0.0.1": {
+        "en": "init",
+        "de": "init",
+        "ru": "инициализация",
+        "pt": "inicialização",
+        "nl": "init",
+        "fr": "initialisation",
+        "it": "inizializzazione",
+        "es": "inicialización",
+        "pl": "init",
+        "uk": "ініціалізація",
+        "zh-cn": "初始化"
+      }
+    },
+    "messages": [],
+    "titleLang": {
+      "en": "zwaveWS",
+      "de": "zwaveWS",
+      "ru": "зигби2мктт",
+      "pt": "zwaveWS",
+      "nl": "zwaveWS",
+      "fr": "zwaveWS",
+      "it": "zwaveWS",
+      "es": "zwaveWS",
+      "pl": "zwaveWS",
+      "zh-cn": "zwaveWS",
+      "uk": "zwaveWS"
+    },
+    "desc": {
+      "en": "zwaveWS adapter for ioBroker",
+      "de": "zwaveWS-Adapter für ioBroker",
+      "ru": "Адаптер zwaveWS для ioBroker",
+      "pt": "Adaptador zwaveWS para ioBroker",
+      "nl": "zwaveWS-adapter voor ioBroker",
+      "fr": "Adaptateur zwaveWS pour ioBroker",
+      "it": "Adattatore zwaveWS per ioBroker",
+      "es": "Adaptador zwaveWS para ioBroker",
+      "pl": "Adapter zwaveWS do ioBroker",
+      "zh-cn": "用于 ioBroker 的 zwaveWS 适配器",
+      "uk": "Адаптер zwaveWS для ioBroker"
+    },
+    "authors": [
+      "arteck <arteck@outlook.com>"
+    ],
+    "keywords": [
+      "zwave",
+      "zwaveWS",
+      "zwave-js-ui",
+      "zwave-js"
+    ],
+    "licenseInformation": {
+      "license": "MIT",
+      "type": "free"
+    },
+    "platform": "Javascript/Node.js",
+    "icon": "zwaveWS.png",
+    "enabled": false,
+    "extIcon": "https://raw.githubusercontent.com/arteck/ioBroker.zwaveWS/main/admin/zwaveWS.png",
+    "readme": "https://github.com/arteck/ioBroker.zwaveWS/blob/main/README.md",
+    "loglevel": "info",
+    "mode": "daemon",
+    "type": "hardware",
+    "compact": true,
+    "supportedMessages": {
+      "deviceManager": true
+    },
+    "stopTimeout": 2000,
+    "tier": 2,
+    "connectionType": "local",
+    "dataSource": "push",
+    "adminUI": {
+      "config": "json"
+    },
+    "adminTab": {
+      "name": {
+        "en": "zwaveWS",
+        "de": "zwaveWS",
+        "ru": "zwaveWS",
+        "pt": "zwaveWS",
+        "nl": "zwaveWS",
+        "fr": "zwaveWS",
+        "it": "zwaveWS",
+        "es": "zwaveWS",
+        "pl": "zwaveWS",
+        "zh-cn": "zwaveWS"
+      },
+      "link": "%webUIScheme%://%webUIServer%:%webUIPort%",
+      "fa-icon": "</i><img style='width:24px;margin-bottom:-6px;' src='/adapter/zwaveWS/zwaveWS.png'><i>"
+    },
+    "localLinks": {
+      "_default": {
+        "link": "%webUIScheme%://%webUIServer%:%webUIPort%"
+      }
+    },
+    "dependencies": [
+      {
+        "js-controller": ">=6.0.11"
+      }
+    ],
+    "globalDependencies": [
+      {
+        "admin": ">=7.4.10"
+      }
+    ]
+  },
+  "native": {
+    "connectionType": "ws",
+    "wsScheme": "ws",
+    "wsServerIP": "",
+    "wsServerPort": 8080,
+    "wsTokenEnabled": false,
+    "wsToken": "",
+    "dummyMqtt": false,
+    "baseTopic": "zwave",
+    "externalMqttServerIP": "",
+    "externalMqttServerPort": 1883,
+    "externalMqttServerCredentials": false,
+    "externalMqttServerUsername": "",
+    "externalMqttServerPassword": "",
+    "mqttServerIPBind": "0.0.0.0",
+    "mqttServerPort": 1885,
+    "webUIScheme": "http",
+    "webUIServer": "",
+    "webUIPort": 8091,
+    "showNodeInfoMessages": true,
+    "renewNodeInfo": true,
+    "useEventInDesc": false,
+    "wakeUpInfo": false,
+    "newTypeEvent": true
+  },
+  "protectedNative": [
+    "externalMqttServerPassword",
+    "wsToken"
+  ],
+  "encryptedNative": [
+    "externalMqttServerPassword",
+    "wsToken"
+  ],
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": {
+        "name": "Information"
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "zwaveWS connected",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.zwave_gateway_status",
+      "type": "state",
+      "common": {
+        "name": "ZWAVE GATEWAY Status",
+        "type": "string",
+        "role": "indicator.connected",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.zwave_gateway_version",
+      "type": "state",
+      "common": {
+        "name": "ZWAVE GATEWAY Version",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": false,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.debugId",
+      "type": "state",
+      "common": {
+        "name": "Log changes for xxx",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": true,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.debugmessages",
+      "type": "state",
+      "common": {
+        "name": "Log changes for debugId",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": true,
+        "def": ""
+      },
+      "native": {}
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+{
+  "i18n": true,
+  "type": "tabs",
+  "tabsStyle": {
+    "width": "calc(100% - 100px)"
+  },
+  "items": {
+    "_tab_Start": {
+      "type": "panel",
+      "label": "Main Settings",
+      "items": {
+        "header_Start": {
+            "type": "header",
+            "text": "zwaveWS adapter settings",
+            "size": 2
+        },
+        "_textStart": {
+            "type": "staticText",
+            "text": "A detailed documentation with explanations and all further information can be found on this GitHub page",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "style": {
+                "fontSize": 14,
+                "marginTop": 0
+            }
+        },
+        "_documentationLink": {
+            "type": "staticLink",
+            "label": "click for Documentation",
+            "button": true,
+            "href": "https://github.com/arteck/ioBroker.zwaveWS/blob/main/README.md",
+            "xs": 12,
+            "sm": 12,
+            "md": 6,
+            "lg": 4,
+            "xl": 4,
+            "style": {
+                "fontSize": 18,
+                "marginTop": 0
+            }
+        },
+        "connectionHeader": {
+          "type": "header",
+          "text": "Select and configure your zwaveWS connection",
+          "size": 2,
+          "newLine": true
+        },
+        "connectionType": {
+          "label": "Select connection to zwaveWS",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "type": "select",
+          "options": [
+          {
+              "label": "Websocket",
+              "value": "ws"
+            }
+          ],
+          "newLine": true
+        },
+        "baseTopic": {
+          "type": "text",
+          "label": "Base MQTT topic",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "default": "zwave",          
+          "hidden": "data.connectionType != 'exmqtt'"
+        },
+        "spacer01": {
+          "type": "staticText",
+          "text": "",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": true
+        },
+        "wsScheme": {
+          "type": "select",
+          "label": "Scheme",
+          "options": [
+            {
+              "label": "WS",
+              "value": "ws"
+            },
+            {
+              "label": "WSS (SSL)",
+              "value": "wss"
+            }
+          ],
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'ws'"
+        },
+        "wsServerIP": {
+          "type": "text",
+          "label": "Websocket IP-Address",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": false,
+          "hidden": "data.connectionType != 'ws'"
+        },
+        "wsServerPort": {
+          "type": "number",
+          "label": "Websocket Port",
+          "newLine": false,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'ws'"
+        },
+        "wsTokenEnabled": {
+          "type": "checkbox",
+          "label": "Use Auth-Token",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'ws'"
+        },
+        "wsToken": {
+          "type": "password",
+          "label": "Auth-Token (special characters are not supported)",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 5,
+          "xl": 4,
+          "hidden": "data.wsTokenEnabled != true || data.connectionType != 'ws'"
+        },
+        "dummyMqtt": {
+          "type": "checkbox",
+          "label": "Create a dummy MQTT-Server for Zigbee2MQTT",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'ws'"
+        },
+        
+        "externalMqttServerIP": {
+          "type": "text",
+          "label": "External MQTT-Server IP-Address",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'exmqtt'"
+        },
+        "externalMqttServerPort": {
+          "type": "number",
+          "label": "External MQTT-Server Port",
+          "newLine": false,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'exmqtt'"
+        },
+        "externalMqttServerCredentials": {
+          "type": "checkbox",
+          "label": "Use MQTT Credentials",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.connectionType != 'exmqtt'"
+        },
+        "externalMqttServerUsername": {
+          "type": "text",
+          "label": "MQTT Username",
+          "newLine": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "hidden": "data.externalMqttServerCredentials != true ||data.connectionType != 'exmqtt'"
+        },
+        "externalMqttServerPassword": {
+          "type": "password",
+          "label": "MQTT Password",
+          "newLine": false,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "visible": true,
+          "hidden": "data.externalMqttServerCredentials != true ||data.connectionType != 'exmqtt'"
+        },
+        "mqttServerIPBind": {
+          "type": "ip",
+          "label": "MQTT-Server IP-Address bind",
+          "listenOnAllPorts": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": true,
+          "hidden": "data.connectionType == 'exmqtt' || data.dummyMqtt == false && data.connectionType == 'ws'"
+        },
+        "mqttServerPort": {
+          "type": "number",
+          "label": "MQTT-Server Port",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": false,
+          "hidden": "data.connectionType == 'exmqtt' || data.dummyMqtt == false && data.connectionType == 'ws'"
+        },
+        "spacer02": {
+          "type": "staticText",
+          "text": "",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": true,
+          "hidden": "data.connectionType == 'ws'"
+        },
+        "webUIHeader": {
+          "type": "header",
+          "text": "Configure your zwaveWS WebUi connection",
+          "size": 2,
+          "newLine": true
+        },
+        "webUIScheme": {
+          "type": "select",
+          "label": "Scheme",
+          "options": [
+            {
+              "label": "HTTP",
+              "value": "http"
+            },
+            {
+              "label": "HTTPS",
+              "value": "https"
+            }
+          ],
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": true
+        },
+        "webUIServer": {
+          "type": "text",
+          "label": "WebUi Address",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": false
+        },
+        "webUIPort": {
+          "type": "number",
+          "label": "WebUi Port",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "newLine": false
+        }
+      }
+    },
+    "_tab_Other Settings": {
+      "type": "panel",
+      "label": "Other configurations",
+      "items": {
+        "showNodeInfoMessage": {
+          "type": "checkbox",
+          "label": "Show Node Info messages to ioBroker log",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
+          "newLine": true
+        },
+         "useEventInDesc": {
+          "type": "checkbox",
+          "label": "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "wakeUpInfo": {
+          "type": "checkbox",
+          "label": "Inform about wake up and sleep of battery devices in the log",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        },
+        "newTypeEvent": {
+          "type": "checkbox",
+          "label": "new Type event Warning in log",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
+        }
+      }
+    }
+  }
+}
