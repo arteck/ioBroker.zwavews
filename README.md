@@ -33,23 +33,8 @@ we use the Home Assistant Settings for this:
 <img width="1959" height="786" alt="grafik" src="https://github.com/user-attachments/assets/9731b94f-a25f-41fd-bdc0-0236ecb4130b" />
 
 
-
-
-
-
 ## Changelog
-### 0.0.4 (2026-01-05)
-* (arteck) fix undefined overrideState DP
-
-### 0.0.3 (2026-01-05)
-* (arteck) add Firmware update process
-* (arteck) add wakeup info
-* (arteck) newTypeEvent as warning is configurable
-
-### 0.0.2 (2026-01-05)
-- (arteck) beta
-
-### 0.0.1 (2026-01-01)
+### 0.0.2 (2026-01-06)
 - (arteck) first release
 
 ## License

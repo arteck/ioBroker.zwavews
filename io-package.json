@@ -1,46 +1,20 @@
 {
   "common": {
     "name": "zwaveWS",
-    "version": "0.0.4",
+    "version": "0.0.2",
     "news": {
-      "0.0.4": {
-        "en": "fix undefined overrideState DP",
-        "de": "undefiniertes Override beheben Staat",
-        "ru": "исправление неопределенного переопределения Государство ДП",
-        "pt": "corrigir sobreposição indefinida Estado DP",
-        "nl": "ongedefinieerde override repareren Staat DP",
-        "fr": "correction d'une redéfinition non définie État DP",
-        "it": "correzione di override non definita Stato DP",
-        "es": "fijar la anulación indefinida State DP",
-        "pl": "fix nieokreślone sterowanie Państwo DP",
-        "uk": "виправити undefined override Державний ДП",
-        "zh-cn": "修复未定义的覆盖 国家DP"
-      },
-      "0.0.3": {
-        "en": "add Firmware update process\nadd wakeup info\nnewTypeEvent as warning is configurable",
-        "de": "firmware-Update-Prozess hinzufügen\nweck-info hinzufügen\nneue TypeEvent als Warnung konfigurierbar",
-        "ru": "добавить процесс обновления прошивки\nдобавить информацию о пробуждении\nновый TypeEvent как предупреждение настраивается",
-        "pt": "adicionar processo de atualização do Firmware\nadicionar informações de wakeup\nnovo TipoEvento como aviso é configurável",
-        "nl": "firmware-updateproces toevoegen\nwakeup-info toevoegen\nnieuw TypeEvent als waarschuwing is configureerbaar",
-        "fr": "ajouter le processus de mise à jour du firmware\najouter des informations de réveil\nnouveaux TypeEvent comme avertissement est configurable",
-        "it": "aggiungere processo di aggiornamento firmware\naggiungi informazioni su wakeup\nnuovo TipoEvent come avviso è configurabile",
-        "es": "añadir proceso de actualización de firmware\nañadir información de despertar\nnuevo TipoEvent como advertencia es configurable",
-        "pl": "dodaj proces aktualizacji oprogramowania\ndodaj informacje o budzeniu\nnowy TypeEvent jako ostrzeżenie jest konfigurowalne",
-        "uk": "додати процес оновлення прошивки\nдодати інформацію про про розпуск\nновини TypeEvent як попередження",
-        "zh-cn": "添加固件更新进程\n添加提醒信息\n新设 将 Event 作为警告类型可配置"
-      },
       "0.0.2": {
-        "en": "beta",
-        "de": "beta",
-        "ru": "бета",
-        "pt": "beta",
-        "nl": "beta",
-        "fr": "bêta",
-        "it": "beta",
-        "es": "beta",
-        "pl": "beta",
-        "uk": "бета",
-        "zh-cn": "贝塔"
+        "en": "first release",
+        "de": "erste veröffentlichung",
+        "ru": "первый выпуск",
+        "pt": "primeira versão",
+        "nl": "eerste release",
+        "fr": "première sortie",
+        "it": "primo rilascio",
+        "es": "primera liberación",
+        "pl": "pierwsze wydanie",
+        "uk": "перший реліз",
+        "zh-cn": "第一次发布"
       },
       "0.0.1": {
         "en": "init",
