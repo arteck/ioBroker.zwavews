@@ -28,32 +28,6 @@
         "pl": "ustaw tytuł",
         "uk": "заголовок",
         "zh-cn": "固定标题"
-      },
-      "0.0.2": {
-        "en": "first release",
-        "de": "erste veröffentlichung",
-        "ru": "первый выпуск",
-        "pt": "primeira versão",
-        "nl": "eerste release",
-        "fr": "première sortie",
-        "it": "primo rilascio",
-        "es": "primera liberación",
-        "pl": "pierwsze wydanie",
-        "uk": "перший реліз",
-        "zh-cn": "第一次发布"
-      },
-      "0.0.1": {
-        "en": "init",
-        "de": "init",
-        "ru": "инициализация",
-        "pt": "inicialização",
-        "nl": "init",
-        "fr": "initialisation",
-        "it": "inizializzazione",
-        "es": "inicialización",
-        "pl": "init",
-        "uk": "ініціалізація",
-        "zh-cn": "初始化"
       }
     },
     "messages": [],
