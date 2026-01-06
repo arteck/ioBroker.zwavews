@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "news": {
+      "0.0.5": {
+        "en": "add online status",
+        "de": "online-status hinzufügen",
+        "ru": "добавить онлайн статус",
+        "pt": "adicionar status online",
+        "nl": "online status toevoegen",
+        "fr": "ajouter le statut en ligne",
+        "it": "aggiungere lo stato online",
+        "es": "añadir estado en línea",
+        "pl": "dodaj status online",
+        "uk": "додати статус онлайн",
+        "zh-cn": "添加在线状态"
+      },
       "0.0.4": {
         "en": "fix overrideState \n",
         "de": "override fixieren Staat\n",

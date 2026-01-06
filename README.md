@@ -32,8 +32,11 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### 0.0.5 (2026-01-06)
+* (arteck) add online status
+
 ### 0.0.4 (2026-01-06)
-* (arteck) fix overrideState 
+* (arteck) fix overrideState
 
 ### 0.0.3 (2026-01-06)
 * (arteck) fix title
