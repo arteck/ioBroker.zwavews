@@ -13,7 +13,7 @@
 ![Test and Release](https://github.com/arteck/ioBroker.zwavews/workflows/Test%20and%20Release/badge.svg)
 ![CodeQL](https://github.com/arteck/ioBroker.zwavews/actions/workflows/codeql.yml/badge.svg?branch=main)
 
-## zwavews adapter for ioBroker
+## zwave-WS adapter for ioBroker
 
 The `zwavews` adapter connects a [`zwave-js-ui`](https://zwave-js.github.io/zwave-js-ui/#/) to ioBroker and creates corresponding data points for devices, values, and statuses. This allows Z-Wave devices to be conveniently used in visualizations, logic, and automations.
 
