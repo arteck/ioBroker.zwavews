@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.8",
+    "version": "0.0.9",
     "news": {
+      "0.0.9": {
+        "en": "convert status to lower case",
+        "de": "status in den unteren fall konvertieren",
+        "ru": "преобразовать статус в нижний регистр",
+        "pt": "converter status para minúsculas",
+        "nl": "status omzetten naar kleine letters",
+        "fr": "convertir le statut en minuscules",
+        "it": "convertire lo stato in caso più basso",
+        "es": "convertir estado en caso inferior",
+        "pl": "konwertuj status na niższy przypadek",
+        "uk": "перетворення статусу в нижній корпус",
+        "zh-cn": "将状态转换为小写"
+      },
       "0.0.8": {
         "en": "add warning message for inteview states",
         "de": "warnmeldung für inteview-staaten hinzufügen",

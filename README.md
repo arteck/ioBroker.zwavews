@@ -35,6 +35,9 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### 0.0.9 (2026-01-08)
+* (arteck) convert status to lower case
+
 ### 0.0.8 (2026-01-06)
 * (arteck) add warning message for inteview states
 
