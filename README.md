@@ -35,6 +35,9 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### 0.0.10 (2026-01-17)
+* (arteck) event value added
+
 ### 0.0.9 (2026-01-08)
 * (arteck) convert status to lower case
 

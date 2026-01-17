@@ -217,7 +217,8 @@ class zwavews extends core.Adapter {
                 eventTyp = messageObj.event;
 
                 switch (eventTyp.event) {
-                  case 'value updated': {
+                  case 'value updated':
+                  case 'value added': { 
                       const nodeArg = eventTyp.args;
                       const nodeId = utils.formatNodeId(eventTyp.nodeId);
 
@@ -313,7 +314,6 @@ class zwavews extends core.Adapter {
                   
                   case 'statistics updated':
                   case 'metadata updated':
-                  case 'value added':
                   case 'node info received':
                     break;
                 default:

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "news": {
+      "0.0.10": {
+        "en": "event value added",
+        "de": "event-wertschöpfung",
+        "ru": "добавленная стоимость",
+        "pt": "valor acrescentado do evento",
+        "nl": "gebeurteniswaarde toegevoegd",
+        "fr": "valeur ajoutée événement",
+        "it": "valore aggiunto",
+        "es": "valor añadido del evento",
+        "pl": "wartość dodana zdarzenia",
+        "uk": "додано вартість заходу",
+        "zh-cn": "事件增加值"
+      },
       "0.0.9": {
         "en": "convert status to lower case",
         "de": "status in den unteren fall konvertieren",
@@ -80,19 +93,6 @@
         "pl": "fix derover Państwo\n",
         "uk": "закріпити напляскване Стан\n",
         "zh-cn": "固定覆盖 状态\n"
-      },
-      "0.0.3": {
-        "en": "fix title",
-        "de": "bersetzung titel",
-        "ru": "исправить название",
-        "pt": "corrigir título",
-        "nl": "titel herstellen",
-        "fr": "fixer le titre",
-        "it": "titolo di correzione",
-        "es": "fijar título",
-        "pl": "ustaw tytuł",
-        "uk": "заголовок",
-        "zh-cn": "固定标题"
       }
     },
     "messages": [],
