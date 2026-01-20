@@ -168,8 +168,7 @@
         "pl": "zwavews",
         "zh-cn": "zwavews"
       },
-      "link": "%webUIScheme%://%webUIServer%:%webUIPort%",
-      "fa-icon": "</i><img style='width:24px;margin-bottom:-6px;' src='/adapter/zwavews/zwavews.png'><i>"
+      "link": "%webUIScheme%://%webUIServer%:%webUIPort%"
     },
     "localLinks": {
       "_default": {
