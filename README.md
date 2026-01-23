@@ -35,6 +35,9 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### 0.0.11 (2026-01-23)
+* (arteck) fix dp types
+
 ### 0.0.10 (2026-01-17)
 * (arteck) event value added
 

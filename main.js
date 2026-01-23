@@ -176,6 +176,12 @@ class zwavews extends core.Adapter {
 
     try {
       const messageObj = JSON.parse(message);
+
+    if (JSON.stringify(messageObj).includes(logCustomizations.debugDevices) && logCustomizations.debugDevices !== "") {
+        this.log.warn(`--->>> fromZ2W_RAW1 -> ${JSON.stringify(messageObj)}`
+        );
+    }
+
       const type       = messageObj?.type;
 
       if (this.config.connectionType === 'ws') {
@@ -198,6 +204,11 @@ class zwavews extends core.Adapter {
 
                 for (const nodeData of allNodes) {
                     const nodeId = utils.formatNodeId(nodeData.nodeId);
+
+                    if (logCustomizations.debugDevices.includes(nodeId.toLowerCase())) {
+                        this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}` );
+                    }
+
                     if (!nodeCache[nodeId]) {
                         if (this.config.showNodeInfoMessage) {
                             this.log.info(`Node Info Update for ${nodeId}`);

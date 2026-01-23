@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.10",
+    "version": "0.0.11",
     "news": {
+      "0.0.11": {
+        "en": "fix dp types",
+        "de": "dp-typen",
+        "ru": "фиксировать типы dp",
+        "pt": "corrigir tipos dp",
+        "nl": "fix dp types",
+        "fr": "correction des types dp",
+        "it": "corretti i tipi dp",
+        "es": "arreglos tipo dp",
+        "pl": "fix dp types",
+        "uk": "фіксувати типи dp",
+        "zh-cn": "固定 dp 类型"
+      },
       "0.0.10": {
         "en": "event value added",
         "de": "event-wertschöpfung",
@@ -80,19 +93,6 @@
         "pl": "dodaj status online",
         "uk": "додати статус онлайн",
         "zh-cn": "添加在线状态"
-      },
-      "0.0.4": {
-        "en": "fix overrideState \n",
-        "de": "override fixieren Staat\n",
-        "ru": "исправить ошибку государство\n",
-        "pt": "corrigir sobreposição Estado\n",
-        "nl": "fix override Staat\n",
-        "fr": "correction de la priorité État\n",
-        "it": "correzione di sovraccarico Stato\n",
-        "es": "corrección Estado\n",
-        "pl": "fix derover Państwo\n",
-        "uk": "закріпити напляскване Стан\n",
-        "zh-cn": "固定覆盖 状态\n"
       }
     },
     "messages": [],
