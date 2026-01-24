@@ -266,7 +266,7 @@ class zwavews extends core.Adapter {
 
                       this.log.debug(`${parsePath} ->> ${nodeArg.newValue}`);
 
-                      if (parsePath.includes('firmwareVersions')) { // noderlocke damit array werte gespeichert werden
+                      if (parsePath.includes('firmwareVersions')) { // damit array werte gespeichert werden
                           parsePath = `${parsePath}_value`;
                       }
 
