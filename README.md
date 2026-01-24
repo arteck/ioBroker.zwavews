@@ -35,6 +35,9 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (arteck) add endpoint > 0 to value if exists 
+
 ### 0.0.11 (2026-01-23)
 * (arteck) fix dp types
 
