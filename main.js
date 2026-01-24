@@ -237,6 +237,7 @@ class zwavews extends core.Adapter {
                           .replace(/[^\p{L}\p{N}\s]/gu, "")
                           .replace(/\s+/g, " ")
                           .trim()}`;
+
                       if (nodeArg?.propertyKeyName) {
                           parsePath = `${parsePath}.${nodeArg.propertyKeyName
                               .replace(/[^\p{L}\p{N}\s]/gu, "")
@@ -266,7 +267,12 @@ class zwavews extends core.Adapter {
                       this.log.debug(`${parsePath} ->> ${nodeArg.newValue}`);
 
                       if (parsePath.includes('firmwareVersions')) { // noderlocke damit array werte gespeichert werden
-                          parsePath = `${parsePath  }_value`;
+                          parsePath = `${parsePath}_value`;
+                      }
+
+                       // mehr als 1 endpoint behandeln
+                      if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
+                        parsePath = `${parsePath}_${nodeArg.endpoint}`;
                       }
 
                       await helper.parse(`${parsePath}`, nodeArg.newValue, options);
