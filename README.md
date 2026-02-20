@@ -36,6 +36,10 @@ we use the Home Assistant Settings for this:
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (arteck) fix adapter start
+* (arteck) Dependencies have been updated
+
 ### 0.0.16 (2026-02-09)
 * (arteck) fix warning message
 

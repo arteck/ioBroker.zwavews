@@ -24,6 +24,7 @@ let helper;
 let messageParseMutex = Promise.resolve();
 let options = {};
 let startListening = false;
+let allNodesCreated = false;
 
 let driver;
 let controller;
@@ -216,7 +217,12 @@ class zwavews extends core.Adapter {
                     }
                     await helper.createNode(`${nodeId}`, nodeData, options);
                 }
+                
+                allNodesCreated = true;
 
+                if (this.config.showNodeInfoMessage) {
+                    this.log.info(`all Nodes are ready`);
+                }
                 if (startListening) {
                     websocketController.send(JSON.stringify({command: "start_listening"}));
                     startListening = false;
@@ -398,6 +404,10 @@ class zwavews extends core.Adapter {
   }
 
   async onStateChange(id, state) {
+    if (!allNodesCreated) {  // wenn alle nodes angelegt sind, erst dann horchen auf target
+        return;
+    }
+    
     if (state && state.ack == false) {
       if (id.endsWith("info.debugId")) {
         logCustomizations.debugDevices = state.val.toLowerCase();
