@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.16",
+    "version": "0.0.17",
     "news": {
+      "0.0.17": {
+        "en": "fix adapter start\nDependencies have been updated",
+        "de": "befestigungsadapter start\nAbhängigkeiten wurden aktualisiert",
+        "ru": "запуск адаптера\nЗависимости были обновлены",
+        "pt": "corrigir o início do adaptador\nAs dependências foram atualizadas",
+        "nl": "fix adapter start\nAfhankelijkheden zijn bijgewerkt",
+        "fr": "fixer le démarrage de l'adaptateur\nLes dépendances ont été actualisées",
+        "it": "avvio dell'adattatore\nLe dipendenze sono state aggiornate",
+        "es": "adaptador de fijación\nSe han actualizado las dependencias",
+        "pl": "uruchomić adapter\nZaktualizowano zależności",
+        "uk": "запуск адаптера\nЗалежність було оновлено",
+        "zh-cn": "固定适配器启动\n依赖关系已更新"
+      },
       "0.0.16": {
         "en": "fix warning message",
         "de": "warnmeldung aktivieren",
@@ -80,19 +93,6 @@
         "pl": "fix dp types",
         "uk": "фіксувати типи dp",
         "zh-cn": "固定 dp 类型"
-      },
-      "0.0.10": {
-        "en": "event value added",
-        "de": "event-wertschöpfung",
-        "ru": "добавленная стоимость",
-        "pt": "valor acrescentado do evento",
-        "nl": "gebeurteniswaarde toegevoegd",
-        "fr": "valeur ajoutée événement",
-        "it": "valore aggiunto",
-        "es": "valor añadido del evento",
-        "pl": "wartość dodana zdarzenia",
-        "uk": "додано вартість заходу",
-        "zh-cn": "事件增加值"
       }
     },
     "messages": [],

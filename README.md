@@ -35,7 +35,7 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 0.0.17 (2026-02-20)
 * (arteck) fix adapter start
 * (arteck) Dependencies have been updated
 
