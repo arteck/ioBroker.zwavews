@@ -28,8 +28,7 @@ You only need to wake up the battery-powered devices once so that zwave-js-ui ca
 <p></p>
 
 
-Activate WS Server Settings in `zwave-js-ui` <br>
-we use the Home Assistant Settings for this:
+Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings for this:
 
 
 <img width="1887" height="479" alt="grafik" src="https://github.com/user-attachments/assets/6ed8cf36-2d91-435f-91d7-86e430bb0c6c" />
