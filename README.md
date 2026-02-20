@@ -20,7 +20,7 @@ The `zwavews` adapter connects a [`zwave-js-ui`](https://zwave-js.github.io/zwav
 
 ## Adapter Documentation
 
-What is required is to install zwave-js-ui and activate WS communication.
+It is necessary to install zwave-js-ui (it is possible to migrate the zwave2 Devices to zwave-js-ui. Copy json cache file from /opt/iobroker/iobroker-data/zwave2/ into Z-Wave JS UI's store directory. then start zwave-js-ui) and activate WS communication.
 Switching from the zwave2 adapter is easy because all information is stored on the coordinator.
 You only need to wake up the battery-powered devices once so that zwave-js-ui can read them in again.
 
