@@ -20,16 +20,15 @@ The `zwavews` adapter connects a [`zwave-js-ui`](https://zwave-js.github.io/zwav
 
 ## Adapter Documentation
 
-What is required is to install zwave-js-ui and activate WS communication.
-Switching from the zwave2 adapter is easy because all information is stored on the coordinator.
-You only need to wake up the battery-powered devices once so that zwave-js-ui can read them in again.
+It is necessary to install zwave-js-ui (it is possible to migrate the zwave2 Devices to zwave-js-ui. Copy json cache file from /opt/iobroker/iobroker-data/zwave2/ into Z-Wave JS UI's store directory. then start zwave-js-ui) and activate WS communication. <br>
+Switching from the zwave2 adapter is easy because all information is stored on the coordinator. <br>
+You only need to wake up the battery-powered devices once so that zwave-js-ui can read them again or migrate it from zwave2. <br>
 
 <img width="1444" height="740" alt="grafik" src="https://github.com/user-attachments/assets/876a81d3-04ab-43c6-914e-86772d0188e1" />
 <p></p>
 
 
-Activate WS Server Settings in `zwave-js-ui` <br>
-we use the Home Assistant Settings for this:
+Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings for this:
 
 
 <img width="1887" height="479" alt="grafik" src="https://github.com/user-attachments/assets/6ed8cf36-2d91-435f-91d7-86e430bb0c6c" />
