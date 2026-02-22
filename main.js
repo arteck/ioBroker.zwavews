@@ -1,9 +1,10 @@
-"use strict";
+'use strict';
 
 const core = require("@iobroker/adapter-core");
 const mqtt = require("mqtt");
 const utils = require("./lib/utils");
 const constant = require("./lib/constants");
+const dmZwave  = require('./lib/devicemgmt.js');
 
 const adapterInfo = require("./lib/messages").adapterInfo;
 const StatesController = require("./lib/statesController").StatesController;
@@ -14,7 +15,6 @@ const MqttServerController = require("./lib/mqttServerController").MqttServerCon
 
 let mqttClient;
 let deviceCache = {};
-let nodeCache = {};
 const logCustomizations = { debugDevices: "", logfilter: [] };
 
 let websocketController;
@@ -60,6 +60,9 @@ class zwavews extends core.Adapter {
         debugDevicesState.val.toLowerCase(),
       );
     }
+
+    this.deviceManagement = new dmZwave(this);
+    this.nodeCache = {};
     this.setState("info.debugmessages", "", true);
 
     // MQTT
@@ -161,7 +164,7 @@ class zwavews extends core.Adapter {
               await statesController.setAllAvailableToFalse();
               startListening = false;
               deviceCache = [];
-              nodeCache = [];
+              this.nodeCache = [];
               this.log.info('Websocket connection closed. Attempting to reconnect...');
           });
       }
@@ -209,13 +212,13 @@ class zwavews extends core.Adapter {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}` );
                     }
 
-                    if (!nodeCache[nodeId]) {
+                    if (!this.nodeCache[nodeId]) {
                         if (this.config.showNodeInfoMessage) {
                             this.log.info(`Node Info Update for ${nodeId}`);
                         }
-                        nodeCache[nodeId] = {nodeId: nodeId};
+                        this.nodeCache[nodeId] = {nodeData};
                     }
-                    await helper.createNode(`${nodeId}`, nodeData, options);
+                    await helper.createNode(nodeId, nodeData, options);
                 }
                 
                 allNodesCreated = true;
