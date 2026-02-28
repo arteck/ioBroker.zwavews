@@ -434,7 +434,8 @@ class zwavews extends core.Adapter {
               nodeId: nodeId,
               valueId: nativeObj.valueId,
               value: state.val
-            }
+          };
+
           const sendMessageAllowed = await this.getStateAsync("info.sendMessageAllowed");
 
           if (sendMessageAllowed) {
