@@ -201,6 +201,10 @@ class zwavews extends core.Adapter {
                     break;
                 }
 
+                if (allNodesCreated) {  // wird manchmal doppelt geschickt
+                    break;
+                }
+
                 driver = messageObj.result.state.driver;
                 controller = messageObj.result.state.controller;
                 allNodes = messageObj.result.state.nodes;
