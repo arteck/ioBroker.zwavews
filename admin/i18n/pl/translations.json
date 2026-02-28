@@ -31,6 +31,7 @@
     "Always refresh node infos": "Zawsze odświeżaj informacje o Node",
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "Zdarzenia takie jak 'Urządzenie usunięte' lub 'Wyłączone' są wyświetlane w opisie zamiast w nazwie",
     "Inform about wake up and sleep of battery devices in the log": "Informuj o wybudzaniu i usypianiu urządzeń bateryjnych w Logu",
-    "new Type event Warning in log": "nowe ostrzeżenie zdarzenia typu w Logu"
+    "new Type event Warning in log": "nowe ostrzeżenie zdarzenia typu w Logu",
+	"allow start send WS message directly after adapter start": "zezwól na wysyłanie wiadomości WS bezpośrednio po uruchomieniu adaptera"
 
 }

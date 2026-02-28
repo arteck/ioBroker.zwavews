@@ -341,6 +341,16 @@
           "md": 12,
           "lg": 12,
           "xl": 12
+        },
+        "wsOnStart": {
+          "type": "checkbox",
+          "label": "allow start send WS message directly after adapter start",
+          "default": true,
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12
         }
       }
     }

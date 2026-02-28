@@ -48,7 +48,7 @@ class zwavews extends core.Adapter {
     // Initialize your adapter here
     adapterInfo(this.config, this.log);
 
-    this.setState("info.connection", false, true);
+    this.setStateChanged("info.connection", false, true);
     await statesController.setAllAvailableToFalse();
 
     helper = new Helper(this, deviceCache);
@@ -60,8 +60,12 @@ class zwavews extends core.Adapter {
       );
     }
 
+    if (this.config.wsOnStart) {
+        this.setStateChanged("info.sendMessageAllowed", true, true);
+    }
+
     this.nodeCache = {};
-    this.setState("info.debugmessages", "", true);
+    this.setStateChanged("info.debugmessages", "", true);
 
     // MQTT
     if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
@@ -114,7 +118,7 @@ class zwavews extends core.Adapter {
       // MQTT Client
       mqttClient.on("connect", () => {
         this.log.info(`Connect to zwavews over ${this.config.connectionType == "exmqtt" ? "external mqtt" : "internal mqtt"} connection.`);
-        this.setState("info.connection", true, true);
+        this.setStateChanged("info.connection", true, true);
       });
 
       mqttClient.subscribe(`${this.config.baseTopic}/#`);
@@ -134,7 +138,7 @@ class zwavews extends core.Adapter {
             if (this.config.dummyMqtt == true) {
                 mqttServerController = new MqttServerController(this);
                 await mqttServerController.createDummyMQTTServer();
-                this.setState("info.connection", true, true);
+                this.setStateChanged("info.connection", true, true);
                 await this.delay(1500);
             }
 
@@ -403,7 +407,7 @@ class zwavews extends core.Adapter {
       this.log.error(e);
     }
 
-    this.setState("info.connection", false, true);
+    this.setStateChanged("info.connection", false, true);
 
     callback();
   }
@@ -416,7 +420,7 @@ class zwavews extends core.Adapter {
     if (state && state.ack == false) {
       if (id.endsWith("info.debugId")) {
         logCustomizations.debugDevices = state.val.toLowerCase();
-        this.setState(id, state.val, true);
+        this.setStateChanged(id, state.val, true);
         return;
       }
 

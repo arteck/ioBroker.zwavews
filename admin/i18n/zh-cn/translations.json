@@ -31,5 +31,6 @@
   "Always refresh node infos": "始终刷新节点信息",
   "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "诸如“设备已移除”或“已禁用”等事件显示在描述中，而不是名称中",
   "Inform about wake up and sleep of battery devices in the log": "在日志中通知电池设备的唤醒和休眠情况",
-  "new Type event Warning in log": "日志中新类型事件警告"
+  "new Type event Warning in log": "日志中新类型事件警告",
+  "allow start send WS message directly after adapter start": "允许在适配器启动后直接发送 WS 消息"
 }

@@ -183,7 +183,8 @@
       {
         "admin": ">=7.6.17"
       }
-    ]
+    ],
+    "installedFrom": "arteck/ioBroker.zwavews#notrigger"
   },
   "native": {
     "connectionType": "ws",
@@ -207,7 +208,8 @@
     "showNodeInfoMessage": true,
     "useEventInDesc": false,
     "wakeUpInfo": false,
-    "newTypeEvent": true
+    "newTypeEvent": true,
+    "wsOnStart": true
   },
   "protectedNative": [
     "externalMqttServerPassword",

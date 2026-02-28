@@ -31,5 +31,6 @@
     "Always refresh node infos": "Ververs node-informatie altijd",
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "Evenementen zoals 'Apparaat verwijderd' of 'Uitgeschakeld' worden weergegeven in de beschrijving in plaats van in de naam",
     "Inform about wake up and sleep of battery devices in the log": "Informeer over het wakker worden en slapen van batterijapparaten in het logboek",
-    "new Type event Warning in log": "nieuw Type gebeurtenis Waarschuwing in log"
+    "new Type event Warning in log": "nieuw Type gebeurtenis Waarschuwing in log",
+	"allow start send WS message directly after adapter start": "toestaan dat WS-berichten direct na het starten van de adapter worden verzonden"
 }
