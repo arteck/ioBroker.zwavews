@@ -31,5 +31,7 @@
     "Always refresh node infos": "Sempre atualizar informações do nó",
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "Os eventos como 'Dispositivo removido' ou 'Desativado' são exibidos na descrição em vez do nome",
     "Inform about wake up and sleep of battery devices in the log": "Informar sobre o despertar e o sono dos dispositivos de bateria no log",
-    "new Type event Warning in log": "novo aviso de evento de tipo no log"
+    "new Type event Warning in log": "novo aviso de evento de tipo no log",
+	"allow start send WS message directly after adapter start": "permitir o envio de mensagens WS diretamente após o início do adaptador",
+    "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "Isso permite que você decida se as mensagens são enviadas imediatamente após o início do adaptador. Se a caixa de seleção for falsa, o último status é retirado do DP info.sendMessageAllowed."
 }

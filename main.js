@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 const core = require("@iobroker/adapter-core");
 const mqtt = require("mqtt");
@@ -14,7 +14,6 @@ const MqttServerController = require("./lib/mqttServerController").MqttServerCon
 
 let mqttClient;
 let deviceCache = {};
-let nodeCache = {};
 const logCustomizations = { debugDevices: "", logfilter: [] };
 
 let websocketController;
@@ -49,7 +48,7 @@ class zwavews extends core.Adapter {
     // Initialize your adapter here
     adapterInfo(this.config, this.log);
 
-    this.setState("info.connection", false, true);
+    this.setStateChanged("info.connection", false, true);
     await statesController.setAllAvailableToFalse();
 
     helper = new Helper(this, deviceCache);
@@ -60,7 +59,13 @@ class zwavews extends core.Adapter {
         debugDevicesState.val.toLowerCase(),
       );
     }
-    this.setState("info.debugmessages", "", true);
+
+    if (this.config.wsOnStart) {
+        this.setStateChanged("info.sendMessageAllowed", true, true);
+    }
+
+    this.nodeCache = {};
+    this.setStateChanged("info.debugmessages", "", true);
 
     // MQTT
     if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
@@ -113,7 +118,7 @@ class zwavews extends core.Adapter {
       // MQTT Client
       mqttClient.on("connect", () => {
         this.log.info(`Connect to zwavews over ${this.config.connectionType == "exmqtt" ? "external mqtt" : "internal mqtt"} connection.`);
-        this.setState("info.connection", true, true);
+        this.setStateChanged("info.connection", true, true);
       });
 
       mqttClient.subscribe(`${this.config.baseTopic}/#`);
@@ -133,7 +138,7 @@ class zwavews extends core.Adapter {
             if (this.config.dummyMqtt == true) {
                 mqttServerController = new MqttServerController(this);
                 await mqttServerController.createDummyMQTTServer();
-                this.setState("info.connection", true, true);
+                this.setStateChanged("info.connection", true, true);
                 await this.delay(1500);
             }
 
@@ -161,7 +166,7 @@ class zwavews extends core.Adapter {
               await statesController.setAllAvailableToFalse();
               startListening = false;
               deviceCache = [];
-              nodeCache = [];
+              this.nodeCache = [];
               this.log.info('Websocket connection closed. Attempting to reconnect...');
           });
       }
@@ -198,6 +203,10 @@ class zwavews extends core.Adapter {
                     break;
                 }
 
+                if (allNodesCreated) {  // wird manchmal doppelt geschickt
+                    break;
+                }
+
                 driver = messageObj.result.state.driver;
                 controller = messageObj.result.state.controller;
                 allNodes = messageObj.result.state.nodes;
@@ -209,13 +218,13 @@ class zwavews extends core.Adapter {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}` );
                     }
 
-                    if (!nodeCache[nodeId]) {
+                    if (!this.nodeCache[nodeId]) {
                         if (this.config.showNodeInfoMessage) {
                             this.log.info(`Node Info Update for ${nodeId}`);
                         }
-                        nodeCache[nodeId] = {nodeId: nodeId};
+                        this.nodeCache[nodeId] = {nodeData};
                     }
-                    await helper.createNode(`${nodeId}`, nodeData, options);
+                    await helper.createNode(nodeId, nodeData, options);
                 }
                 
                 allNodesCreated = true;
@@ -398,7 +407,7 @@ class zwavews extends core.Adapter {
       this.log.error(e);
     }
 
-    this.setState("info.connection", false, true);
+    this.setStateChanged("info.connection", false, true);
 
     callback();
   }
@@ -407,11 +416,11 @@ class zwavews extends core.Adapter {
     if (!allNodesCreated) {  // wenn alle nodes angelegt sind, erst dann horchen auf target
         return;
     }
-    
+
     if (state && state.ack == false) {
       if (id.endsWith("info.debugId")) {
         logCustomizations.debugDevices = state.val.toLowerCase();
-        this.setState(id, state.val, true);
+        this.setStateChanged(id, state.val, true);
         return;
       }
 
@@ -429,13 +438,17 @@ class zwavews extends core.Adapter {
               nodeId: nodeId,
               valueId: nativeObj.valueId,
               value: state.val
-            }
-      }
-      this.setStateChanged('info.debugmessages', JSON.stringify(message), true);
+          };
 
-      this.log.debug(`<zwavews> error message ${message}`);
+          const sendMessageAllowed = await this.getStateAsync("info.sendMessageAllowed");
 
-      websocketController.send(JSON.stringify(message));
+          if (sendMessageAllowed.val) {
+            websocketController.send(JSON.stringify(message));
+          }
+
+          this.setStateChanged('info.debugmessages', JSON.stringify(message), true);     
+          this.log.debug(`<zwavews> message onStateChange ${message}`);
+      }      
     }
   }
 }

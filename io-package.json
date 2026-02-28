@@ -183,7 +183,8 @@
       {
         "admin": ">=7.6.17"
       }
-    ]
+    ],
+    "installedFrom": "arteck/ioBroker.zwavews#notrigger"
   },
   "native": {
     "connectionType": "ws",
@@ -207,7 +208,8 @@
     "showNodeInfoMessage": true,
     "useEventInDesc": false,
     "wakeUpInfo": false,
-    "newTypeEvent": true
+    "newTypeEvent": true,
+    "wsOnStart": true
   },
   "protectedNative": [
     "externalMqttServerPassword",
@@ -289,6 +291,19 @@
         "read": true,
         "write": true,
         "def": ""
+      },
+      "native": {}
+    },
+    {
+      "_id": "info.sendMessageAllowed",
+      "type": "state",
+      "common": {
+        "role": "state",
+        "name": "send message is allowed",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": true
       },
       "native": {}
     }
