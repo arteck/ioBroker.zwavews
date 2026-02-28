@@ -4,7 +4,6 @@ const core = require("@iobroker/adapter-core");
 const mqtt = require("mqtt");
 const utils = require("./lib/utils");
 const constant = require("./lib/constants");
-const dmZwave  = require('./lib/devicemgmt.js');
 
 const adapterInfo = require("./lib/messages").adapterInfo;
 const StatesController = require("./lib/statesController").StatesController;
@@ -61,7 +60,6 @@ class zwavews extends core.Adapter {
       );
     }
 
-    this.deviceManagement = new dmZwave(this);
     this.nodeCache = {};
     this.setState("info.debugmessages", "", true);
 
