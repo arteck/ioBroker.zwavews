@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.17",
+    "version": "0.0.18",
     "news": {
+      "0.0.18": {
+        "en": "add info.sendMessageAllowed object to allow sending the message to zwave-ui-js\nadd new checkbox to set info.sendMessageAllowed immediately after starting the adapter",
+        "de": "add info.sendMessageAllowed object to let send the message to zwave-ui-js\nneue Checkbox hinzufügen, um info.sendMessage einzustellen Sofort nach dem Start des Adapters zugelassen",
+        "ru": "добавить info.sendMessageРазрешенный объект для отправки сообщения на zwave-ui-js\nдобавить новый флажок для установки info.sendMessage Допускается сразу после запуска адаптера",
+        "pt": "add info.sendMessagePermitido objeto para permitir o envio da mensagem para zwave-ui-js\nadicionar nova caixa de seleção para definir info.sendMessage Permitido imediatamente após iniciar o adaptador",
+        "nl": "info.sendMessageToegewezen object om het bericht naar zwave-ui-js te versturen\nnieuwe selectievakje toevoegen om info.sendMessage in te stellen Onmiddellijk na het starten van de adapter toegestaan",
+        "fr": "ajouter info.sendMessageObjet autorisé pour permettre l'envoi du message à zwave-ui-js\najouter une nouvelle case à cocher pour définir info.sendMessage Autorisé immédiatement après le démarrage de l'adaptateur",
+        "it": "aggiungere info.sendMessageAllowed oggetto per consentire l'invio del messaggio a zwave-ui-js\naggiungere nuova casella di controllo per impostare info.sendMessage Consentito subito dopo l'avvio dell'adattatore",
+        "es": "añadir info.sendMessagePropósito permitido enviar el mensaje a zwave-ui-js\nañadir nueva casilla para configurar información.sendMessage Permitido inmediatamente después de iniciar el adaptador",
+        "pl": "dodaj info.sendMessageDopuszczalny obiekt, aby umożliwić wysyłanie wiadomości do zwave- ui- js\ndodaj nową opcję do ustawienia info.sendMessage Dozwolone bezpośrednio po uruchomieniu adaptera",
+        "uk": "додайте інформацію.sendMessageВсього об'єкту, щоб дозволити надсилати повідомлення на zwave-ui-js\nдодати нову прапорець, щоб встановити інформацію.sendMessage Допускається відразу після запуску адаптера",
+        "zh-cn": "添加信息. sendMessage Allowed 对象允许将消息发送到 zwave- ui- js\n添加新复选框以设置信息. sendMessage 启动适配器后立即允许"
+      },
       "0.0.17": {
         "en": "fix adapter start\nDependencies have been updated",
         "de": "befestigungsadapter start\nAbhängigkeiten wurden aktualisiert",
@@ -80,19 +93,6 @@
         "pl": "typo\nfix dp nazwa kanału\ndodać punkt końcowy > 0 do wartości, jeśli istnieje",
         "uk": "типи\nзафіксувати ім'я каналів dp\nдодати кінцеву точку > 0 до значення, якщо існує",
         "zh-cn": "类型\n修复 dp 频道名称\n添加终点 > 0 到数值( 如果存在)"
-      },
-      "0.0.11": {
-        "en": "fix dp types",
-        "de": "dp-typen",
-        "ru": "фиксировать типы dp",
-        "pt": "corrigir tipos dp",
-        "nl": "fix dp types",
-        "fr": "correction des types dp",
-        "it": "corretti i tipi dp",
-        "es": "arreglos tipo dp",
-        "pl": "fix dp types",
-        "uk": "фіксувати типи dp",
-        "zh-cn": "固定 dp 类型"
       }
     },
     "messages": [],
