@@ -32,5 +32,6 @@
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "Події, такі як 'Пристрій видалено' або 'Вимкнено', відображаються в описі, а не в імені",
     "Inform about wake up and sleep of battery devices in the log": "Інформація про пробудження та сон пристроїв на батарейках у журналі",
     "new Type event Warning in log": "нове попередження про подію типу в журналі",
-	"allow start send WS message directly after adapter start": "дозволить отправлять WS-сообщение непосредственно после запуска адаптера"
+	"allow start send WS message directly after adapter start": "дозволить отправлять WS-сообщение непосредственно после запуска адаптера",
+    "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "Это позволяет вам решить, отправляются ли сообщения сразу после запуска адаптера. Если флажок не установлен, последний статус берется из info.sendMessageAllowed DP."
 }

@@ -305,6 +305,18 @@
       "type": "panel",
       "label": "Other configurations",
       "items": {
+        "wsOnStart": {
+          "type": "checkbox",
+          "label": "allow start send WS message directly after adapter start",
+          "default": true,
+          "help": "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
+          "newLine": true
+        },
         "showNodeInfoMessage": {
           "type": "checkbox",
           "label": "Show Node Info messages to ioBroker log",
@@ -336,16 +348,6 @@
         "newTypeEvent": {
           "type": "checkbox",
           "label": "new Type event Warning in log",
-          "xs": 12,
-          "sm": 12,
-          "md": 12,
-          "lg": 12,
-          "xl": 12
-        },
-        "wsOnStart": {
-          "type": "checkbox",
-          "label": "allow start send WS message directly after adapter start",
-          "default": true,
           "xs": 12,
           "sm": 12,
           "md": 12,

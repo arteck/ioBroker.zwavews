@@ -32,5 +32,6 @@
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "Les événements tels que 'Appareil supprimé' ou 'Désactivé' sont affichés dans la description au lieu du nom",
     "Inform about wake up and sleep of battery devices in the log": "Informer sur le réveil et le sommeil des appareils alimentés par batterie dans le journal",
     "new Type event Warning in log": "nouvel avertissement d'événement de type dans le journal",
-	"allow start send WS message directly after adapter start": "permettre l'envoi de messages WS directement après le démarrage de l'adaptateur"
+	"allow start send WS message directly after adapter start": "permettre l'envoi de messages WS directement après le démarrage de l'adaptateur",
+    "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "Cela vous permet de décider si les messages sont envoyés immédiatement après le démarrage de l'adaptateur. Si la case à cocher est fausse, le dernier statut est pris du DP info.sendMessageAllowed."
 }
