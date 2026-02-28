@@ -430,12 +430,11 @@ class zwavews extends core.Adapter {
               valueId: nativeObj.valueId,
               value: state.val
             }
-      }
-      this.setStateChanged('info.debugmessages', JSON.stringify(message), true);
-
-      websocketController.send(JSON.stringify(message));
-
-      this.log.debug(`<zwavews> message onStateChange ${message}`);
+        
+          websocketController.send(JSON.stringify(message));
+          this.setStateChanged('info.debugmessages', JSON.stringify(message), true);     
+          this.log.debug(`<zwavews> message onStateChange ${message}`);
+      }      
     }
   }
 }
