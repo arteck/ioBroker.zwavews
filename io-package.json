@@ -291,6 +291,19 @@
         "def": ""
       },
       "native": {}
+    },
+    {
+      "_id": "info.sendMessageAllowed",
+      "type": "state",
+      "common": {
+        "role": "state",
+        "name": "send message is allowed",
+        "type": "boolean",
+        "read": true,
+        "write": true,
+        "def": true
+      },
+      "native": {}
     }
   ]
 }

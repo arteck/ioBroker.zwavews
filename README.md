@@ -35,6 +35,8 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+* (arteck) add info.sendMessageAllowed object to allow sending the message to zwave-ui-js
+
 ### 0.0.17 (2026-02-20)
 * (arteck) fix adapter start
 * (arteck) Dependencies have been updated
