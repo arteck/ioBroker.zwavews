@@ -407,7 +407,7 @@ class zwavews extends core.Adapter {
     if (!allNodesCreated) {  // wenn alle nodes angelegt sind, erst dann horchen auf target
         return;
     }
-    
+
     if (state && state.ack == false) {
       if (id.endsWith("info.debugId")) {
         logCustomizations.debugDevices = state.val.toLowerCase();
@@ -433,9 +433,9 @@ class zwavews extends core.Adapter {
       }
       this.setStateChanged('info.debugmessages', JSON.stringify(message), true);
 
-      this.log.debug(`<zwavews> error message ${message}`);
-
       websocketController.send(JSON.stringify(message));
+
+      this.log.debug(`<zwavews> message onStateChange ${message}`);
     }
   }
 }
