@@ -4,6 +4,7 @@ const core = require("@iobroker/adapter-core");
 const mqtt = require("mqtt");
 const utils = require("./lib/utils");
 const constant = require("./lib/constants");
+const dmZwave  = require('./lib/devicemgmt.js');
 
 const adapterInfo = require("./lib/messages").adapterInfo;
 const StatesController = require("./lib/statesController").StatesController;
@@ -60,12 +61,15 @@ class zwavews extends core.Adapter {
       );
     }
 
+    this.deviceManagement = new dmZwave(this);
+
     if (this.config.wsOnStart) {
         this.setStateChanged("info.sendMessageAllowed", true, true);
     }
 
     this.nodeCache = {};
     this.setStateChanged("info.debugmessages", "", true);
+
 
     // MQTT
     if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
