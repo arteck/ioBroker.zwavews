@@ -31,6 +31,8 @@
 	"Always refresh node infos": "Always refresh node infos",
 	"The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name",
 	"Inform about wake up and sleep of battery devices in the log": "Inform about wake up and sleep of battery devices in the log",
-	"new Type event Warning in log": "new Type event Warning in log"
+	"new Type event Warning in log": "new Type event Warning in log",
+	"allow start send WS message directly after adapter start": "allow start send WS message directly after adapter start",
+    "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP."
 
 }

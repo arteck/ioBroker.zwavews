@@ -31,5 +31,7 @@
     "Always refresh node infos": "Всегда обновлять информацию о узлах",
     "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name": "События, такие как 'Устройство удалено' или 'Отключено', отображаются в описании, а не в имени",
     "Inform about wake up and sleep of battery devices in the log": "Информация о пробуждении и сне устройств на батарейках в журнале",
-    "new Type event Warning in log": "новое предупреждение о событии типа в журнале"
+    "new Type event Warning in log": "новое предупреждение о событии типа в журнале",
+	"allow start send WS message directly after adapter start": "разрешить отправку WS-сообщения непосредственно после запуска адаптера",
+    "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "Это позволяет вам решить, отправляются ли сообщения сразу после запуска адаптера. Если флажок не установлен, последний статус берется из info.sendMessageAllowed DP."
 }
