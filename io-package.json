@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.0.18",
+    "version": "0.1.0",
     "news": {
+      "0.1.0": {
+        "en": "BREAKING CHANGE - dp name is now with underline\nadd deviceManager\nfix dp's with a space\nfix dp's with special chars",
+        "de": "BREAKING CHANGE - dp name ist jetzt mit unterstreichen\nadd-Gerät Manager\ndp's mit einem raum reparieren\nfix dp's with special chars",
+        "ru": "BREAKING CHANGE - название dp теперь с подчеркиванием\nдобавить устройство Менеджер\nустановить dp в пространстве\nобсуждение dp's with special chars",
+        "pt": "MUDANÇA DE INÍCIO - nome dp está agora com sublinhado\nadicionar dispositivo Gestor\ncorrigir dp's com um espaço\ncorrigir dp's com caracteres especiais",
+        "nl": "BREAKING VERANDERING - dp naam is nu met benadrukken\napparaat toevoegen Beheerder\nfix dp's met een spatie\nfix dp's met speciale tekens",
+        "fr": "CHANGEMENT DE BREAKING - DP nom est maintenant avec le soulignement\najouter un périphérique Gestionnaire\nréparer dp's avec un espace\nfixer dp's avec des caractères spéciaux",
+        "it": "BREAKING CHANGE - il nome dp è ora in linea\naggiungere dispositivo Manager\nfix dp's con uno spazio\nsistemare dp's con beneficenza speciali",
+        "es": "CAMBIO DE BREAKING - nombre dp ahora es con subrayado\nañadir dispositivo Manager\narreglar dp con un espacio\narreglar dp con chars especiales",
+        "pl": "ZMIANA BREAKING - nazwa dp jest teraz z podkreśleniem\ndodaj urządzenie Kierownik\nfix dp 's z przestrzenią\nfix dp 's ze specjalnymi znakami",
+        "uk": "BREAKING CHANGE - ім'я dp тепер з онлайн\nдодати пристрій Менеджер\nзакріпити dp's з космосом\nфіксувати dp з особливими chars",
+        "zh-cn": "断裂变换 - dp 名称现在是下划线\n添加设备 经理\n修补 dp 的空格\n修复 dp 与特殊字符"
+      },
       "0.0.18": {
         "en": "add info.sendMessageAllowed object to allow sending the message to zwave-ui-js\nadd new checkbox to set info.sendMessageAllowed immediately after starting the adapter",
         "de": "add info.sendMessageAllowed object to let send the message to zwave-ui-js\nneue Checkbox hinzufügen, um info.sendMessage einzustellen Sofort nach dem Start des Adapters zugelassen",
@@ -80,22 +93,8 @@
         "pl": "dodaj typ zdarzenia \"powiadomienie o wartości\"",
         "uk": "додати тип події \"значення повідомлення\"",
         "zh-cn": "添加事件类型“ 值通知”"
-      },
-      "0.0.12": {
-        "en": "typo\nfix dp channel name\nadd endpoint > 0 to value if exists",
-        "de": "typo\ndp kanal name\nendpunkt hinzufügen > 0 auf wert, falls vorhanden",
-        "ru": "опечатка\nустановить имя канала dp\nдобавить конечную точку 0, если существует",
-        "pt": "erro de digitação\ncorrigir o nome do canal dp\nadicionar endpoint > 0 a valor se existir",
-        "nl": "type\nfix dp kanaalnaam\neindpunt toevoegen > 0 naar waarde indien aanwezig",
-        "fr": "typo\ncorriger le nom du canal dp\najouter le paramètre > 0 à valeur s'il existe",
-        "it": "tipo\ncorretto nome del canale dp\naggiungere il punto finale 0 a valore se esiste",
-        "es": "typo\nfijar nombre del canal dp\nañadir endpoint √ 0 a valor si existe",
-        "pl": "typo\nfix dp nazwa kanału\ndodać punkt końcowy > 0 do wartości, jeśli istnieje",
-        "uk": "типи\nзафіксувати ім'я каналів dp\nдодати кінцеву точку > 0 до значення, якщо існує",
-        "zh-cn": "类型\n修复 dp 频道名称\n添加终点 > 0 到数值( 如果存在)"
       }
     },
-    "messages": [],
     "titleLang": {
       "en": "Z-Wave WS",
       "de": "Z-Wave WS",
@@ -184,7 +183,60 @@
         "admin": ">=7.6.17"
       }
     ],
-    "installedFrom": "arteck/ioBroker.zwavews#notrigger"
+    "messages": [
+      {
+        "condition": {
+          "operand": "and",
+          "rules": [
+            "oldVersion<0.0.18",
+            "newVersion>=0.1.0"
+          ]
+        },
+        "title": {
+          "en": "Important notice!",
+          "de": "Wichtiger Hinweis!",
+          "ru": "Важное замечание!",
+          "pt": "Notícia importante!",
+          "nl": "Belangrijke mededeling!",
+          "fr": "Avis important!",
+          "it": "Avviso IMPORTANTE!",
+          "es": "Noticia importante!",
+          "pl": "Ważna uwaga!",
+          "zh-cn": "重要通知!"
+        },
+        "text": {
+          "en": "\"BREAKING CHANGE. <br> Adapter version 0.1.0 use now a underline on Object. check you alias or visu and corr this mistake. example: Manufacturer Specific is now Manufacturer_Specific",
+          "de": "\"BREAKING CHANGE. <br> Die Adapterversion 0.1.0 verwendet jetzt eine Unterstreichung bei Objekten. Überprüfe deinen Alias oder Visu und korrigiere es. Beispiel: Manufacturer Specific lautet jetzt Manufacturer_Specific.",
+          "ru": "\"BREAKING CHANGE. <br> В версии адаптера 0.1.0 теперь используется подчеркивание объекта. Проверьте свой псевдоним или визуализацию и исправьте эту ошибку. Например: Manufacturer Specific теперь Manufacturer_Specific",
+          "pt": "\"BREAKING CHANGE. <br> A versão 0.1.0 do adaptador agora usa um sublinhado em Objetos. Verifique seu alias ou visualizador e corrija esse erro. Exemplo: Manufacturer Specific agora é Manufacturer_Specific.",
+          "nl": "\"BREAKING CHANGE. <br> Adapterversie 0.1.0 gebruikt nu een onderstreping bij Object. Controleer je alias of visualisatie en corrigeer deze fout. Bijvoorbeeld: Manufacturer Specific is nu Manufacturer_Specific.",
+          "fr": "\"BREAKING CHANGE. <br> L'adaptateur version 0.1.0 utilise désormais un trait de soulignement sur les objets. Vérifiez votre alias ou visualisez l'interface et corrigez cette erreur. Exemple : Manufacturer Specific devient Manufacturer_Specific.",
+          "it": "\"BREAKING CHANGE. <br> La versione 0.1.0 dell'adattatore ora utilizza una sottolineatura sull'oggetto. Controlla il tuo alias o visu e correggi questo errore. Esempio: Manufacturer Specific ora è Manufacturer_Specific",
+          "es": "\"BREAKING CHANGE. <br> La versión 0.1.0 del adaptador ahora usa un subrayado en el objeto. Verifique su alias o visu y corrija este error. Ejemplo: Manufacturer Specific ahora es Manufacturer_Specific",
+          "pl": "\"BREAKING CHANGE. <br> Wersja adaptera 0.1.0 używa teraz podkreślenia na obiekcie. Sprawdź alias lub wizualizację i popraw ten błąd. Przykład: Manufacturer Specific to teraz Manufacturer_Specific",
+          "uk": "\"BREAKING CHANGE. <br> Версія адаптера 0.1.0 тепер використовує підкреслення на об'єкті. Перевірте свій псевдонім або візуалізацію та виправте цю помилку. Приклад: Manufacturer Specific тепер Manufacturer_Specific.",
+          "zh-cn": "\"BREAKING CHANGE. <br> 适配器版本 0.1.0 现在在对象名称前使用下划线。请检查您的别名或视觉设置，并更正此错误。例如：Manufacturer Specific 现在是 Manufacturer_Specific。"
+        },
+        "link": "https://github.com/arteck/ioBroker.zwavews/wiki/DP's-with-space-blank-in-Name",
+        "level": "warn",
+        "linkText": {
+          "en": "Readme",
+          "de": "Liesmich",
+          "ru": "Прочти меня",
+          "pt": "Leia-me",
+          "nl": "Leesmij",
+          "fr": "Lisez-moi",
+          "it": "Leggimi",
+          "es": "Léame",
+          "pl": "Readme",
+          "zh-cn": "自述文件"
+        },
+        "buttons": [
+          "agree",
+          "cancel"
+        ]
+      }
+    ]
   },
   "native": {
     "connectionType": "ws",
