@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "news": {
+      "0.1.2": {
+        "en": "typo",
+        "de": "typo",
+        "ru": "опечатка",
+        "pt": "erro de digitação",
+        "nl": "type",
+        "fr": "typo",
+        "it": "tipo",
+        "es": "typo",
+        "pl": "typo",
+        "uk": "типи",
+        "zh-cn": "类型"
+      },
       "0.1.1": {
         "en": "add debug information",
         "de": "debug information",
@@ -80,19 +93,6 @@
         "pl": "typo\nustaw stan gotowy, jeśli stan jest martwy",
         "uk": "типи\nвиправити готовий статус, якщо статус мертвий",
         "zh-cn": "类型\n如果状态已死亡, 则固定状态"
-      },
-      "0.0.14": {
-        "en": "add event ready",
-        "de": "event bereit hinzufügen",
-        "ru": "добавить событие готово",
-        "pt": "adicionar o evento pronto",
-        "nl": "evenement klaar toevoegen",
-        "fr": "ajouter l'événement prêt",
-        "it": "aggiungere evento pronto",
-        "es": "agregar evento listo",
-        "pl": "dodaj zdarzenie gotowe",
-        "uk": "додати захід готовий",
-        "zh-cn": "添加已准备的事件"
       }
     },
     "titleLang": {

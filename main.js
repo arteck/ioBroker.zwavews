@@ -15,8 +15,6 @@ const MqttServerController = require("./lib/mqttServerController").MqttServerCon
 
 let mqttClient;
 let deviceCache = {};
-const logCustomizations = { debugDevices: "", logfilter: [] };
-
 let websocketController;
 let mqttServerController;
 let statesController;
@@ -53,11 +51,6 @@ class zwavews extends core.Adapter {
     await statesController.setAllAvailableToFalse();
 
     helper = new Helper(this, deviceCache);
-
-    const debugDevicesState = await this.getStateAsync("info.debugId");
-    if (debugDevicesState && debugDevicesState.val) {
-      logCustomizations.debugDevices = String(debugDevicesState.val.toLowerCase());
-    }
 
     this.deviceManagement = new dmZwave(this);
 
@@ -186,9 +179,6 @@ class zwavews extends core.Adapter {
       const messageObj = JSON.parse(message);
 
       const debugDevicesState = await this.getStateAsync("info.debugId");
-      if (debugDevicesState && debugDevicesState.val) {
-        logCustomizations.debugDevices = String(debugDevicesState.val.toLowerCase());
-      }
 
       this.log.debug(`--->>> fromZ2W_RAW1 -> ${JSON.stringify(messageObj)}`);
 
@@ -219,7 +209,7 @@ class zwavews extends core.Adapter {
                 for (const nodeData of allNodes) {
                     const nodeId = utils.formatNodeId(nodeData.nodeId);
 
-                    if (logCustomizations.debugDevices.includes(nodeId.toLowerCase())) {
+                    if (debugDevicesState && debugDevicesState.val.includes(nodeId)) {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}` );
                     }
 
@@ -253,7 +243,7 @@ class zwavews extends core.Adapter {
                       const nodeArg = eventTyp.args;
                       const nodeId = utils.formatNodeId(eventTyp.nodeId);
 
-                      if (logCustomizations.debugDevices.includes(nodeId.toLowerCase())) {
+                      if (debugDevicesState && debugDevicesState.val.includes(nodeId)) {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(eventTyp)}` );
                       }
 
@@ -430,7 +420,6 @@ class zwavews extends core.Adapter {
 
     if (state && state.ack == false) {
       if (id.endsWith("info.debugId")) {
-        logCustomizations.debugDevices = state.val.toLowerCase();
         this.setStateChanged(id, state.val, true);
         return;
       }
