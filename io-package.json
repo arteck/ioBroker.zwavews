@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "news": {
+      "0.1.1": {
+        "en": "add debug information",
+        "de": "debug information",
+        "ru": "добавить информацию об отладке",
+        "pt": "adicionar informações de depuração",
+        "nl": "debug-informatie toevoegen",
+        "fr": "ajouter des informations de débogage",
+        "it": "aggiungere informazioni debug",
+        "es": "añadir información de depuración",
+        "pl": "dodaj informacje o debugowaniu",
+        "uk": "додати інформацію debug",
+        "zh-cn": "添加调试信息"
+      },
       "0.1.0": {
         "en": "BREAKING CHANGE - dp name is now with underline\nadd deviceManager\nfix dp's with a space\nfix dp's with special chars",
         "de": "BREAKING CHANGE - dp name ist jetzt mit unterstreichen\nadd-Gerät Manager\ndp's mit einem raum reparieren\nfix dp's with special chars",
@@ -80,19 +93,6 @@
         "pl": "dodaj zdarzenie gotowe",
         "uk": "додати захід готовий",
         "zh-cn": "添加已准备的事件"
-      },
-      "0.0.13": {
-        "en": "add event type \"value notification\"",
-        "de": "ereignistyp hinzufügen \"wert-benachrichtigung\"",
-        "ru": "добавить событие типа «уведомление о ценности»",
-        "pt": "adicionar tipo de evento \"notificação de valor\"",
-        "nl": "gebeurtenistype \"waarde notificatie\" toevoegen",
-        "fr": "ajouter le type d'événement \"avis de valeur\"",
-        "it": "aggiungere tipo di evento \"notifica valore\"",
-        "es": "añadir tipo de evento \"notificación de valor\"",
-        "pl": "dodaj typ zdarzenia \"powiadomienie o wartości\"",
-        "uk": "додати тип події \"значення повідомлення\"",
-        "zh-cn": "添加事件类型“ 值通知”"
       }
     },
     "titleLang": {
@@ -183,6 +183,13 @@
         "admin": ">=7.6.17"
       }
     ],
+    "plugins": {
+      "docker": {
+        "iobDockerComposeFiles": [
+          "https://github.com/zwave-js/zwave-js-ui/blob/master/docker/docker-compose.yml"
+        ]
+      }
+    },
     "messages": [
       {
         "condition": {

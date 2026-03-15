@@ -56,9 +56,7 @@ class zwavews extends core.Adapter {
 
     const debugDevicesState = await this.getStateAsync("info.debugId");
     if (debugDevicesState && debugDevicesState.val) {
-      logCustomizations.debugDevices = String(
-        debugDevicesState.val.toLowerCase(),
-      );
+      logCustomizations.debugDevices = String(debugDevicesState.val.toLowerCase());
     }
 
     this.deviceManagement = new dmZwave(this);
@@ -187,9 +185,12 @@ class zwavews extends core.Adapter {
     try {
       const messageObj = JSON.parse(message);
 
-      if (JSON.stringify(messageObj).includes(logCustomizations.debugDevices) && logCustomizations.debugDevices !== "") {
-        this.log.warn(`--->>> fromZ2W_RAW1 -> ${JSON.stringify(messageObj)}`);
+      const debugDevicesState = await this.getStateAsync("info.debugId");
+      if (debugDevicesState && debugDevicesState.val) {
+        logCustomizations.debugDevices = String(debugDevicesState.val.toLowerCase());
       }
+
+      this.log.debug(`--->>> fromZ2W_RAW1 -> ${JSON.stringify(messageObj)}`);
 
       const type       = messageObj?.type;
 
@@ -251,6 +252,10 @@ class zwavews extends core.Adapter {
                   case 'value notification': { 
                       const nodeArg = eventTyp.args;
                       const nodeId = utils.formatNodeId(eventTyp.nodeId);
+
+                      if (logCustomizations.debugDevices.includes(nodeId.toLowerCase())) {
+                        this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(eventTyp)}` );
+                      }
 
                       let parsePath = `${nodeId}.${nodeArg.commandClassName}.${nodeArg.propertyName
                           .replace(/[^\p{L}\p{N}\s]/gu, "")
