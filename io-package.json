@@ -186,7 +186,7 @@
     "plugins": {
       "docker": {
         "iobDockerComposeFiles": [
-          "https://github.com/zwave-js/zwave-js-ui/blob/master/docker/docker-compose.yml"
+          "docker-compose.yaml"
         ]
       }
     },
