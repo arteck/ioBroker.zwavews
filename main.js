@@ -264,6 +264,7 @@ class zwavews extends core.Adapter {
                       }
 
                       parsePath = utils.formatObject(parsePath);
+                      parsePath = utils.deleteLastDot(parsePath);
 
                       if (nodeArg.commandClass === 119) {    // sonderlocke für node naming
                           switch (nodeArg.property) {
