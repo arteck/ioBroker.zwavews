@@ -160,6 +160,7 @@ class zwavews extends core.Adapter {
               this.setStateChanged('info.connection', false, true);
               await statesController.setAllAvailableToFalse();
               startListening = false;
+              allNodesCreated = false;
               deviceCache = [];
               this.nodeCache = [];
               this.log.info('Websocket connection closed. Attempting to reconnect...');
