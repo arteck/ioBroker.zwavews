@@ -292,6 +292,8 @@ class zwavews extends core.Adapter {
                         parsePath = `${parsePath}_${nodeArg.endpoint}`;
                       }
 
+                      parsePath = utils.deleteLastDot(parsePath); // check again
+
                       await helper.parse(`${parsePath}`, nodeArg.newValue, options);
 
                       break;
