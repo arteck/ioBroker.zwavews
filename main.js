@@ -294,7 +294,7 @@ class zwavews extends core.Adapter {
 
                       parsePath = utils.deleteLastDot(parsePath); // check again
 
-                      if (eventTyp.event === 'value updated') {
+                      if (eventTyp.event === 'value notification') {
                         await helper.parse(`${parsePath}`, nodeArg.newValue, options, true);
                       } else {
                         await helper.parse(`${parsePath}`, nodeArg.newValue, options, false);
