@@ -35,6 +35,10 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (arteck) Dependencies have been updated
+* (arteck) add vscode folder
+
 ### 0.1.3 (2026-04-03)
 * (arteck) del last dot from DP
 * (arteck) fix scene
