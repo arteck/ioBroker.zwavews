@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "news": {
+      "0.1.4": {
+        "en": "Dependencies have been updated\nadd vscode folder",
+        "de": "Abhängigkeiten wurden aktualisiert\nvscode ordner hinzufügen",
+        "ru": "Зависимости были обновлены\nдобавить vscode папку",
+        "pt": "As dependências foram atualizadas\nadicionar pasta vscode",
+        "nl": "Afhankelijkheden zijn bijgewerkt\nvscode map toevoegen",
+        "fr": "Les dépendances ont été actualisées\najouter un dossier vscode",
+        "it": "Le dipendenze sono state aggiornate\naggiungere cartella vscode",
+        "es": "Se han actualizado las dependencias\nañadir carpeta vscode",
+        "pl": "Zaktualizowano zależności\ndodaj folder vscode",
+        "uk": "Залежність було оновлено\nдодати папку проти коду",
+        "zh-cn": "依赖关系已更新\n添加 vscode 文件夹"
+      },
       "0.1.3": {
         "en": "fix unknown state from scene\ndel last dot from DP\nfix scene",
         "de": "unbekannter zustand von szene\nder letzte Punkt von DP\nfixe szene",
@@ -80,19 +93,6 @@
         "pl": "uruchomić adapter\nZaktualizowano zależności",
         "uk": "запуск адаптера\nЗалежність було оновлено",
         "zh-cn": "固定适配器启动\n依赖关系已更新"
-      },
-      "0.0.16": {
-        "en": "fix warning message",
-        "de": "warnmeldung aktivieren",
-        "ru": "исправить предупреждающее сообщение",
-        "pt": "corrigir a mensagem de aviso",
-        "nl": "waarschuwingsbericht herstellen",
-        "fr": "corriger le message d'avertissement",
-        "it": "correzione del messaggio di avviso",
-        "es": "mensaje de advertencia",
-        "pl": "naprawić komunikat ostrzegawczy",
-        "uk": "фіксувати повідомлення про попередження",
-        "zh-cn": "修补警告消息"
       }
     },
     "titleLang": {

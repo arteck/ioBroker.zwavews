@@ -387,11 +387,9 @@ class zwavews extends core.Adapter {
     if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
       if (mqttClient && !mqttClient.closed) {
         try {
-          if (mqttClient) {
             mqttClient.end();
-          }
         } catch (e) {
-          this.log.error(e);
+            this.log.error(e);
         }
       }
     }
