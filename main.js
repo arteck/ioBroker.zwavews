@@ -65,8 +65,8 @@ class zwavews extends core.Adapter {
     // MQTT
     if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
       // External MQTT-Server
-      if (this.config.connectionType == "exmqtt") {
-        if (this.config.externalMqttServerIP == "") {
+      if (this.config.connectionType === "exmqtt") {
+        if (this.config.externalMqttServerIP === "") {
           this.log.warn(
             "Please configure the External MQTT-Server connection!",
           );
@@ -85,7 +85,7 @@ class zwavews extends core.Adapter {
         };
 
         // Set external mqtt credentials
-        if (this.config.externalMqttServerCredentials == true) {
+        if (this.config.externalMqttServerCredentials === true) {
           mqttClientOptions.username = this.config.externalMqttServerUsername;
           mqttClientOptions.password = this.config.externalMqttServerPassword;
         }
@@ -112,25 +112,37 @@ class zwavews extends core.Adapter {
 
       // MQTT Client
       mqttClient.on("connect", () => {
-        this.log.info(`Connect to zwavews over ${this.config.connectionType == "exmqtt" ? "external mqtt" : "internal mqtt"} connection.`);
+        this.log.info(`Connect to zwavews over ${this.config.connectionType === "exmqtt" ? "external mqtt" : "internal mqtt"} connection.`);
         this.setStateChanged("info.connection", true, true);
       });
 
-      mqttClient.subscribe(`${this.config.baseTopic}/#`);
+      mqttClient.subscribe(`${this.config.baseTopic}/#`, (err) => {
+        if (err) this.log.error(`<zwavews> MQTT subscribe error: ${err.message}`);
+      });
 
       mqttClient.on("message", (topic, payload) => {
-        const newMessage = `{"payload":${payload.toString() == "" ? '"null"' : payload.toString()},"topic":"${topic.slice(topic.search("/") + 1)}"}`;
+        const rawPayload = payload.toString();
+        let parsedPayload;
+        try {
+          parsedPayload = rawPayload === "" ? null : JSON.parse(rawPayload);
+        } catch {
+          parsedPayload = rawPayload;
+        }
+        const newMessage = JSON.stringify({
+          payload: parsedPayload,
+          topic: topic.slice(topic.indexOf("/") + 1),
+        });
         this.messageParse(newMessage);
       });
-    } else if (this.config.connectionType == 'ws') {
+    } else if (this.config.connectionType === 'ws') {
     // Websocket
-            if (this.config.wsServerIP == '') {
+            if (this.config.wsServerIP === '') {
                 this.log.warn('Please configure the Websoket connection!');
                 return;
             }
 
             // Dummy MQTT-Server
-            if (this.config.dummyMqtt == true) {
+            if (this.config.dummyMqtt === true) {
                 mqttServerController = new MqttServerController(this);
                 await mqttServerController.createDummyMQTTServer();
                 this.setStateChanged("info.connection", true, true);
@@ -145,27 +157,30 @@ class zwavews extends core.Adapter {
       websocketController = new WebsocketController(this);
       const wsClient = websocketController.initWsClient();
 
-      if (wsClient) {
-          wsClient.on('open', () => {
-              this.log.info('Connect to zwave-js-ui over websocket connection.');
-              startListening = true;
-              websocketController.send(JSON.stringify({command: "start_listening"}));
-          });
-
-          wsClient.on('message', (message) => {
-              this.messageParse(message);
-          });
-
-          wsClient.on('close', async () => {
-              this.setStateChanged('info.connection', false, true);
-              await statesController.setAllAvailableToFalse();
-              startListening = false;
-              allNodesCreated = false;
-              deviceCache = [];
-              this.nodeCache = [];
-              this.log.info('Websocket connection closed. Attempting to reconnect...');
-          });
+      if (!wsClient) {
+          this.log.error('<zwavews> initWsClient returned null — websocket not started.');
+          return;
       }
+
+      wsClient.on('open', () => {
+          this.log.info('Connect to zwave-js-ui over websocket connection.');
+          startListening = true;
+          websocketController.send(JSON.stringify({command: "start_listening"}));
+      });
+
+      wsClient.on('message', (message) => {
+          this.messageParse(message);
+      });
+
+      wsClient.on('close', async () => {
+          this.setStateChanged('info.connection', false, true);
+          await statesController.setAllAvailableToFalse();
+          startListening = false;
+          allNodesCreated = false;
+          deviceCache = {};
+          this.nodeCache = {};
+          this.log.info('Websocket connection closed. Attempting to reconnect...');
+      });
   }
   
   async messageParse(message) {
@@ -203,14 +218,19 @@ class zwavews extends core.Adapter {
                     break;
                 }
 
-                driver = messageObj.result.state.driver;
+                if (!messageObj.result?.state || !Array.isArray(messageObj.result.state.nodes)) {
+                    this.log.warn('<zwavews> Invalid result.state structure received, skipping.');
+                    break;
+                }
+
+                driver     = messageObj.result.state.driver;
                 controller = messageObj.result.state.controller;
-                allNodes = messageObj.result.state.nodes;
+                allNodes   = messageObj.result.state.nodes;
 
                 for (const nodeData of allNodes) {
                     const nodeId = utils.formatNodeId(nodeData.nodeId);
 
-                    if (debugDevicesState && debugDevicesState.val.includes(nodeId)) {
+                    if (debugDevicesState && debugDevicesState.val && String(debugDevicesState.val).includes(nodeId)) {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}` );
                     }
 
@@ -244,7 +264,7 @@ class zwavews extends core.Adapter {
                       const nodeArg = eventTyp.args;
                       const nodeId = utils.formatNodeId(eventTyp.nodeId);
 
-                      if (debugDevicesState && debugDevicesState.val.includes(nodeId)) {
+                      if (debugDevicesState && debugDevicesState.val && String(debugDevicesState.val).includes(nodeId)) {
                         this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(eventTyp)}` );
                       }
 
@@ -273,7 +293,7 @@ class zwavews extends core.Adapter {
                                   parsePath = `${nodeId}.info.${nodeArg.property}`;
                                   break;
                               case 'location':
-
+                                  // intentionally ignored
                                   break;
                               default:
                                   parsePath = `${nodeId}.info.${nodeArg.property}`;
@@ -383,38 +403,49 @@ class zwavews extends core.Adapter {
   }
 
   async onUnload(callback) {
-    // Close MQTT connections
-    if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
-      if (mqttClient && !mqttClient.closed) {
-        try {
-            mqttClient.end();
-        } catch (e) {
-            this.log.error(e);
+    try {
+      // Close MQTT connections
+      if (["exmqtt", "intmqtt"].includes(this.config.connectionType)) {
+        if (mqttClient && !mqttClient.closed) {
+          try {
+              mqttClient.end();
+          } catch (e) {
+              this.log.error(e);
+          }
         }
       }
-    }
-    // Internal or Dummy MQTT-Server
-    if (this.config.connectionType == "intmqtt" || this.config.dummyMqtt == true) {
+      // Internal or Dummy MQTT-Server
+      if (this.config.connectionType === "intmqtt" || this.config.dummyMqtt === true) {
+        try {
+          if (mqttServerController) {
+            mqttServerController.closeServer();
+          }
+        } catch (e) {
+          this.log.error(e);
+        }
+      }
+      // WebSocket cleanup
+      if (websocketController) {
+        try {
+          await websocketController.allTimerClear();
+          websocketController.closeConnection();
+        } catch (e) {
+          this.log.error(e);
+        }
+      }
+      // Set all device available states to false
       try {
-        if (mqttServerController) {
-          mqttServerController.closeServer();
+        if (statesController) {
+          await statesController.setAllAvailableToFalse();
         }
       } catch (e) {
         this.log.error(e);
       }
-    }
-    // Set all device available states of false
-    try {
-      if (statesController) {
-        await statesController.setAllAvailableToFalse();
-      }
-    } catch (e) {
-      this.log.error(e);
-    }
 
-    this.setStateChanged("info.connection", false, true);
-
-    callback();
+      this.setStateChanged("info.connection", false, true);
+    } finally {
+      callback();
+    }
   }
 
   async onStateChange(id, state) {
@@ -422,21 +453,24 @@ class zwavews extends core.Adapter {
         return;
     }
 
-    if (state && state.ack == false) {
+    if (state && state.ack === false) {
       if (id.endsWith("info.debugId")) {
         this.setStateChanged(id, state.val, true);
         return;
       }
 
-      let message;
       const obj = await this.getObjectAsync(id);
       if (obj) {
-          const nativeObj= obj.native || {};
+          const nativeObj = obj.native || {};
 
           const m = id.match(/nodeID_0*(\d+)/i);
-          const nodeId = m ? Number(m[1]) : null;
+          if (!m) {
+              this.log.warn(`<zwavews> Could not extract nodeId from state id: ${id}`);
+              return;
+          }
+          const nodeId = Number(m[1]);
 
-          message = {
+          const message = {
               messageId: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
               command: "node.set_value",
               nodeId: nodeId,
@@ -446,13 +480,17 @@ class zwavews extends core.Adapter {
 
           const sendMessageAllowed = await this.getStateAsync("info.sendMessageAllowed");
 
-          if (sendMessageAllowed.val) {
-            websocketController.send(JSON.stringify(message));
+          if (sendMessageAllowed && sendMessageAllowed.val === true) {
+              if (websocketController) {
+                  websocketController.send(JSON.stringify(message));
+              } else {
+                  this.log.warn('<zwavews> websocketController not initialised, cannot send message.');
+              }
           }
 
-          this.setStateChanged('info.debugmessages', JSON.stringify(message), true);     
-          this.log.debug(`<zwavews> message onStateChange ${message}`);
-      }      
+          this.setStateChanged('info.debugmessages', JSON.stringify(message), true);
+          this.log.debug(`<zwavews> message onStateChange ${JSON.stringify(message)}`);
+      }
     }
   }
 }
