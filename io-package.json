@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "news": {
+      "0.1.5": {
+        "en": "upd devicemanager",
+        "de": "gerätemanager und -manager",
+        "ru": "улучшенный devicemanager",
+        "pt": "gerenciador de dispositivos upd",
+        "nl": "upd apparaatbeheerder",
+        "fr": "gestionnaire d'appareil",
+        "it": "upd devicemanager",
+        "es": "upd devicemanager",
+        "pl": "upd devicemaniger",
+        "uk": "напляскване",
+        "zh-cn": "上调设备管理器"
+      },
       "0.1.4": {
         "en": "Dependencies have been updated\nadd vscode folder",
         "de": "Abhängigkeiten wurden aktualisiert\nvscode ordner hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "dodaj info.sendMessageDopuszczalny obiekt, aby umożliwić wysyłanie wiadomości do zwave- ui- js\ndodaj nową opcję do ustawienia info.sendMessage Dozwolone bezpośrednio po uruchomieniu adaptera",
         "uk": "додайте інформацію.sendMessageВсього об'єкту, щоб дозволити надсилати повідомлення на zwave-ui-js\nдодати нову прапорець, щоб встановити інформацію.sendMessage Допускається відразу після запуску адаптера",
         "zh-cn": "添加信息. sendMessage Allowed 对象允许将消息发送到 zwave- ui- js\n添加新复选框以设置信息. sendMessage 启动适配器后立即允许"
-      },
-      "0.0.17": {
-        "en": "fix adapter start\nDependencies have been updated",
-        "de": "befestigungsadapter start\nAbhängigkeiten wurden aktualisiert",
-        "ru": "запуск адаптера\nЗависимости были обновлены",
-        "pt": "corrigir o início do adaptador\nAs dependências foram atualizadas",
-        "nl": "fix adapter start\nAfhankelijkheden zijn bijgewerkt",
-        "fr": "fixer le démarrage de l'adaptateur\nLes dépendances ont été actualisées",
-        "it": "avvio dell'adattatore\nLe dipendenze sono state aggiornate",
-        "es": "adaptador de fijación\nSe han actualizado las dependencias",
-        "pl": "uruchomić adapter\nZaktualizowano zależności",
-        "uk": "запуск адаптера\nЗалежність було оновлено",
-        "zh-cn": "固定适配器启动\n依赖关系已更新"
       }
     },
     "titleLang": {

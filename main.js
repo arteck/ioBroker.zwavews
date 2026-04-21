@@ -117,7 +117,9 @@ class zwavews extends core.Adapter {
       });
 
       mqttClient.subscribe(`${this.config.baseTopic}/#`, (err) => {
-        if (err) this.log.error(`<zwavews> MQTT subscribe error: ${err.message}`);
+        if (err) {
+this.log.error(`<zwavews> MQTT subscribe error: ${err.message}`);
+}
       });
 
       mqttClient.on("message", (topic, payload) => {

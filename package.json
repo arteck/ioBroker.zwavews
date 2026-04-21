@@ -1,6 +1,6 @@
 {
   "name": "iobroker.zwavews",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "zwavews adapter for ioBroker",
   "author": {
     "name": "Arthur Rupp",
