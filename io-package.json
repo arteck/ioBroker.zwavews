@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "news": {
+      "0.2.0": {
+        "en": "del deprectated setStateAsync",
+        "de": "del deprected setStateAsync",
+        "ru": "обсуждение StateAsync",
+        "pt": "del deprectated setStateAsync",
+        "nl": "del deprectated setStateAsync",
+        "fr": "set dépréciéStateAsync",
+        "it": "del set deprettatoStateAsync",
+        "es": "del deprectated setStateAsync",
+        "pl": "del deprectated setStateAsync",
+        "uk": "deprectated setStateAsync",
+        "zh-cn": "已贬值的设置"
+      },
       "0.1.6": {
         "en": "add test",
         "de": "test hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "dodaj informacje o debugowaniu",
         "uk": "додати інформацію debug",
         "zh-cn": "添加调试信息"
-      },
-      "0.1.0": {
-        "en": "BREAKING CHANGE - dp name is now with underline\nadd deviceManager\nfix dp's with a space\nfix dp's with special chars",
-        "de": "BREAKING CHANGE - dp name ist jetzt mit unterstreichen\nadd-Gerät Manager\ndp's mit einem raum reparieren\nfix dp's with special chars",
-        "ru": "BREAKING CHANGE - название dp теперь с подчеркиванием\nдобавить устройство Менеджер\nустановить dp в пространстве\nобсуждение dp's with special chars",
-        "pt": "MUDANÇA DE INÍCIO - nome dp está agora com sublinhado\nadicionar dispositivo Gestor\ncorrigir dp's com um espaço\ncorrigir dp's com caracteres especiais",
-        "nl": "BREAKING VERANDERING - dp naam is nu met benadrukken\napparaat toevoegen Beheerder\nfix dp's met een spatie\nfix dp's met speciale tekens",
-        "fr": "CHANGEMENT DE BREAKING - DP nom est maintenant avec le soulignement\najouter un périphérique Gestionnaire\nréparer dp's avec un espace\nfixer dp's avec des caractères spéciaux",
-        "it": "BREAKING CHANGE - il nome dp è ora in linea\naggiungere dispositivo Manager\nfix dp's con uno spazio\nsistemare dp's con beneficenza speciali",
-        "es": "CAMBIO DE BREAKING - nombre dp ahora es con subrayado\nañadir dispositivo Manager\narreglar dp con un espacio\narreglar dp con chars especiales",
-        "pl": "ZMIANA BREAKING - nazwa dp jest teraz z podkreśleniem\ndodaj urządzenie Kierownik\nfix dp 's z przestrzenią\nfix dp 's ze specjalnymi znakami",
-        "uk": "BREAKING CHANGE - ім'я dp тепер з онлайн\nдодати пристрій Менеджер\nзакріпити dp's з космосом\nфіксувати dp з особливими chars",
-        "zh-cn": "断裂变换 - dp 名称现在是下划线\n添加设备 经理\n修补 dp 的空格\n修复 dp 与特殊字符"
       }
     },
     "titleLang": {

@@ -42,6 +42,9 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### 0.2.0 (2026-04-26)
+* (arteck) del deprectated setStateAsync
+
 ### 0.1.6 (2026-04-23)
 * (arteck) add test
 
