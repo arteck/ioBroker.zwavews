@@ -42,6 +42,9 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+- (copilot) Adapter requires node.js >= 22 now
+
 ### 0.2.0 (2026-04-26)
 * (arteck) del deprectated setStateAsync
 
