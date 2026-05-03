@@ -127,6 +127,8 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 ### 0.0.2 (2026-01-06)
 - (arteck) first release
 
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
 ## License
 
 MIT License
