@@ -1,0 +1,2225 @@
+{
+  "id": 5,
+  "name": "rollo.schlafzimmer",
+  "loc": "",
+  "values": [
+    {
+      "id": "5-37-0-currentValue",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 0,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": false,
+      "value": null,
+      "isCurrentValue": true,
+      "targetValue": "37-0-targetValue",
+      "lastUpdate": 1778342193397,
+      "newValue": null
+    },
+    {
+      "id": "5-37-0-targetValue",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 0,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": false,
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-38-0-currentValue",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 98,
+      "isCurrentValue": true,
+      "targetValue": "38-0-targetValue",
+      "lastUpdate": 1779681936902,
+      "newValue": 98
+    },
+    {
+      "id": "5-38-0-targetValue",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 98.01,
+      "lastUpdate": 1779681925837,
+      "newValue": 98.01
+    },
+    {
+      "id": "5-38-0-Open",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "Open",
+      "propertyName": "Open",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Open)",
+      "ccSpecific": {
+        "switchType": 3
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-38-0-Close",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "Close",
+      "propertyName": "Close",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Perform a level change (Close)",
+      "ccSpecific": {
+        "switchType": 3
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Start",
+          "value": true
+        },
+        {
+          "text": "Stop",
+          "value": false
+        }
+      ],
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-38-0-duration",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "duration",
+      "propertyName": "duration",
+      "type": "duration",
+      "readable": true,
+      "writeable": false,
+      "label": "Remaining duration",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": {
+        "unit": "seconds"
+      },
+      "lastUpdate": 1779538545271,
+      "newValue": {
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "5-38-0-restorePrevious",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 38,
+      "commandClassName": "Multilevel Switch",
+      "endpoint": 0,
+      "property": "restorePrevious",
+      "propertyName": "restorePrevious",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Restore previous value",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Restore",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-49-0-Power",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 49,
+      "commandClassName": "Multilevel Sensor",
+      "endpoint": 0,
+      "property": "Power",
+      "propertyName": "Power",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Power",
+      "ccSpecific": {
+        "sensorType": 4,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 2,
+      "unit": "W",
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1779676307023,
+      "newValue": 0
+    },
+    {
+      "id": "5-49-0-Humidity",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 49,
+      "commandClassName": "Multilevel Sensor",
+      "endpoint": 0,
+      "property": "Humidity",
+      "propertyName": "Humidity",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Humidity",
+      "ccSpecific": {
+        "sensorType": 5,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 2,
+      "unit": "%",
+      "list": false,
+      "value": 61,
+      "lastUpdate": 1779334794434,
+      "newValue": 61
+    },
+    {
+      "id": "5-49-0-Illuminance",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 49,
+      "commandClassName": "Multilevel Sensor",
+      "endpoint": 0,
+      "property": "Illuminance",
+      "propertyName": "Illuminance",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Illuminance",
+      "ccSpecific": {
+        "sensorType": 3,
+        "scale": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 2,
+      "unit": "Lux",
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1779418742991,
+      "newValue": 0
+    },
+    {
+      "id": "5-50-0-value-65536",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 0,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 65536,
+      "propertyKeyName": "Electric_kWh",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 0,
+        "rateType": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 1,
+      "unit": "kWh",
+      "list": false,
+      "value": 1.03,
+      "lastUpdate": 1779669265444,
+      "newValue": 1.03
+    },
+    {
+      "id": "5-50-0-reset",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 0,
+      "property": "reset",
+      "propertyName": "reset",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset accumulated values",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-112-0-3",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 3,
+      "propertyName": "Reports Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "value should be set to 1 if the module operates in Venetian Blind mode.",
+      "label": "Reports Type",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Blind position using Z-Wave command",
+          "value": 0
+        },
+        {
+          "text": "Blind position via Fibaro command",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342185645,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-10",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 10,
+      "propertyName": "Roller Shutter Operating Modes",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Roller Shutter Operating Modes",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 4,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 4
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Roller blind mode, without positioning",
+          "value": 0
+        },
+        {
+          "text": "Roller blind mode, with positioning",
+          "value": 1
+        },
+        {
+          "text": "Venetian blind mode, with positioning",
+          "value": 2
+        },
+        {
+          "text": "Gate mode, without positioning",
+          "value": 3
+        },
+        {
+          "text": "Gate mode, with positioning",
+          "value": 4
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1778342186227,
+      "newValue": 1
+    },
+    {
+      "id": "5-112-0-12",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 12,
+      "propertyName": "Turning Time/ Delay Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "depending on mode, turning time or delay time",
+      "label": "Turning Time/ Delay Time",
+      "default": 150,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65535,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 65535
+        }
+      ],
+      "list": false,
+      "value": 150,
+      "lastUpdate": 1778342186596,
+      "newValue": 150
+    },
+    {
+      "id": "5-112-0-13",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 13,
+      "propertyName": "Lamellas Positioning Mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Parameter influences the lamellas positioning in venetian blind mode",
+      "label": "Lamellas Positioning Mode",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Only in case of the main controller operation",
+          "value": 0
+        },
+        {
+          "text": "Default - Controller+switchlimit",
+          "value": 1
+        },
+        {
+          "text": "Like 1 + stop control frame",
+          "value": 2
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1778342186999,
+      "newValue": 1
+    },
+    {
+      "id": "5-112-0-14",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 14,
+      "propertyName": "Switch Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "either Toggle switches or a single, momentary switch.",
+      "label": "Switch Type",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Momentary switches",
+          "value": 0
+        },
+        {
+          "text": "Toggle switches",
+          "value": 1
+        },
+        {
+          "text": "Single, momentary switch",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342187180,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-17",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "Delay Time After S2",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "delay till auto turned off or auto gate close",
+      "label": "Delay Time After S2",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 255
+        }
+      ],
+      "list": false,
+      "value": 10,
+      "lastUpdate": 1778342187359,
+      "newValue": 10
+    },
+    {
+      "id": "5-112-0-18",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "Motor Operation Detection",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Power threshold to be interpreted as reaching a limit switch.",
+      "label": "Motor Operation Detection",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 255
+        }
+      ],
+      "list": false,
+      "value": 30,
+      "lastUpdate": 1778342187538,
+      "newValue": 30
+    },
+    {
+      "id": "5-112-0-22",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 22,
+      "propertyName": "Motor Operation Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Time period for the motor to continue operation.",
+      "label": "Motor Operation Time",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65535,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 65535
+        }
+      ],
+      "list": false,
+      "value": 240,
+      "lastUpdate": 1778342187720,
+      "newValue": 240
+    },
+    {
+      "id": "5-112-0-29",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 29,
+      "propertyName": "Forced Roller Shutter Calibration",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "set to 1 will enter calibration mode",
+      "label": "Forced Roller Shutter Calibration",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Deactivated",
+          "value": 0
+        },
+        {
+          "text": "Start calibration process",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342187953,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-30",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 30,
+      "propertyName": "Response to General Alarm",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Response to General Alarm",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "No response to alarm frames",
+          "value": 0
+        },
+        {
+          "text": "Open blind",
+          "value": 1
+        },
+        {
+          "text": "Close blind",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342188175,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-31",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 31,
+      "propertyName": "Response to Water Flood Alarm",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Response to Water Flood Alarm",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "No response to alarm frames",
+          "value": 0
+        },
+        {
+          "text": "Open blind",
+          "value": 1
+        },
+        {
+          "text": "Close blind",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342188347,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-32",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 32,
+      "propertyName": "Response to Smoke, CO, CO2 Alarm",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Response to Smoke, CO, CO2 Alarm",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "No response to alarm frames",
+          "value": 0
+        },
+        {
+          "text": "Open blind",
+          "value": 1
+        },
+        {
+          "text": "Close blind",
+          "value": 2
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1778342188831,
+      "newValue": 1
+    },
+    {
+      "id": "5-112-0-33",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 33,
+      "propertyName": "Response to Temperature Alarm",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Response to Temperature Alarm",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 2,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 2
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "No response to alarm frames",
+          "value": 0
+        },
+        {
+          "text": "Open blind",
+          "value": 1
+        },
+        {
+          "text": "Close blind",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342189027,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-40",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 40,
+      "propertyName": "Power Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "change that needs to occur to trigger the power report",
+      "label": "Power Reports",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1778342190612,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-42",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 42,
+      "propertyName": "Periodic Power or Energy Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Time to the next report. Value of 0 means the reports are turned off.",
+      "label": "Periodic Power or Energy Reports",
+      "default": 3600,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65534,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 65534
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1778342191253,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-43",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 43,
+      "propertyName": "Energy Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Energy threshold to trigger report",
+      "label": "Energy Reports",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 254,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 254
+        }
+      ],
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1778342191774,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-44",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 44,
+      "propertyName": "Self-Measurement",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "if power and energy reports are to sent to the main controller",
+      "label": "Self-Measurement",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Disabled",
+          "value": 0
+        },
+        {
+          "text": "Activated",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342191947,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-50",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 50,
+      "propertyName": "Scenes/ Associations Activation",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "whether scenes or associations are activated by the switch keys",
+      "label": "Scenes/ Associations Activation",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Associations active",
+          "value": 0
+        },
+        {
+          "text": "Scenes active",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342192129,
+      "newValue": 0
+    },
+    {
+      "id": "5-112-0-35",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 35,
+      "propertyName": "Managing Lamellas in Response to Alarm",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 no change, 1 extreme position",
+      "label": "Managing Lamellas in Response to Alarm",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Do not change lamellas position",
+          "value": 0
+        },
+        {
+          "text": "Set lamellas to their extreme position",
+          "value": 1
+        }
+      ],
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-114-0-productId",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productId",
+      "propertyName": "productId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product ID",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 4096,
+      "lastUpdate": 1778342165696,
+      "newValue": 4096
+    },
+    {
+      "id": "5-114-0-productType",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productType",
+      "propertyName": "productType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product type",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 770,
+      "lastUpdate": 1778342165696,
+      "newValue": 770
+    },
+    {
+      "id": "5-114-0-manufacturerId",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "manufacturerId",
+      "propertyName": "manufacturerId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Manufacturer ID",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 271,
+      "lastUpdate": 1778342165696,
+      "newValue": 271
+    },
+    {
+      "id": "5-117-0-rf",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 117,
+      "commandClassName": "Protection",
+      "endpoint": 0,
+      "property": "rf",
+      "propertyName": "rf",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "RF protection state",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": true,
+      "states": [
+        {
+          "text": "Unprotected",
+          "value": 0
+        },
+        {
+          "text": "NoControl",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342194410,
+      "newValue": 0
+    },
+    {
+      "id": "5-117-0-local",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 117,
+      "commandClassName": "Protection",
+      "endpoint": 0,
+      "property": "local",
+      "propertyName": "local",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Local protection state",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": true,
+      "states": [
+        {
+          "text": "Unprotected",
+          "value": 0
+        },
+        {
+          "text": "NoOperationPossible",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1778342194410,
+      "newValue": 0
+    },
+    {
+      "id": "5-117-0-exclusiveControlNodeId",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 117,
+      "commandClassName": "Protection",
+      "endpoint": 0,
+      "property": "exclusiveControlNodeId",
+      "propertyName": "exclusiveControlNodeId",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Node ID with exclusive control",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 1,
+      "max": 232,
+      "list": false,
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-117-0-timeout",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 117,
+      "commandClassName": "Protection",
+      "endpoint": 0,
+      "property": "timeout",
+      "propertyName": "timeout",
+      "type": "timeout",
+      "readable": true,
+      "writeable": true,
+      "label": "RF protection timeout",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "lastUpdate": 1779538545271
+    },
+    {
+      "id": "5-134-0-firmwareVersions",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "firmwareVersions",
+      "propertyName": "firmwareVersions",
+      "type": "string[]",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip firmware versions",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": false,
+      "value": [
+        "25.25"
+      ],
+      "lastUpdate": 1778342166073,
+      "newValue": [
+        "25.25"
+      ]
+    },
+    {
+      "id": "5-134-0-protocolVersion",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "protocolVersion",
+      "propertyName": "protocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": false,
+      "value": "3.52",
+      "lastUpdate": 1778342166073,
+      "newValue": "3.52"
+    },
+    {
+      "id": "5-134-0-libraryType",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "libraryType",
+      "propertyName": "libraryType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Library type",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "list": true,
+      "states": [
+        {
+          "text": "Unknown",
+          "value": 0
+        },
+        {
+          "text": "Static Controller",
+          "value": 1
+        },
+        {
+          "text": "Controller",
+          "value": 2
+        },
+        {
+          "text": "Enhanced Slave",
+          "value": 3
+        },
+        {
+          "text": "Slave",
+          "value": 4
+        },
+        {
+          "text": "Installer",
+          "value": 5
+        },
+        {
+          "text": "Routing Slave",
+          "value": 6
+        },
+        {
+          "text": "Bridge Controller",
+          "value": 7
+        },
+        {
+          "text": "Device under Test",
+          "value": 8
+        },
+        {
+          "text": "N/A",
+          "value": 9
+        },
+        {
+          "text": "AV Remote",
+          "value": 10
+        },
+        {
+          "text": "AV Device",
+          "value": 11
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1778342166074,
+      "newValue": 3
+    },
+    {
+      "id": "5-145-0-fibaro-venetianBlindsPosition",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 145,
+      "commandClassName": "Manufacturer Proprietary",
+      "endpoint": 0,
+      "property": "fibaro",
+      "propertyName": "fibaro",
+      "propertyKey": "venetianBlindsPosition",
+      "propertyKeyName": "venetianBlindsPosition",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Venetian blinds position",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 0,
+      "max": 99,
+      "list": false,
+      "value": 74,
+      "lastUpdate": 1778342193788,
+      "newValue": 74
+    },
+    {
+      "id": "5-49-0-Air temperature",
+      "nodeId": 5,
+      "toUpdate": false,
+      "commandClass": 49,
+      "commandClassName": "Multilevel Sensor",
+      "endpoint": 0,
+      "property": "Air temperature",
+      "propertyName": "Air temperature",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Air temperature",
+      "ccSpecific": {
+        "sensorType": 1,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 2,
+      "unit": "°C",
+      "list": false,
+      "value": 35.6,
+      "lastUpdate": 1779628601509,
+      "newValue": 35.6
+    }
+  ],
+  "groups": [
+    {
+      "title": "Momentary click",
+      "endpoint": 0,
+      "value": 1,
+      "maxNodes": 7,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Momentary hold",
+      "endpoint": 0,
+      "value": 2,
+      "maxNodes": 7,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Controller Updates",
+      "endpoint": 0,
+      "value": 3,
+      "maxNodes": 1,
+      "isLifeline": true,
+      "multiChannel": false
+    }
+  ],
+  "neighbors": [],
+  "ready": true,
+  "available": true,
+  "hassDevices": {},
+  "failed": false,
+  "inited": true,
+  "eventsQueue": [
+    {
+      "time": "2026-05-23T12:15:45.261Z",
+      "event": "alive",
+      "args": [
+        0
+      ]
+    },
+    {
+      "time": "2026-05-23T12:15:45.272Z",
+      "event": "ready",
+      "args": []
+    },
+    {
+      "time": "2026-05-23T13:00:00.386Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T13:00:02.434Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T14:13:29.934Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T17:00:00.237Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 98.01,
+          "prevValue": 0,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T17:00:05.354Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 22,
+          "prevValue": 0,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T17:00:20.440Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 98,
+          "prevValue": 22,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T18:09:09.714Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T18:09:10.314Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T18:09:10.366Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T18:09:25.675Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T19:09:05.027Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 49.5,
+          "prevValue": 98.01,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T19:09:10.126Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 74,
+          "prevValue": 98,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T19:09:15.636Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 49,
+          "prevValue": 74,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T19:29:00.103Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 49.5,
+          "prevValue": 49.5,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T19:29:05.202Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 49,
+          "prevValue": 49,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-23T21:05:43.738Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T01:01:06.858Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T03:57:48.917Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T04:51:43.696Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 98.01,
+          "prevValue": 49.5,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T04:51:48.796Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 72,
+          "prevValue": 49,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T04:51:54.784Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 98,
+          "prevValue": 72,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T07:53:11.066Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T10:00:00.364Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 0,
+          "prevValue": 98.01,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T10:00:05.803Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 68,
+          "prevValue": 98,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T10:00:20.958Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 0,
+          "prevValue": 68,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T10:49:48.312Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T10:49:48.341Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T13:00:00.709Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T13:00:02.765Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T13:16:41.510Z",
+      "event": "value added",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Air temperature",
+          "newValue": 35.6,
+          "propertyName": "Air temperature",
+          "nodeId": 5
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T17:00:00.609Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 98.01,
+          "prevValue": 0,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T17:00:06.717Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 27,
+          "prevValue": 0,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T17:00:19.655Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 98,
+          "prevValue": 27,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T17:41:53.919Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T19:38:00.140Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 49.5,
+          "prevValue": 98.01,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T19:38:05.321Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 74,
+          "prevValue": 98,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T19:38:09.650Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 49,
+          "prevValue": 74,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-24T19:39:38.488Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25T00:34:25.444Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 0,
+          "property": "value",
+          "propertyKey": 65536,
+          "newValue": 1.03,
+          "prevValue": 1.03,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25T02:31:47.023Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Sensor",
+          "commandClass": 49,
+          "endpoint": 0,
+          "property": "Power",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "Power"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25T04:05:25.837Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "targetValue",
+          "newValue": 98.01,
+          "prevValue": 49.5,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25T04:05:30.935Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 72,
+          "prevValue": 49,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-05-25T04:05:36.902Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Multilevel Switch",
+          "commandClass": 38,
+          "endpoint": 0,
+          "property": "currentValue",
+          "newValue": 98,
+          "prevValue": 72,
+          "propertyName": "currentValue"
+        }
+      ]
+    }
+  ],
+  "status": "Alive",
+  "interviewStage": "Complete",
+  "priorityReturnRoute": {},
+  "customReturnRoute": {},
+  "prioritySUCReturnRoute": false,
+  "customSUCReturnRoutes": [],
+  "availableFirmwareUpdates": [],
+  "firmwareUpdatesDismissed": {},
+  "lastFirmwareUpdateCheck": 1778342194867,
+  "appliedTemplateContentHashes": [],
+  "hexId": "0x010f 0x0302-0x1000",
+  "dbLink": "https://devices.zwave-js.io/?jumpTo=0x010f:0x0302:0x1000:25.25",
+  "manufacturerId": 271,
+  "productId": 4096,
+  "productType": 770,
+  "deviceConfig": {
+    "filename": "/root/.zwave-js-ui/.config-db/devices/0x010f/fgr222_24.24_255.255.json",
+    "isEmbedded": true,
+    "manufacturer": "Fibargroup",
+    "manufacturerId": 271,
+    "label": "FGR222",
+    "description": "Roller Shutter 2",
+    "devices": [
+      {
+        "productType": 768,
+        "productId": 258
+      },
+      {
+        "productType": 769,
+        "productId": 4097
+      },
+      {
+        "productType": 770,
+        "productId": 4096
+      },
+      {
+        "productType": 770,
+        "productId": 12288
+      },
+      {
+        "productType": 770,
+        "productId": 16384
+      }
+    ],
+    "firmwareVersion": {
+      "min": "24.24",
+      "max": "255.255"
+    },
+    "preferred": false,
+    "associations": {},
+    "paramInformation": {
+      "_map": {}
+    },
+    "proprietary": {
+      "fibaroCCs": [
+        38
+      ]
+    }
+  },
+  "productLabel": "FGR222",
+  "productDescription": "Roller Shutter 2",
+  "manufacturer": "Fibargroup",
+  "firmwareVersion": "25.25",
+  "protocolVersion": 3,
+  "nodeType": 1,
+  "endpointsCount": 0,
+  "endpoints": [
+    {
+      "index": 0,
+      "label": "Root Endpoint",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 17,
+        "specific": 6
+      }
+    }
+  ],
+  "isSecure": false,
+  "security": "None",
+  "supportsSecurity": false,
+  "supportsBeaming": true,
+  "isControllerNode": false,
+  "isListening": true,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "keepAwake": false,
+  "maxDataRate": 40000,
+  "deviceClass": {
+    "basic": 4,
+    "generic": 17,
+    "specific": 6
+  },
+  "lastActive": 1779681936902,
+  "firmwareCapabilities": {
+    "firmwareUpgradable": false
+  },
+  "protocol": 0,
+  "deviceId": "271-4096-770",
+  "hasDeviceConfigChanged": false,
+  "statistics": {
+    "commandsTX": 30,
+    "commandsRX": 33,
+    "commandsDroppedRX": 0,
+    "commandsDroppedTX": 0,
+    "timeoutResponse": 0,
+    "lastSeen": "2026-05-25T04:05:36.902Z",
+    "rtt": 74.2,
+    "rssi": -58,
+    "lwr": {
+      "protocolDataRate": 2,
+      "repeaters": [
+        72
+      ],
+      "rssi": -58,
+      "repeaterRSSI": [
+        127
+      ]
+    },
+    "nlwr": {
+      "protocolDataRate": 1,
+      "repeaters": [
+        27
+      ],
+      "rssi": -65,
+      "repeaterRSSI": [
+        127
+      ]
+    }
+  },
+  "supportsTime": false,
+  "_name": "rollo.schlafzimmer",
+  "applicationRoute": false
+}

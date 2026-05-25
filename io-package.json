@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "news": {
+      "0.2.1": {
+        "en": "Adapter requires node.js >= 22 now\nfix new event",
+        "de": "Adapter benötigt node.js >= 22 jetzt\nneue veranstaltung",
+        "ru": "Адаптер требует node.js >= 22 сейчас\nремонт нового события",
+        "pt": "Adaptador requer nod.js >= 22 agora\ncorrigir novo evento",
+        "nl": "Voor de adapter zijn node.js < 22 nu nodig\nnieuwe gebeurtenis herstellen",
+        "fr": "Adaptateur nécessite node.js >= 22 maintenant\ncorrection du nouvel événement",
+        "it": "Adattatore richiede node.js >= 22 ora\nfix nuovo evento",
+        "es": "Adaptador requiere node.js ю= 22 ahora\nnuevo evento",
+        "pl": "Adapter wymaga node.js > = 22\nnaprawić nowe zdarzenie",
+        "uk": "Адаптер вимагає node.js >= 22 тепер\nвиправити новий захід",
+        "zh-cn": "适配器需要节点.js 现在22\n修复新事件"
+      },
       "0.2.0": {
         "en": "del deprectated setStateAsync",
         "de": "del deprected setStateAsync",
@@ -80,19 +93,6 @@
         "pl": "typo",
         "uk": "типи",
         "zh-cn": "类型"
-      },
-      "0.1.1": {
-        "en": "add debug information",
-        "de": "debug information",
-        "ru": "добавить информацию об отладке",
-        "pt": "adicionar informações de depuração",
-        "nl": "debug-informatie toevoegen",
-        "fr": "ajouter des informations de débogage",
-        "it": "aggiungere informazioni debug",
-        "es": "añadir información de depuración",
-        "pl": "dodaj informacje o debugowaniu",
-        "uk": "додати інформацію debug",
-        "zh-cn": "添加调试信息"
       }
     },
     "titleLang": {

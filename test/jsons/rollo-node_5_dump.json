@@ -1,0 +1,1162 @@
+{
+  "id": 5,
+  "manufacturer": "Fibargroup",
+  "label": "FGR222",
+  "description": "Roller Shutter 2",
+  "fingerprint": {
+    "manufacturerId": "0x010f",
+    "productType": "0x0302",
+    "productId": "0x1000",
+    "firmwareVersion": "25.25"
+  },
+  "interviewStage": "Complete",
+  "ready": true,
+  "securityClasses": {
+    "S2_AccessControl": false,
+    "S2_Authenticated": false,
+    "S2_Unauthenticated": false,
+    "S0_Legacy": false
+  },
+  "failedS2Bootstrapping": false,
+  "isListening": true,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "supportsBeaming": true,
+  "supportsSecurity": false,
+  "protocol": "ZWave",
+  "protocolVersion": "4.5x / 6.0x",
+  "sdkVersion": "unknown",
+  "supportedDataRates": [
+    40000
+  ],
+  "deviceClass": {
+    "basic": {
+      "key": 4,
+      "label": "Routing End Node"
+    },
+    "generic": {
+      "key": 17,
+      "label": "Multilevel Switch"
+    },
+    "specific": {
+      "key": 6,
+      "label": "Motor Control Class B"
+    }
+  },
+  "commandClasses": {
+    "Multi Channel Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 2,
+          "timestamp": "2026-05-09T15:56:24.285Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 1,
+          "value": [],
+          "timestamp": "2026-05-09T15:56:24.480Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [
+            45
+          ],
+          "timestamp": "2026-05-09T15:56:24.480Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 7,
+          "timestamp": "2026-05-09T15:56:24.480Z",
+          "internal": true
+        },
+        {
+          "property": "endpoints",
+          "propertyKey": 2,
+          "value": [],
+          "timestamp": "2026-05-09T15:56:24.660Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 2,
+          "value": [
+            45
+          ],
+          "timestamp": "2026-05-09T15:56:24.660Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 2,
+          "value": 7,
+          "timestamp": "2026-05-09T15:56:24.660Z",
+          "internal": true
+        }
+      ]
+    },
+    "Manufacturer Specific": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "productId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product ID"
+          },
+          "value": 4096,
+          "timestamp": "2026-05-09T15:56:05.696Z"
+        },
+        {
+          "property": "productType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Product type"
+          },
+          "value": 770,
+          "timestamp": "2026-05-09T15:56:05.696Z"
+        },
+        {
+          "property": "manufacturerId",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 65535,
+            "label": "Manufacturer ID"
+          },
+          "value": 271,
+          "timestamp": "2026-05-09T15:56:05.696Z"
+        }
+      ]
+    },
+    "Version": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "firmwareVersions",
+          "metadata": {
+            "type": "string[]",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave chip firmware versions"
+          },
+          "value": [
+            "25.25"
+          ],
+          "timestamp": "2026-05-09T15:56:06.073Z"
+        },
+        {
+          "property": "protocolVersion",
+          "metadata": {
+            "type": "string",
+            "readable": true,
+            "writeable": false,
+            "label": "Z-Wave protocol version"
+          },
+          "value": "3.52",
+          "timestamp": "2026-05-09T15:56:06.073Z"
+        },
+        {
+          "property": "libraryType",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Library type",
+            "states": {
+              "0": "Unknown",
+              "1": "Static Controller",
+              "2": "Controller",
+              "3": "Enhanced Slave",
+              "4": "Slave",
+              "5": "Installer",
+              "6": "Routing Slave",
+              "7": "Bridge Controller",
+              "8": "Device under Test",
+              "9": "N/A",
+              "10": "AV Remote",
+              "11": "AV Device"
+            }
+          },
+          "value": 3,
+          "timestamp": "2026-05-09T15:56:06.074Z"
+        }
+      ]
+    },
+    "Configuration": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "isParamInformationFromConfig",
+          "value": true,
+          "timestamp": "2026-05-09T15:56:24.944Z",
+          "internal": true
+        },
+        {
+          "property": 3,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Blind position using Z-Wave command",
+              "1": "Blind position via Fibaro command"
+            },
+            "label": "Reports Type",
+            "description": "value should be set to 1 if the module operates in Venetian Blind mode.",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:25.645Z"
+        },
+        {
+          "property": 10,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 4,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 4
+              }
+            ],
+            "default": 1,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Roller blind mode, without positioning",
+              "1": "Roller blind mode, with positioning",
+              "2": "Venetian blind mode, with positioning",
+              "3": "Gate mode, without positioning",
+              "4": "Gate mode, with positioning"
+            },
+            "label": "Roller Shutter Operating Modes",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-09T15:56:26.227Z"
+        },
+        {
+          "property": 12,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 2,
+            "min": 0,
+            "max": 65535,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 65535
+              }
+            ],
+            "default": 150,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Turning Time/ Delay Time",
+            "description": "depending on mode, turning time or delay time",
+            "isFromConfig": true
+          },
+          "value": 150,
+          "timestamp": "2026-05-09T15:56:26.596Z"
+        },
+        {
+          "property": 13,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 2,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Only in case of the main controller operation",
+              "1": "Default - Controller+switchlimit",
+              "2": "Like 1 + stop control frame"
+            },
+            "label": "Lamellas Positioning Mode",
+            "description": "Parameter influences the lamellas positioning in venetian blind mode",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-09T15:56:26.999Z"
+        },
+        {
+          "property": 14,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Momentary switches",
+              "1": "Toggle switches",
+              "2": "Single, momentary switch"
+            },
+            "label": "Switch Type",
+            "description": "either Toggle switches or a single, momentary switch.",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:27.180Z"
+        },
+        {
+          "property": 17,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 255
+              }
+            ],
+            "default": 10,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Delay Time After S2",
+            "description": "delay till auto turned off or auto gate close",
+            "isFromConfig": true
+          },
+          "value": 10,
+          "timestamp": "2026-05-09T15:56:27.359Z"
+        },
+        {
+          "property": 18,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 255,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 255
+              }
+            ],
+            "default": 10,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Motor Operation Detection",
+            "description": "Power threshold to be interpreted as reaching a limit switch.",
+            "isFromConfig": true
+          },
+          "value": 30,
+          "timestamp": "2026-05-09T15:56:27.538Z"
+        },
+        {
+          "property": 22,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 2,
+            "min": 0,
+            "max": 65535,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 65535
+              }
+            ],
+            "default": 10,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Motor Operation Time",
+            "description": "Time period for the motor to continue operation.",
+            "isFromConfig": true
+          },
+          "value": 240,
+          "timestamp": "2026-05-09T15:56:27.720Z"
+        },
+        {
+          "property": 29,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Deactivated",
+              "1": "Start calibration process"
+            },
+            "label": "Forced Roller Shutter Calibration",
+            "description": "set to 1 will enter calibration mode",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:27.953Z"
+        },
+        {
+          "property": 30,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 2,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "No response to alarm frames",
+              "1": "Open blind",
+              "2": "Close blind"
+            },
+            "label": "Response to General Alarm",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:28.175Z"
+        },
+        {
+          "property": 31,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "No response to alarm frames",
+              "1": "Open blind",
+              "2": "Close blind"
+            },
+            "label": "Response to Water Flood Alarm",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:28.347Z"
+        },
+        {
+          "property": 32,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 1,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "No response to alarm frames",
+              "1": "Open blind",
+              "2": "Close blind"
+            },
+            "label": "Response to Smoke, CO, CO2 Alarm",
+            "isFromConfig": true
+          },
+          "value": 1,
+          "timestamp": "2026-05-09T15:56:28.831Z"
+        },
+        {
+          "property": 33,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 2,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 2
+              }
+            ],
+            "default": 1,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "No response to alarm frames",
+              "1": "Open blind",
+              "2": "Close blind"
+            },
+            "label": "Response to Temperature Alarm",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:29.027Z"
+        },
+        {
+          "property": 40,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 100,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 100
+              }
+            ],
+            "default": 10,
+            "format": 0,
+            "allowManualEntry": true,
+            "label": "Power Reports",
+            "description": "change that needs to occur to trigger the power report",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:30.612Z"
+        },
+        {
+          "property": 42,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 2,
+            "min": 0,
+            "max": 65534,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 65534
+              }
+            ],
+            "default": 3600,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Periodic Power or Energy Reports",
+            "description": "Time to the next report. Value of 0 means the reports are turned off.",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:31.253Z"
+        },
+        {
+          "property": 43,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 254,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 254
+              }
+            ],
+            "default": 10,
+            "format": 1,
+            "allowManualEntry": true,
+            "label": "Energy Reports",
+            "description": "Energy threshold to trigger report",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:31.774Z"
+        },
+        {
+          "property": 44,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Disabled",
+              "1": "Activated"
+            },
+            "label": "Self-Measurement",
+            "description": "if power and energy reports are to sent to the main controller",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:31.947Z"
+        },
+        {
+          "property": 50,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 0,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Associations active",
+              "1": "Scenes active"
+            },
+            "label": "Scenes/ Associations Activation",
+            "description": "whether scenes or associations are activated by the switch keys",
+            "isFromConfig": true
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:32.129Z"
+        },
+        {
+          "property": 35,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "valueSize": 1,
+            "min": 0,
+            "max": 1,
+            "allowed": [
+              {
+                "from": 0,
+                "to": 1
+              }
+            ],
+            "default": 1,
+            "format": 0,
+            "allowManualEntry": false,
+            "states": {
+              "0": "Do not change lamellas position",
+              "1": "Set lamellas to their extreme position"
+            },
+            "label": "Managing Lamellas in Response to Alarm",
+            "description": "0 no change, 1 extreme position",
+            "isFromConfig": true
+          }
+        }
+      ]
+    },
+    "Association": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "groupCount",
+          "value": 3,
+          "timestamp": "2026-05-09T15:56:23.038Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 1,
+          "value": [
+            45
+          ],
+          "timestamp": "2026-05-09T15:56:23.382Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 1,
+          "value": 16,
+          "timestamp": "2026-05-09T15:56:23.382Z",
+          "internal": true
+        },
+        {
+          "property": "nodeIds",
+          "propertyKey": 3,
+          "value": [
+            1
+          ],
+          "timestamp": "2026-05-09T15:56:25.892Z",
+          "internal": true
+        },
+        {
+          "property": "maxNodes",
+          "propertyKey": 3,
+          "value": 1,
+          "timestamp": "2026-05-09T15:56:25.892Z",
+          "internal": true
+        },
+        {
+          "property": "hasLifeline",
+          "value": true,
+          "timestamp": "2026-05-09T15:56:24.942Z",
+          "internal": true
+        }
+      ]
+    },
+    "Powerlevel": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": []
+    },
+    "Meter": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "value",
+          "propertyKey": 65536,
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "ccSpecific": {
+              "meterType": 1,
+              "scale": 0,
+              "rateType": 0
+            },
+            "label": "Electric [kWh]",
+            "unit": "kWh"
+          },
+          "value": 1.03,
+          "timestamp": "2026-05-25T00:34:25.444Z"
+        },
+        {
+          "property": "type",
+          "internal": true
+        },
+        {
+          "property": "supportsReset",
+          "internal": true
+        },
+        {
+          "property": "supportedScales",
+          "internal": true
+        },
+        {
+          "property": "supportedRateTypes",
+          "internal": true
+        },
+        {
+          "property": "reset"
+        }
+      ]
+    },
+    "Multilevel Switch": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 3,
+      "values": [
+        {
+          "property": "switchType",
+          "value": 3,
+          "timestamp": "2026-05-09T15:56:32.707Z",
+          "internal": true
+        },
+        {
+          "property": "currentValue",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "min": 0,
+            "max": 99,
+            "label": "Current value"
+          },
+          "value": 98,
+          "timestamp": "2026-05-25T04:05:36.902Z"
+        },
+        {
+          "property": "targetValue",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "min": 0,
+            "max": 99,
+            "label": "Target value",
+            "valueChangeOptions": [
+              "transitionDuration"
+            ]
+          },
+          "value": 98.01
+        },
+        {
+          "property": "Open",
+          "metadata": {
+            "type": "boolean",
+            "readable": false,
+            "writeable": true,
+            "label": "Perform a level change (Open)",
+            "valueChangeOptions": [
+              "transitionDuration"
+            ],
+            "states": {
+              "true": "Start",
+              "false": "Stop"
+            },
+            "ccSpecific": {
+              "switchType": 3
+            }
+          }
+        },
+        {
+          "property": "Close",
+          "metadata": {
+            "type": "boolean",
+            "readable": false,
+            "writeable": true,
+            "label": "Perform a level change (Close)",
+            "valueChangeOptions": [
+              "transitionDuration"
+            ],
+            "states": {
+              "true": "Start",
+              "false": "Stop"
+            },
+            "ccSpecific": {
+              "switchType": 3
+            }
+          }
+        },
+        {
+          "property": "duration",
+          "metadata": {
+            "type": "duration",
+            "readable": true,
+            "writeable": false,
+            "label": "Remaining duration"
+          }
+        },
+        {
+          "property": "restorePrevious"
+        },
+        {
+          "property": "superviseStartStopLevelChange",
+          "internal": true
+        }
+      ]
+    },
+    "Multilevel Sensor": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "Power",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Power",
+            "unit": "W",
+            "ccSpecific": {
+              "sensorType": 4,
+              "scale": 0
+            }
+          },
+          "value": 0,
+          "timestamp": "2026-05-25T02:31:47.023Z"
+        },
+        {
+          "property": "Humidity",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Humidity",
+            "unit": "%",
+            "ccSpecific": {
+              "sensorType": 5,
+              "scale": 0
+            }
+          },
+          "value": 61,
+          "timestamp": "2026-05-21T03:39:54.434Z"
+        },
+        {
+          "property": "Illuminance",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Illuminance",
+            "unit": "Lux",
+            "ccSpecific": {
+              "sensorType": 3,
+              "scale": 1
+            }
+          },
+          "value": 0,
+          "timestamp": "2026-05-22T02:59:02.991Z"
+        },
+        {
+          "property": "Air temperature",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": false,
+            "label": "Air temperature",
+            "unit": "°C",
+            "ccSpecific": {
+              "sensorType": 1,
+              "scale": 0
+            }
+          },
+          "value": 35.6,
+          "timestamp": "2026-05-24T13:16:41.509Z"
+        },
+        {
+          "property": "supportedSensorTypes",
+          "internal": true
+        }
+      ]
+    },
+    "Binary Switch": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "currentValue",
+          "metadata": {
+            "type": "boolean",
+            "readable": true,
+            "writeable": false,
+            "label": "Current value"
+          },
+          "timestamp": "2026-05-09T15:56:33.397Z"
+        },
+        {
+          "property": "targetValue",
+          "metadata": {
+            "type": "boolean",
+            "readable": true,
+            "writeable": true,
+            "label": "Target value",
+            "valueChangeOptions": [
+              "transitionDuration"
+            ]
+          }
+        }
+      ]
+    },
+    "Manufacturer Proprietary": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": [
+        {
+          "property": "fibaro",
+          "propertyKey": "venetianBlindsPosition",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "min": 0,
+            "max": 99,
+            "label": "Venetian blinds position"
+          },
+          "value": 74,
+          "timestamp": "2026-05-09T15:56:33.788Z"
+        }
+      ]
+    },
+    "Protection": {
+      "isSupported": true,
+      "isControlled": false,
+      "secure": false,
+      "version": 2,
+      "values": [
+        {
+          "property": "supportedRFStates",
+          "value": [
+            0,
+            1
+          ],
+          "timestamp": "2026-05-09T15:56:34.069Z",
+          "internal": true
+        },
+        {
+          "property": "supportedLocalStates",
+          "value": [
+            0,
+            2
+          ],
+          "timestamp": "2026-05-09T15:56:34.069Z",
+          "internal": true
+        },
+        {
+          "property": "supportsTimeout",
+          "value": false,
+          "timestamp": "2026-05-09T15:56:34.069Z",
+          "internal": true
+        },
+        {
+          "property": "supportsExclusiveControl",
+          "value": false,
+          "timestamp": "2026-05-09T15:56:34.069Z",
+          "internal": true
+        },
+        {
+          "property": "rf",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "label": "RF protection state",
+            "states": {
+              "0": "Unprotected",
+              "1": "NoControl"
+            }
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:34.410Z"
+        },
+        {
+          "property": "local",
+          "metadata": {
+            "type": "number",
+            "readable": true,
+            "writeable": true,
+            "label": "Local protection state",
+            "states": {
+              "0": "Unprotected",
+              "2": "NoOperationPossible"
+            }
+          },
+          "value": 0,
+          "timestamp": "2026-05-09T15:56:34.410Z"
+        },
+        {
+          "property": "exclusiveControlNodeId"
+        },
+        {
+          "property": "timeout"
+        }
+      ]
+    },
+    "Basic": {
+      "isSupported": false,
+      "isControlled": false,
+      "secure": false,
+      "version": 1,
+      "values": []
+    }
+  },
+  "maySupportBasicCC": false,
+  "configFileName": "/root/.zwave-js-ui/.config-db/devices/0x010f/fgr222_24.24_255.255.json"
+}

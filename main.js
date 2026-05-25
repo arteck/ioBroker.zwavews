@@ -253,7 +253,8 @@ class zwavews extends core.Adapter {
                         switch (eventTyp.event) {
                             case 'value updated':
                             case 'value added':
-                            case 'value notification': {
+                            case 'value notification':
+                            case  'notification': {
                                 const nodeArg = eventTyp.args;
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
 
@@ -305,7 +306,7 @@ class zwavews extends core.Adapter {
 
                                 parsePath = utils.deleteLastDot(parsePath);
 
-                                if (eventTyp.event === 'value notification') {
+                                if (eventTyp.event === 'value notification' || eventTyp.event === 'notification') {
                                     await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
                                 } else {
                                     await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
