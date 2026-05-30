@@ -6,11 +6,11 @@ const utils = require('./lib/utils');
 const constant = require('./lib/constants');
 const dmZwave = require('./lib/devicemgmt.js');
 
-const { adapterInfo } = require('./lib/messages');
-const { StatesController } = require('./lib/statesController');
-const { WebsocketController } = require('./lib/websocketController');
-const { Helper } = require('./lib/helper');
-const { MqttServerController } = require('./lib/mqttServerController');
+const {adapterInfo} = require('./lib/messages');
+const {StatesController} = require('./lib/statesController');
+const {WebsocketController} = require('./lib/websocketController');
+const {Helper} = require('./lib/helper');
+const {MqttServerController} = require('./lib/mqttServerController');
 
 class zwavews extends core.Adapter {
     constructor(options) {
@@ -161,7 +161,7 @@ class zwavews extends core.Adapter {
         wsClient.on('open', () => {
             this.log.info('Connect to zwave-js-ui over websocket connection.');
             this.startListening = true;
-            this.websocketController.send(JSON.stringify({ command: 'start_listening' }));
+            this.websocketController.send(JSON.stringify({command: 'start_listening'}));
         });
 
         wsClient.on('message', (message) => {
@@ -191,7 +191,7 @@ class zwavews extends core.Adapter {
             const messageObj = JSON.parse(message);
             const debugDevicesState = await this.getStateAsync('info.debugId');
 
-            this.log.debug(`--->>> fromZ2W_RAW1 -> ${JSON.stringify(messageObj)}`);
+            this.log.debug(`--->>> fromZ2W_RAW_1 -> ${JSON.stringify(messageObj)}`);
 
             const type = messageObj?.type;
 
@@ -218,20 +218,20 @@ class zwavews extends core.Adapter {
                             break;
                         }
 
-                        const { nodes: allNodes } = messageObj.result.state;
+                        const {nodes: allNodes} = messageObj.result.state;
 
                         for (const nodeData of allNodes) {
                             const nodeId = utils.formatNodeId(nodeData.nodeId);
 
                             if (debugDevicesState?.val && String(debugDevicesState.val).includes(nodeId)) {
-                                this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(nodeData)}`);
+                                this.log.warn(`--->>> fromZ2W_RAW_2-> ${JSON.stringify(nodeData)}`);
                             }
 
                             if (!this.nodeCache[nodeId]) {
                                 if (this.config.showNodeInfoMessage) {
                                     this.log.info(`Node Info Update for ${nodeId}`);
                                 }
-                                this.nodeCache[nodeId] = { nodeData };
+                                this.nodeCache[nodeId] = {nodeData};
                             }
                             await this.helper.createNode(nodeId, nodeData, this.parseOptions);
                         }
@@ -242,7 +242,7 @@ class zwavews extends core.Adapter {
                             this.log.info('all Nodes are ready');
                         }
                         if (this.startListening) {
-                            this.websocketController.send(JSON.stringify({ command: 'start_listening' }));
+                            this.websocketController.send(JSON.stringify({command: 'start_listening'}));
                             this.startListening = false;
                         }
                         break;
@@ -253,13 +253,12 @@ class zwavews extends core.Adapter {
                         switch (eventTyp.event) {
                             case 'value updated':
                             case 'value added':
-                            case 'value notification':
-                            case  'notification': {
+                            case 'value notification': {
                                 const nodeArg = eventTyp.args;
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
 
                                 if (debugDevicesState?.val && String(debugDevicesState.val).includes(nodeId)) {
-                                    this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(eventTyp)}`);
+                                    this.log.warn(`--->>> fromZ2W_RAW_3-> ${JSON.stringify(eventTyp)}`);
                                 }
 
                                 let parsePath = `${nodeId}.${nodeArg.commandClassName}.${nodeArg.propertyName
@@ -306,11 +305,18 @@ class zwavews extends core.Adapter {
 
                                 parsePath = utils.deleteLastDot(parsePath);
 
-                                if (eventTyp.event === 'value notification' || eventTyp.event === 'notification') {
+                                if (eventTyp.event === 'value notification') {
                                     await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
                                 } else {
                                     await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
                                 }
+
+                                break;
+                            }
+
+                            case  'notification': {
+                                const nodeId = utils.formatNodeId(eventTyp.nodeId);
+                                this.log.info(`--->>> fromZ2W_RAW_notification-> ${JSON.stringify(eventTyp)}`);
                                 break;
                             }
 
@@ -353,9 +359,9 @@ class zwavews extends core.Adapter {
                             case 'node removed': {
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
                                 if (this.config.useEventInDesc) {
-                                    await this.helper.updateDevice(nodeId, { desc: 'Node is Deleted' }, false);
+                                    await this.helper.updateDevice(nodeId, {desc: 'Node is Deleted'}, false);
                                 } else {
-                                    await this.helper.updateDevice(nodeId, { name: 'Node is Deleted' }, true);
+                                    await this.helper.updateDevice(nodeId, {name: 'Node is Deleted'}, true);
                                 }
                                 this.log.error(`Delete ${utils.formatNodeId(eventTyp.nodeId)}`);
                                 break;
