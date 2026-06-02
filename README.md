@@ -59,7 +59,9 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 * (arteck) Dependencies have been updated
 * (arteck) add vscode folder
 
-[Older changelogs can be found there](CHANGELOG_OLD.md)## License
+[Older changelogs can be found there](CHANGELOG_OLD.md)
+
+## License
 
 MIT License
 
