@@ -209,7 +209,8 @@
           "it": "Avviso IMPORTANTE!",
           "es": "Noticia importante!",
           "pl": "Ważna uwaga!",
-          "zh-cn": "重要通知!"
+          "zh-cn": "重要通知!",
+          "uk": "Важливе повідомлення!"
         },
         "text": {
           "en": "\"BREAKING CHANGE. <br> Adapter version 0.1.0 use now a underline on Object. check you alias or visu and corr this mistake. example: Manufacturer Specific is now Manufacturer_Specific",
@@ -236,7 +237,8 @@
           "it": "Leggimi",
           "es": "Léame",
           "pl": "Readme",
-          "zh-cn": "自述文件"
+          "zh-cn": "自述文件",
+          "uk": "Readme"
         },
         "buttons": [
           "agree",
