@@ -190,7 +190,7 @@ class zwavews extends core.Adapter {
             const eventMessage = await this.getStateAsync('info.eventMessage');
             
             let messageObj = JSON.parse(message);
-            if (eventMessage.length() > 2) {
+            if (eventMessage.length > 2) {
               this.log.error(`--->>> fromZ2W ->  manual event Message added`);
               messageObj = JSON.parse(eventMessage);
             }
