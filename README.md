@@ -42,6 +42,9 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (arteck) add notification
+
 ### 0.2.1 (2026-05-25)
 - (copilot) Adapter requires node.js >= 22 now
 * (arteck) fix new event

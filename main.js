@@ -27,7 +27,7 @@ class zwavews extends core.Adapter {
         this.statesController = null;
         this.helper = null;
         this.messageParseMutex = Promise.resolve();
-        this.parseOptions = {};
+        this.parseOptions = {write:false};
         this.startListening = false;
         this.allNodesCreated = false;
         this.nodeCache = {};
@@ -316,7 +316,17 @@ class zwavews extends core.Adapter {
 
                             case  'notification': {
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
-                                this.log.info(`--->>> fromZ2W_RAW_notification-> ${JSON.stringify(eventTyp)}`);
+                                const parsePath = `${nodeId}.notification`;
+                                const notifMessage = {
+                                      name: eventTyp.notificationLabel,
+                                      parameters: eventTyp.parameters
+                                };
+
+                                await this.helper.parse(parsePath, notifMessage, this.parseOptions, true);
+                                
+                                if (debugDevicesState?.val && String(debugDevicesState.val).includes(nodeId)) {
+                                    this.log.warn(`--->>> fromZ2W_RAW_notification-> ${JSON.stringify(eventTyp)}`);
+                                }
                                 break;
                             }
 
