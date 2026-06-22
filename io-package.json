@@ -356,6 +356,19 @@
       "native": {}
     },
     {
+      "_id": "info.eventMessage",
+      "type": "state",
+      "common": {
+        "name": "input eventmessage",
+        "type": "string",
+        "role": "state",
+        "read": true,
+        "write": true,
+        "def": ""
+      },
+      "native": {}
+    },
+    {
       "_id": "info.sendMessageAllowed",
       "type": "state",
       "common": {

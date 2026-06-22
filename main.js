@@ -180,7 +180,6 @@ class zwavews extends core.Adapter {
     }
 
     async messageParse(message) {
-        // FIX: release mit let deklarieren (war implizite globale Variable)
         let release;
         const lock = new Promise((resolve) => (release = resolve));
         const prev = this.messageParseMutex;
@@ -188,7 +187,14 @@ class zwavews extends core.Adapter {
         await prev;
 
         try {
-            const messageObj = JSON.parse(message);
+            const eventMessage = await this.getStateAsync('info.eventMessage');
+            
+            let messageObj = JSON.parse(message);
+            if (eventMessage.length() > 2) {
+              this.log.error(`--->>> fromZ2W ->  manual event Message added`);
+              messageObj = JSON.parse(eventMessage);
+            }
+            
             const debugDevicesState = await this.getStateAsync('info.debugId');
 
             this.log.debug(`--->>> fromZ2W_RAW_1 -> ${JSON.stringify(messageObj)}`);
