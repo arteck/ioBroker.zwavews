@@ -27,7 +27,7 @@ class zwavews extends core.Adapter {
         this.statesController = null;
         this.helper = null;
         this.messageParseMutex = Promise.resolve();
-        this.parseOptions = {write:false};
+        this.parseOptions = {write: false};
         this.startListening = false;
         this.allNodesCreated = false;
         this.nodeCache = {};
@@ -188,13 +188,8 @@ class zwavews extends core.Adapter {
 
         try {
             const eventMessage = await this.getStateAsync('info.eventMessage');
-            
             let messageObj = JSON.parse(message);
-            if (eventMessage.length > 2) {
-              this.log.error(`--->>> fromZ2W ->  manual event Message added`);
-              messageObj = JSON.parse(eventMessage);
-            }
-            
+
             const debugDevicesState = await this.getStateAsync('info.debugId');
 
             this.log.debug(`--->>> fromZ2W_RAW_1 -> ${JSON.stringify(messageObj)}`);
@@ -254,6 +249,11 @@ class zwavews extends core.Adapter {
                         break;
                     }
                     case 'event': {
+                        if (eventMessage?.val) {
+                            this.log.error(`--->>> fromZ2W ->  manual event Message added`);
+                            messageObj.event = JSON.parse(eventMessage.val);
+                        }
+
                         const eventTyp = messageObj.event;
 
                         switch (eventTyp.event) {
@@ -322,14 +322,14 @@ class zwavews extends core.Adapter {
 
                             case  'notification': {
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
-                                const parsePath = `${nodeId}.notification`;
+                                const parsePath = `${nodeId}.Notification`;
                                 const notifMessage = {
-                                      name: eventTyp.notificationLabel,
-                                      parameters: eventTyp.parameters
+                                    name: eventTyp.notificationLabel,
+                                    parameters: eventTyp.parameters
                                 };
 
                                 await this.helper.parse(parsePath, notifMessage, this.parseOptions, true);
-                                
+
                                 if (debugDevicesState?.val && String(debugDevicesState.val).includes(nodeId)) {
                                     this.log.warn(`--->>> fromZ2W_RAW_notification-> ${JSON.stringify(eventTyp)}`);
                                 }
