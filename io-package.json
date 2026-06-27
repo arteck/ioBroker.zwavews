@@ -309,7 +309,7 @@
       "common": {
         "name": "ZWAVE GATEWAY Status",
         "type": "string",
-        "role": "indicator.connected",
+        "role": "state",
         "read": true,
         "write": false,
         "def": ""

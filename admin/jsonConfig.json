@@ -9,25 +9,25 @@
       "type": "panel",
       "label": "devices",
       "items": {
-          "_devMng": {
-              "type": "deviceManager",
-              "sm": 12,
-              "style": {
-                  "width": "100%",
-                  "height": "100%",
-                  "overflow": "hidden"
-              }
+        "_devMng": {
+          "type": "deviceManager",
+          "sm": 12,
+          "style": {
+            "width": "100%",
+            "height": "100%",
+            "overflow": "hidden"
           }
+        }
       },
       "style": {
-          "width": "100%",
-          "height": "100%",
-          "overflow": "hidden"
+        "width": "100%",
+        "height": "100%",
+        "overflow": "hidden"
       },
       "innerStyle": {
-          "width": "100%",
-          "height": "100%",
-          "overflow": "hidden"
+        "width": "100%",
+        "height": "100%",
+        "overflow": "hidden"
       }
     },
     "_tab_Start": {
@@ -35,37 +35,37 @@
       "label": "Main Settings",
       "items": {
         "header_Start": {
-            "type": "header",
-            "text": "zwaveWS adapter settings",
-            "size": 2
+          "type": "header",
+          "text": "zwaveWS adapter settings",
+          "size": 2
         },
         "_textStart": {
-            "type": "staticText",
-            "text": "A detailed documentation with explanations and all further information can be found on this GitHub page",
-            "xs": 12,
-            "sm": 12,
-            "md": 6,
-            "lg": 4,
-            "xl": 4,
-            "style": {
-                "fontSize": 14,
-                "marginTop": 0
-            }
+          "type": "staticText",
+          "text": "A detailed documentation with explanations and all further information can be found on this GitHub page",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "style": {
+            "fontSize": 14,
+            "marginTop": 0
+          }
         },
         "_documentationLink": {
-            "type": "staticLink",
-            "label": "click for Documentation",
-            "button": true,
-            "href": "https://github.com/arteck/ioBroker.zwavews/blob/main/README.md",
-            "xs": 12,
-            "sm": 12,
-            "md": 6,
-            "lg": 4,
-            "xl": 4,
-            "style": {
-                "fontSize": 18,
-                "marginTop": 0
-            }
+          "type": "staticLink",
+          "label": "click for Documentation",
+          "button": true,
+          "href": "https://github.com/arteck/ioBroker.zwavews/blob/main/README.md",
+          "xs": 12,
+          "sm": 12,
+          "md": 6,
+          "lg": 4,
+          "xl": 4,
+          "style": {
+            "fontSize": 18,
+            "marginTop": 0
+          }
         },
         "connectionHeader": {
           "type": "header",
@@ -82,7 +82,7 @@
           "xl": 4,
           "type": "select",
           "options": [
-          {
+            {
               "label": "Websocket",
               "value": "ws"
             }
@@ -98,7 +98,7 @@
           "md": 6,
           "lg": 4,
           "xl": 4,
-          "default": "zwave",          
+          "default": "zwave",
           "hidden": "data.connectionType != 'exmqtt'"
         },
         "spacer01": {
@@ -187,7 +187,6 @@
           "xl": 4,
           "hidden": "data.connectionType != 'ws'"
         },
-        
         "externalMqttServerIP": {
           "type": "text",
           "label": "External MQTT-Server IP-Address",
@@ -352,7 +351,7 @@
           "xl": 12,
           "newLine": true
         },
-         "useEventInDesc": {
+        "useEventInDesc": {
           "type": "checkbox",
           "label": "The events such as 'Device removed' or 'Disabled' are displayed in the description instead of in the name",
           "xs": 12,

@@ -17,6 +17,7 @@
 	"MQTT-Server Port": "MQTT-Server-Port",
 	"More information": "Mehr Informationen",
 	"Other configurations": "Andere Konfigurationen",
+  "Create a dummy MQTT-Server for Zigbee2MQTT" : "Erzeuge einen fiktiven MQTT Server",
 	"Scheme": "Scheme",
 	"Select and configure your zwaveWS connection": "Konfiguriere die zwaveWS anbindung",
 	"Select connection to zwaveWS": "zwaveWS Verbindung auswählen",
@@ -33,5 +34,7 @@
 	"allow start send WS message directly after adapter start": "Erlaube das Senden von WS-Nachrichten direkt nach dem Adapterstart",
 	"click for Documentation": "hier geht es zur Dokumentation",
 	"new Type event Warning in log": "neue Typ-Ereigniswarnung im Protokoll",
-	"zwaveWS adapter settings": "Adaptereinstellungen für zwaveWS"
+	"zwaveWS adapter settings": "Adaptereinstellungen für zwaveWS".
+  "devices": "Devices",
+  "Main Settings" : "Main Settings"
 }
