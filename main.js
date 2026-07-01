@@ -252,6 +252,7 @@ class zwavews extends core.Adapter {
                         if (eventMessage?.val) {
                             this.log.error(`--->>> fromZ2W ->  manual event Message added`);
                             messageObj.event = JSON.parse(eventMessage.val);
+                            messageObj.event  = messageObj.event .event;
                         }
 
                         const eventTyp = messageObj.event;
@@ -323,10 +324,17 @@ class zwavews extends core.Adapter {
                             case  'notification': {
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
                                 const parsePath = `${nodeId}.Notification`;
-                                const notifMessage = {
-                                    name: eventTyp.notificationLabel,
-                                    parameters: eventTyp.parameters
-                                };
+
+                                 let notifMessage = {};
+
+                                if (eventTyp?.args) {
+                                    notifMessage = eventTyp.args;
+                                } else {
+                                    notifMessage = {
+                                        name: eventTyp.notificationLabel,
+                                        parameters: eventTyp.parameters
+                                    };
+                                }
 
                                 await this.helper.parse(parsePath, notifMessage, this.parseOptions, true);
 
