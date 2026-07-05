@@ -161,6 +161,11 @@ class zwavews extends core.Adapter {
         wsClient.on('open', () => {
             this.log.info('Connect to zwave-js-ui over websocket connection.');
             this.startListening = true;
+            this.websocketController.send(JSON.stringify({
+                command: 'set_api_schema',
+                messageId: 'api-schema',
+                schemaVersion: constant.api_schema,
+            }));
             this.websocketController.send(JSON.stringify({command: 'start_listening'}));
         });
 
@@ -215,7 +220,12 @@ class zwavews extends core.Adapter {
                         }
 
                         if (!messageObj.result?.state || !Array.isArray(messageObj.result.state.nodes)) {
-                            this.log.warn('<zwavews> Invalid result.state structure received, skipping.');
+                            if (messageObj.messageId !== 'api-schema')
+                            {
+                                this.log.warn('<zwavews> Invalid result.state structure received, skipping.');
+                            } else {
+                                this.log.info('Set API-Schema to ' + constant.api_schema);
+                            }
                             break;
                         }
 
