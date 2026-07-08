@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "0.2.1",
+    "version": "1.0.0",
     "news": {
+      "1.0.0": {
+        "en": "add notification",
+        "de": "Benachrichtigung hinzufügen",
+        "ru": "добавить уведомление",
+        "pt": "adicionar notificação",
+        "nl": "melding toevoegen",
+        "fr": "ajouter une notification",
+        "it": "aggiungi notifica",
+        "es": "agregar notificación",
+        "pl": "dodaj powiadomienie",
+        "uk": "додати сповіщення",
+        "zh-cn": "添加通知"
+      },
       "0.2.1": {
         "en": "Adapter requires node.js >= 22 now\nfix new event",
         "de": "Adapter benötigt node.js >= 22 jetzt\nneue veranstaltung",
@@ -80,19 +93,6 @@
         "pl": "naprawić nieznany stan z miejsca zbrodni\ndel ostatnia kropka z DP\nmiejsce",
         "uk": "виправити невідомого стану з сцени\ndel last dot від DP\nфіксувати сцена",
         "zh-cn": "从现场修复未知状态\ndP 的最后一个点\n修补场景"
-      },
-      "0.1.2": {
-        "en": "typo",
-        "de": "typo",
-        "ru": "опечатка",
-        "pt": "erro de digitação",
-        "nl": "type",
-        "fr": "typo",
-        "it": "tipo",
-        "es": "typo",
-        "pl": "typo",
-        "uk": "типи",
-        "zh-cn": "类型"
       }
     },
     "titleLang": {
