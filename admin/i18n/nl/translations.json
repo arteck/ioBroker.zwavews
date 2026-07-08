@@ -33,5 +33,8 @@
 	"allow start send WS message directly after adapter start": "toestaan dat WS-berichten direct na het starten van de adapter worden verzonden",
 	"click for Documentation": "klik voor documentatie",
 	"new Type event Warning in log": "nieuw Type gebeurtenis Waarschuwing in log",
-	"zwaveWS adapter settings": "Adapterinstellingen voor zwaveWS"
+	"zwaveWS adapter settings": "Adapterinstellingen voor zwaveWS",
+	"devices": "Apparaten",
+	"Main Settings": "Hoofdinstellingen",
+	"Create a dummy MQTT-Server for Zigbee2MQTT": "Maak een nep-MQTT-server voor Zigbee2MQTT"
 }
