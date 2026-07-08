@@ -33,5 +33,8 @@
 	"allow start send WS message directly after adapter start": "允许在适配器启动后直接发送 WS 消息",
 	"click for Documentation": "点击查看文档",
 	"new Type event Warning in log": "日志中新类型事件警告",
-	"zwaveWS adapter settings": "zwaveWS 适配器设置"
+	"zwaveWS adapter settings": "zwaveWS 适配器设置",
+	"devices": "设备",
+	"Main Settings": "主要设置",
+	"Create a dummy MQTT-Server for Zigbee2MQTT": "为 Zigbee2MQTT 创建一个虚拟 MQTT 服务器"
 }

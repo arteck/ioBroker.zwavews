@@ -33,5 +33,8 @@
 	"allow start send WS message directly after adapter start": "дозволить отправлять WS-сообщение непосредственно после запуска адаптера",
 	"click for Documentation": "натисніть для документації",
 	"new Type event Warning in log": "нове попередження про подію типу в журналі",
-	"zwaveWS adapter settings": "Налаштування адаптера для zwaveWS"
+	"zwaveWS adapter settings": "Налаштування адаптера для zwaveWS",
+	"devices": "Пристрої",
+	"Main Settings": "Основні налаштування",
+	"Create a dummy MQTT-Server for Zigbee2MQTT": "Створити фіктивний MQTT-сервер для Zigbee2MQTT"
 }
