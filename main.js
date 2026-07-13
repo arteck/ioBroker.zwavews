@@ -170,7 +170,7 @@ class zwavews extends core.Adapter {
                 const errorList = [];
                 for (const [id, state] of Object.entries(allStates)) {
 
-                    if (state && state.val === null) {
+                    if (state === null) {
                         try {
                             await this.delObjectAsync(id);
                             deletedList.push(id);
