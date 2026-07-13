@@ -282,7 +282,7 @@ class zwavews extends core.Adapter {
                                     .replace(/\s+/g, ' ')
                                     .trim()}`;
 
-                                if (nodeArg?.propertyKeyName) {
+                                if (nodeArg?.propertyKeyName && constant.MEANINGFUL_PROPERTY_KEYS[nodeArg.commandClassName]?.includes(nodeArg.property)) {
                                     parsePath = `${parsePath}.${nodeArg.propertyKeyName.toLowerCase()
                                         .replace(/[^\p{L}\p{N}\s]/gu, '')
                                         .replace(/\s+/g, ' ')

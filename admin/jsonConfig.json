@@ -377,6 +377,50 @@
           "md": 12,
           "lg": 12,
           "xl": 12
+        },
+        "spacerDeleteStates": {
+          "type": "staticText",
+          "text": "",
+          "xs": 12,
+          "sm": 12,
+          "md": 12,
+          "lg": 12,
+          "xl": 12,
+          "newLine": true
+        },
+        "headerDeleteStates": {
+          "type": "header",
+          "text": "",
+          "size": 4,
+          "newLine": true
+        },
+        "buttonDeleteNullStates": {
+          "type": "sendTo",
+          "command": "deleteNullStates",
+          "label": "Delete null states",
+          "variant": "contained",
+          "color": "secondary",
+          "icon": "delete",
+          "xs": 12,
+          "sm": 6,
+          "md": 4,
+          "lg": 3,
+          "xl": 3,
+          "newLine": true
+        },
+        "_deleteNullStatesResult": {
+          "type": "staticText",
+          "text": "",
+           "xs": 12,
+          "sm": 6,
+          "md": 4,
+          "lg": 3,
+          "xl": 3,
+          "newLine": false,
+          "style": {
+            "marginTop": 8,
+            "fontStyle": "italic"
+          }
         }
       }
     }
