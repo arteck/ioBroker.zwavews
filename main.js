@@ -283,14 +283,10 @@ class zwavews extends core.Adapter {
                                     .trim()}`;
 
                                 if (nodeArg?.propertyKeyName) {
-                                    parsePath = `${parsePath}.${nodeArg.propertyKeyName
+                                    parsePath = `${parsePath}.${nodeArg.propertyKeyName.toLowerCase()
                                         .replace(/[^\p{L}\p{N}\s]/gu, '')
                                         .replace(/\s+/g, ' ')
                                         .trim()}`;
-
-                                    if (constant.RGB.includes(nodeArg.propertyKeyName)) {
-                                        parsePath = utils.replaceLastDot(parsePath);
-                                    }
                                 }
 
                                 parsePath = utils.deleteLastDot(utils.formatObject(parsePath));

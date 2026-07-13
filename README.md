@@ -42,6 +42,9 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### **WORK IN PROGRESS**
+* (arteck) fix bulb set color
+
 ### 1.0.0 (2026-07-08)
 * (arteck) add notification
 
