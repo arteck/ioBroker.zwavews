@@ -32,9 +32,17 @@ class zwavews extends core.Adapter {
         this.allNodesCreated = false;
         this.nodeCache = {};
 
-        this.on('ready', this.onReady.bind(this));
-        this.on('stateChange', this.onStateChange.bind(this));
+        this.on('ready', () => {
+            this.onReady().catch((e) => this.log.error(`onReady error: ${e}`));
+        });
+        this.on('stateChange', (id, state) => {
+            this.onStateChange(id, state).catch((e) => this.log.error(`onStateChange error: ${e}`));
+        });
+        this.on('message', (obj) => {
+            this.onMessage(obj).catch((e) => this.log.error(`onMessage error: ${e}`));
+        });
         this.on('unload', this.onUnload.bind(this));
+
     }
 
     async onReady() {
@@ -146,6 +154,58 @@ class zwavews extends core.Adapter {
             }
 
             this.startWebsocket();
+        }
+    }
+
+
+    async onMessage(obj) {
+        if (!obj || !obj.command) {
+            return;
+        }
+
+        if (obj.command === 'deleteNullStates') {
+            try {
+                const allObjects = await this.getAdapterObjectsAsync();
+                const deletedList = [];
+                const errorList = [];
+               for (const id of Object.keys(allObjects)) {
+                   const iobObj = allObjects[id];
+
+                   if (id.includes('.info.')) {
+                        continue;
+                    }
+                    if (state?.val === null) {
+                        try {
+                            await this.adapter.delObjectAsync(id);
+                            deletedList.push(id);
+                        } catch (e) {
+                            errorList.push(id);
+                        }
+                    }
+                }
+                if (deletedList.length > 0) {
+                    this.log.warn(`deleteNullStates: deleted ${deletedList.length} state(s):`);
+                    for (const deletedId of deletedList) {
+                        this.log.warn(`  - ${deletedId}`);
+                    }
+                }
+                if (errorList.length > 0) {
+                    this.log.warn(`deleteNullStates: failed to delete ${errorList.length} state(s):`);
+                    for (const errId of errorList) {
+                        this.log.warn(`  - ${errId}`);
+                    }
+                }
+                const msg = `Deleted ${deletedList.length} null state(s)${errorList.length > 0 ? `, ${errorList.length} error(s)` : ''}.`;
+                this.log.info(`deleteNullStates: ${msg}`);
+                if (obj.callback) {
+                    this.sendTo(obj.from, obj.command, { result: msg }, obj.callback);
+                }
+            } catch (e) {
+                this.log.error(`deleteNullStates: Fehler: ${e.message}`);
+                if (obj.callback) {
+                    this.sendTo(obj.from, obj.command, { error: e.message }, obj.callback);
+                }
+            }
         }
     }
 
@@ -473,6 +533,8 @@ class zwavews extends core.Adapter {
             callback();
         }
     }
+
+
 
     async onStateChange(id, state) {
         if (!this.allNodesCreated) {
