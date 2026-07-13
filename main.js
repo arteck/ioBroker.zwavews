@@ -165,18 +165,14 @@ class zwavews extends core.Adapter {
 
         if (obj.command === 'deleteNullStates') {
             try {
-                const allObjects = await this.getAdapterObjectsAsync();
+                const allStates = await this.getStatesAsync('*');
                 const deletedList = [];
                 const errorList = [];
-               for (const id of Object.keys(allObjects)) {
-                   const iobObj = allObjects[id];
+                for (const [id, state] of Object.entries(allStates)) {
 
-                   if (id.includes('.info.')) {
-                        continue;
-                    }
-                    if (state?.val === null) {
+                    if (state && state.val === null) {
                         try {
-                            await this.adapter.delObjectAsync(id);
+                            await this.delObjectAsync(id);
                             deletedList.push(id);
                         } catch (e) {
                             errorList.push(id);
