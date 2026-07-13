@@ -169,18 +169,26 @@ class zwavews extends core.Adapter {
                 const allObjects = await this.getAdapterObjectsAsync();
                 const deletedList = [];
                 const errorList = [];
+                let delObj = false;
                 for (const [id, state] of Object.entries(allStates)) {
+                    delObj = false;
+                    if (state) {
+                         if (state.val === null) delObj = true;
+                         if (state.val === '') delObj = true;
 
-                    if (state === null || state == '') {
-                        const objNow = allObjects[id];
-                        try {
-                            if (!objNow.common.write) {
-                                await this.delObjectAsync(id);
-                                deletedList.push(id);
-                            }
-                        } catch (e) {
-                            errorList.push(id);
-                        }
+                         if (id.includes('zwavews.0.info')) delObj = false;
+
+                         if (delObj) {
+                             const objNow = allObjects[id];
+                             try {
+                                 if (!objNow.common.write) {
+                                     await this.delObjectAsync(id);
+                                     deletedList.push(id);
+                                 }
+                             } catch (e) {
+                                 errorList.push(id);
+                             }
+                         }
                     }
                 }
                 if (deletedList.length > 0) {
