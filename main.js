@@ -165,7 +165,7 @@ class zwavews extends core.Adapter {
 
         if (obj.command === 'deleteNullStates') {
             try {
-                const allStates       = await this.getStatesAsync('*');
+                const allStates = await this.getStatesAsync('*');
                 const allObjects = await this.getAdapterObjectsAsync();
                 const deletedList = [];
                 const errorList = [];
@@ -173,28 +173,28 @@ class zwavews extends core.Adapter {
                 for (const [id, state] of Object.entries(allStates)) {
                     delObj = false;
                     if (state) {
-                         if (state.val === null) {
-delObj = true;
-}
-                         if (state.val === '') {
-delObj = true;
-}
+                        if (state.val === null) {
+                            delObj = true;
+                        }
+                        if (state.val === '') {
+                            delObj = true;
+                        }
 
-                         if (id.includes('zwavews.0.info')) {
-delObj = false;
-}
+                        if (id.includes('zwavews.0.info')) {
+                            delObj = false;
+                        }
 
-                         if (delObj) {
-                             const objNow = allObjects[id];
-                             try {
-                                 if (!objNow.common.write) {
-                                     await this.delObjectAsync(id);
-                                     deletedList.push(id);
-                                 }
-                             } catch (e) {
-                                 errorList.push(id);
-                             }
-                         }
+                        if (delObj) {
+                            const objNow = allObjects[id];
+                            try {
+                                if (!objNow.common.write) {
+                                    await this.delObjectAsync(id);
+                                    deletedList.push(id);
+                                }
+                            } catch (e) {
+                                errorList.push(id);
+                            }
+                        }
                     }
                 }
                 if (deletedList.length > 0) {
@@ -212,12 +212,12 @@ delObj = false;
                 const msg = `Deleted ${deletedList.length} null state(s)${errorList.length > 0 ? `, ${errorList.length} error(s)` : ''}.`;
                 this.log.info(`deleteNullStates: ${msg}`);
                 if (obj.callback) {
-                    this.sendTo(obj.from, obj.command, { result: msg }, obj.callback);
+                    this.sendTo(obj.from, obj.command, {result: msg}, obj.callback);
                 }
             } catch (e) {
                 this.log.error(`deleteNullStates: Fehler: ${e.message}`);
                 if (obj.callback) {
-                    this.sendTo(obj.from, obj.command, { error: e.message }, obj.callback);
+                    this.sendTo(obj.from, obj.command, {error: e.message}, obj.callback);
                 }
             }
         }
@@ -335,7 +335,7 @@ delObj = false;
                         if (eventMessage?.val) {
                             this.log.error(`--->>> fromZ2W ->  manual event Message added`);
                             messageObj.event = JSON.parse(eventMessage.val);
-                            messageObj.event  = messageObj.event .event;
+                            messageObj.event = messageObj.event.event;
                         }
 
                         const eventTyp = messageObj.event;
@@ -356,7 +356,8 @@ delObj = false;
                                     .replace(/\s+/g, ' ')
                                     .trim()}`;
 
-                                if (nodeArg?.propertyKeyName && constant.MEANINGFUL_PROPERTY_KEYS[nodeArg.commandClassName]?.includes(nodeArg.property)) {
+                                const meaningfulKeysMain = constant.MEANINGFUL_PROPERTY_KEYS[nodeArg.commandClassName];
+                                if (nodeArg?.propertyKeyName && meaningfulKeysMain && (meaningfulKeysMain.includes('*') || meaningfulKeysMain.includes(nodeArg.propertyName ?? nodeArg.property))) {
                                     parsePath = `${parsePath}.${nodeArg.propertyKeyName.toLowerCase()
                                         .replace(/[^\p{L}\p{N}\s]/gu, '')
                                         .replace(/\s+/g, ' ')
@@ -404,7 +405,7 @@ delObj = false;
                                 const nodeId = utils.formatNodeId(eventTyp.nodeId);
                                 const parsePath = `${nodeId}.Notification`;
 
-                                 let notifMessage = {};
+                                let notifMessage = {};
 
                                 if (eventTyp?.args) {
                                     notifMessage = eventTyp.args;
@@ -547,7 +548,6 @@ delObj = false;
             callback();
         }
     }
-
 
 
     async onStateChange(id, state) {

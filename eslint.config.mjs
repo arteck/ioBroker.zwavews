@@ -29,6 +29,7 @@ export default [
              'prettier/prettier': ['off', { endOfLine: 'auto' }],
              'jsdoc/no-blank-blocks': 'off',
              'no-prototype-builtins': 'off',
+             'quote-props': 'warn',
              '@typescript-eslint/no-unused-vars': 'warn',
              'no-useless-escape': 'warn',
             // 'jsdoc/require-returns-description': 'off',

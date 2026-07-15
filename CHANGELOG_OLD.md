@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.6 (2026-04-23)
+* (arteck) add test
+
 ## 0.1.5 (2026-04-21)
 * (arteck) upd devicemanager
 

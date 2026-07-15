@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "news": {
+      "1.0.2": {
+        "en": "fix notification messages (check you scripts)",
+        "de": "Benachrichtigungsmeldungen korrigieren (Skripte prüfen)",
+        "ru": "Исправьте сообщения уведомлений (проверьте свои скрипты).",
+        "pt": "Corrigir mensagens de notificação (verifique seus scripts)",
+        "nl": "Corrigeer de notificatieberichten (controleer je scripts).",
+        "fr": "Corriger les messages de notification (vérifiez vos scripts)",
+        "it": "Correggi i messaggi di notifica (controlla i tuoi script)",
+        "es": "Corrige los mensajes de notificación (revisa tus scripts)",
+        "pl": "napraw wiadomości powiadomień (sprawdź swoje skrypty)",
+        "uk": "виправити сповіщення (перевірити скрипти)",
+        "zh-cn": "修复通知消息（检查您的脚本）"
+      },
       "1.0.1": {
         "en": "fix bulb set color\nadd delete null states button into adapter settings",
         "de": "Glühbirne reparieren, Farbe einstellen\nFüge eine Schaltfläche zum Löschen von Nullzuständen in die Adaptereinstellungen ein.",
@@ -80,19 +93,6 @@
         "pl": "upd devicemaniger",
         "uk": "напляскване",
         "zh-cn": "上调设备管理器"
-      },
-      "0.1.4": {
-        "en": "Dependencies have been updated\nadd vscode folder",
-        "de": "Abhängigkeiten wurden aktualisiert\nvscode ordner hinzufügen",
-        "ru": "Зависимости были обновлены\nдобавить vscode папку",
-        "pt": "As dependências foram atualizadas\nadicionar pasta vscode",
-        "nl": "Afhankelijkheden zijn bijgewerkt\nvscode map toevoegen",
-        "fr": "Les dépendances ont été actualisées\najouter un dossier vscode",
-        "it": "Le dipendenze sono state aggiornate\naggiungere cartella vscode",
-        "es": "Se han actualizado las dependencias\nañadir carpeta vscode",
-        "pl": "Zaktualizowano zależności\ndodaj folder vscode",
-        "uk": "Залежність було оновлено\nдодати папку проти коду",
-        "zh-cn": "依赖关系已更新\n添加 vscode 文件夹"
       }
     },
     "titleLang": {
