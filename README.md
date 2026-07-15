@@ -42,7 +42,7 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
-### **WORK IN PROGRESS**
+### 1.0.1 (2026-07-15)
 * (arteck) fix bulb set color
 * (arteck) add delete null states button into adapter settings
 
@@ -58,9 +58,6 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 ### 0.1.6 (2026-04-23)
 * (arteck) add test
-
-### 0.1.5 (2026-04-21)
-* (arteck) upd devicemanager
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
 

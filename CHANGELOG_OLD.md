@@ -1,4 +1,7 @@
 # Older changes
+## 0.1.5 (2026-04-21)
+* (arteck) upd devicemanager
+
 ## 0.1.4 (2026-04-16)
 * (arteck) Dependencies have been updated
 * (arteck) add vscode folder

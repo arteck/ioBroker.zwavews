@@ -173,10 +173,16 @@ class zwavews extends core.Adapter {
                 for (const [id, state] of Object.entries(allStates)) {
                     delObj = false;
                     if (state) {
-                         if (state.val === null) delObj = true;
-                         if (state.val === '') delObj = true;
+                         if (state.val === null) {
+delObj = true;
+}
+                         if (state.val === '') {
+delObj = true;
+}
 
-                         if (id.includes('zwavews.0.info')) delObj = false;
+                         if (id.includes('zwavews.0.info')) {
+delObj = false;
+}
 
                          if (delObj) {
                              const objNow = allObjects[id];

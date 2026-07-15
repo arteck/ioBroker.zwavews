@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "fix bulb set color\nadd delete null states button into adapter settings",
+        "de": "Glühbirne reparieren, Farbe einstellen\nFüge eine Schaltfläche zum Löschen von Nullzuständen in die Adaptereinstellungen ein.",
+        "ru": "исправить цвет комплекта лампочек\nДобавить кнопку удаления нулевых состояний в настройки адаптера.",
+        "pt": "consertar lâmpada de ajuste de cor\nAdicionar botão para excluir estados nulos nas configurações do adaptador",
+        "nl": "vaste lamp set kleur\nVoeg een knop 'Null-statussen verwijderen' toe aan de adapterinstellingen.",
+        "fr": "couleur de l'ampoule fixe\nAjouter un bouton de suppression des états nuls dans les paramètres de l'adaptateur",
+        "it": "set di lampadine fisse a colori\nAggiungi il pulsante \"Elimina stati nulli\" alle impostazioni dell'adattatore.",
+        "es": "color del conjunto de bombillas fijo\nagregar botón para eliminar estados nulos en la configuración del adaptador",
+        "pl": "naprawa zestawu żarówek w kolorze\ndodaj przycisk usuwania stanów zerowych do ustawień adaptera",
+        "uk": "виправити колір набору лампочок\nдодати кнопку видалення нульових станів у налаштування адаптера",
+        "zh-cn": "固定灯泡设置颜色\n在适配器设置中添加删除空状态按钮"
+      },
       "1.0.0": {
         "en": "add notification",
         "de": "Benachrichtigung hinzufügen",
@@ -80,19 +93,6 @@
         "pl": "Zaktualizowano zależności\ndodaj folder vscode",
         "uk": "Залежність було оновлено\nдодати папку проти коду",
         "zh-cn": "依赖关系已更新\n添加 vscode 文件夹"
-      },
-      "0.1.3": {
-        "en": "fix unknown state from scene\ndel last dot from DP\nfix scene",
-        "de": "unbekannter zustand von szene\nder letzte Punkt von DP\nfixe szene",
-        "ru": "неизвестное состояние с места происшествия\nпоследняя точка от DP\nисправить",
-        "pt": "corrigir o estado desconhecido da cena\ndo último ponto do DP\ncorrigir cena",
-        "nl": "fix onbekende toestand vanaf locatie\nde laatste stip van DP\nscène herstellen",
-        "fr": "réparer l'état inconnu de la scène\ndel dernier point de DP\nréparer la scène",
-        "it": "fissare stato sconosciuto dalla scena\ndel ultimo punto da DP\ncorrere la scena",
-        "es": "arreglar estado desconocido de la escena\ndel último punto de DP\nescena arreglada",
-        "pl": "naprawić nieznany stan z miejsca zbrodni\ndel ostatnia kropka z DP\nmiejsce",
-        "uk": "виправити невідомого стану з сцени\ndel last dot від DP\nфіксувати сцена",
-        "zh-cn": "从现场修复未知状态\ndP 的最后一个点\n修补场景"
       }
     },
     "titleLang": {
