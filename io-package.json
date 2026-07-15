@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+      "1.0.3": {
+        "en": "fix thermostat set point",
+        "de": "Thermostat-Sollwert",
+        "ru": "исправить заданную температуру термостата",
+        "pt": "ajuste o ponto de ajuste do termostato",
+        "nl": "thermostaat instelpunt",
+        "fr": "point de consigne du thermostat",
+        "it": "impostare il punto di regolazione del termostato",
+        "es": "Fijar el punto de ajuste del termostato",
+        "pl": "naprawa termostatu",
+        "uk": "виправити уставку термостата",
+        "zh-cn": "固定恒温器设定点"
+      },
       "1.0.2": {
         "en": "fix notification messages (check you scripts)",
         "de": "Benachrichtigungsmeldungen korrigieren (Skripte prüfen)",
@@ -80,19 +93,6 @@
         "pl": "dodać test",
         "uk": "додати тест",
         "zh-cn": "添加测试"
-      },
-      "0.1.5": {
-        "en": "upd devicemanager",
-        "de": "gerätemanager und -manager",
-        "ru": "улучшенный devicemanager",
-        "pt": "gerenciador de dispositivos upd",
-        "nl": "upd apparaatbeheerder",
-        "fr": "gestionnaire d'appareil",
-        "it": "upd devicemanager",
-        "es": "upd devicemanager",
-        "pl": "upd devicemaniger",
-        "uk": "напляскване",
-        "zh-cn": "上调设备管理器"
       }
     },
     "titleLang": {
