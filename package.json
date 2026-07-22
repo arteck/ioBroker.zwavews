@@ -44,7 +44,7 @@
     "@iobroker/testing": "^5.2.2",
     "@tsconfig/node22": "^22.0.5",
     "@types/node-schedule": "^2.1.8",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "main": "main.js",
   "files": [
