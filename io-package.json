@@ -70,16 +70,16 @@
       },
       "0.2.0": {
         "en": "del deprectated setStateAsync",
-        "de": "del deprected setStateAsync",
-        "ru": "обсуждение StateAsync",
-        "pt": "del deprectated setStateAsync",
-        "nl": "del deprectated setStateAsync",
-        "fr": "set dépréciéStateAsync",
-        "it": "del set deprettatoStateAsync",
-        "es": "del deprectated setStateAsync",
-        "pl": "del deprectated setStateAsync",
-        "uk": "deprectated setStateAsync",
-        "zh-cn": "已贬值的设置"
+        "de": "del veraltete Methode „setStateAsync“",
+        "ru": "del устаревшая функция setStateAsync",
+        "pt": "del setStateAsync (descontinuado)",
+        "nl": "del verouderde setStateAsync",
+        "fr": "Supprimer la méthode obsolète `setStateAsync`",
+        "it": "del setStateAsync (funzione deprecata)",
+        "es": "del método obsoleto `setStateAsync`",
+        "pl": "del przestarzała funkcja setStateAsync",
+        "uk": "del застарілий setStateAsync",
+        "zh-cn": "del deprectated setStateAsync"
       },
       "0.1.6": {
         "en": "add test",
