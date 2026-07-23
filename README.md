@@ -40,6 +40,8 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 <img width="1887" height="479" alt="grafik" src="https://github.com/user-attachments/assets/6ed8cf36-2d91-435f-91d7-86e430bb0c6c" />
 
+### **WORK IN PROGRESS**
+* (arteck) fix reconnect ws
 
 ## Changelog
 ### 1.0.4 (2026-07-23)

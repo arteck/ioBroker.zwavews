@@ -253,8 +253,8 @@ class zwavews extends core.Adapter {
             await this.statesController.setAllAvailableToFalse();
             this.startListening = false;
             this.allNodesCreated = false;
-            this.deviceCache = {};
-            this.nodeCache = {};
+            Object.keys(this.deviceCache).forEach(k => delete this.deviceCache[k]);
+            Object.keys(this.nodeCache).forEach(k => delete this.nodeCache[k]);
             this.log.info('Websocket connection closed. Attempting to reconnect...');
         });
     }
@@ -318,7 +318,7 @@ class zwavews extends core.Adapter {
                                 }
                                 this.nodeCache[nodeId] = {nodeData};
                             }
-                            await this.helper.createNode(nodeId, nodeData, this.parseOptions);
+                            await this.helper.createNode(nodeId, nodeData);
                         }
 
                         this.allNodesCreated = true;
