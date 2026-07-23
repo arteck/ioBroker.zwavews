@@ -228,7 +228,8 @@ class zwavews extends core.Adapter {
         const wsClient = this.websocketController.initWsClient();
 
         if (!wsClient) {
-            this.log.error('<zwavews> initWsClient returned null — websocket not started.');
+            // initWsClient hat autoRestart() bereits getriggert – kein manueller Eingriff nötig.
+            this.log.warn('<zwavews> initWsClient failed — auto-restart already scheduled.');
             return;
         }
 
