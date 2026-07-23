@@ -1,0 +1,3792 @@
+{
+  "id": 100,
+  "name": "Ben LED ep1 neon / ep2 led",
+  "loc": "Ben",
+  "values": [
+    {
+      "id": "100-91-0-scene-001",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "scene",
+      "propertyName": "scene",
+      "propertyKey": "001",
+      "propertyKeyName": "001",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Scene 001",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "KeyPressed",
+          "value": 0
+        },
+        {
+          "text": "KeyReleased",
+          "value": 1
+        },
+        {
+          "text": "KeyHeldDown",
+          "value": 2
+        },
+        {
+          "text": "KeyPressed2x",
+          "value": 3
+        }
+      ],
+      "lastUpdate": 1783881407203
+    },
+    {
+      "id": "100-91-0-scene-002",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "scene",
+      "propertyName": "scene",
+      "propertyKey": "002",
+      "propertyKeyName": "002",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Scene 002",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "KeyPressed",
+          "value": 0
+        },
+        {
+          "text": "KeyReleased",
+          "value": 1
+        },
+        {
+          "text": "KeyHeldDown",
+          "value": 2
+        },
+        {
+          "text": "KeyPressed2x",
+          "value": 3
+        }
+      ],
+      "lastUpdate": 1783881407203
+    },
+    {
+      "id": "100-91-0-slowRefresh",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 91,
+      "commandClassName": "Central Scene",
+      "endpoint": 0,
+      "property": "slowRefresh",
+      "propertyName": "slowRefresh",
+      "type": "boolean",
+      "readable": true,
+      "writeable": true,
+      "description": "When this is true, KeyHeldDown notifications are sent every 55s. When this is false, the notifications are sent every 200ms.",
+      "label": "Send held down notifications at a slow rate",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "lastUpdate": 1783881407203
+    },
+    {
+      "id": "100-112-0-1",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 1,
+      "propertyName": "SW1 Switch Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "SW1 Switch Type",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Momentary switch",
+          "value": 0
+        },
+        {
+          "text": "Toggle switch (Follow switch)",
+          "value": 1
+        },
+        {
+          "text": "Toggle switch (Change on toggle)",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1784286335268,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-2",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 2,
+      "propertyName": "SW2 Switch Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "SW2 Switch Type",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Momentary switch",
+          "value": 0
+        },
+        {
+          "text": "Toggle switch (Follow switch)",
+          "value": 1
+        },
+        {
+          "text": "Toggle switch (Change on toggle)",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1784286331201,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-6",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 6,
+      "propertyName": "Swap Inputs",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Swap Inputs",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Normal (SW1 - O1, SW2 - O2)",
+          "value": 0
+        },
+        {
+          "text": "Swapped (SW1 - O2, SW2 - O1)",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877028491,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-16",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 16,
+      "propertyName": "Swap Outputs",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Swap Outputs",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Normal",
+          "value": 0
+        },
+        {
+          "text": "Swapped",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877028643,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-17",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "O1: State After Power Failure",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: State After Power Failure",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Previous state",
+          "value": 0
+        },
+        {
+          "text": "Always off",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783934892819,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-18",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "O2: State After Power Failure",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O2: State After Power Failure",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Previous state",
+          "value": 0
+        },
+        {
+          "text": "Always off",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783934894431,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-19",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 19,
+      "propertyName": "O1: Auto-Off Timer",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The timer resets to zero each time the device receives an ON command",
+      "label": "O1: Auto-Off Timer",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 32535,
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029137,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-20",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 20,
+      "propertyName": "O1: Auto-On Timer",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The timer resets to zero each time the device receives an OFF command",
+      "label": "O1: Auto-On Timer",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 32535,
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029286,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-25",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 25,
+      "propertyName": "O1: Auto-On/Off Timer Unit",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The value is rounded up to the next multiple of 10. Values 1-10 = 10ms, 11-20 = 20ms, ...",
+      "label": "O1: Auto-On/Off Timer Unit",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "seconds",
+          "value": 0
+        },
+        {
+          "text": "10 ms",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029438,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-21",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 21,
+      "propertyName": "O2: Auto-Off Timer",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The timer resets to zero each time the device receives an ON command",
+      "label": "O2: Auto-Off Timer",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 32535,
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029589,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-22",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 22,
+      "propertyName": "O2: Auto-On Timer",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The timer resets to zero each time the device receives an OFF command",
+      "label": "O2: Auto-On Timer",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 32535,
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029788,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-26",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 26,
+      "propertyName": "O2: Auto-On/Off Timer Unit",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "The value is rounded up to the next multiple of 10. Values 1-10 = 10ms, 11-20 = 20ms, ...",
+      "label": "O2: Auto-On/Off Timer Unit",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "seconds",
+          "value": 0
+        },
+        {
+          "text": "10 ms",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877029937,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-23",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "O1: Relay Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: Relay Type",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "NO: normally open",
+          "value": 0
+        },
+        {
+          "text": "NC: normally closed",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783934914044,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-24",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 24,
+      "propertyName": "O2: Relay Type",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O2: Relay Type",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "NO: normally open",
+          "value": 0
+        },
+        {
+          "text": "NC: normally closed",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783934915439,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-36",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 36,
+      "propertyName": "O1: Power Change Report Threshold",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: Power Change Report Threshold",
+      "default": 50,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 50,
+      "lastUpdate": 1783877030389,
+      "newValue": 50
+    },
+    {
+      "id": "100-112-0-39",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 39,
+      "propertyName": "O1: Minimum Time Between Power Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O1: Minimum Time Between Power Reports",
+      "default": 30,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 120,
+      "unit": "seconds",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 30,
+      "lastUpdate": 1783877030537,
+      "newValue": 30
+    },
+    {
+      "id": "100-112-0-37",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 37,
+      "propertyName": "O2: Power Change Report Threshold",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O2: Power Change Report Threshold",
+      "default": 50,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 50,
+      "lastUpdate": 1783877030684,
+      "newValue": 50
+    },
+    {
+      "id": "100-112-0-40",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 40,
+      "propertyName": "O2: Minimum Time Between Power Reports",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "O2: Minimum Time Between Power Reports",
+      "default": 30,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 120,
+      "unit": "seconds",
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        }
+      ],
+      "value": 30,
+      "lastUpdate": 1783877030838,
+      "newValue": 30
+    },
+    {
+      "id": "100-112-0-120",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 120,
+      "propertyName": "Factory Reset",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Reset to factory default settings and remove from the Z-Wave network.",
+      "label": "Factory Reset",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Idle",
+          "value": 0
+        },
+        {
+          "text": "Factory reset",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877030989,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-201",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 201,
+      "propertyName": "Serial Number: Part 1",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 1",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "list": false,
+      "value": 2147483647,
+      "lastUpdate": 1783877031137,
+      "newValue": 2147483647
+    },
+    {
+      "id": "100-112-0-202",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 202,
+      "propertyName": "Serial Number: Part 2",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 2",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "list": false,
+      "value": 2147483647,
+      "lastUpdate": 1783877031514,
+      "newValue": 2147483647
+    },
+    {
+      "id": "100-112-0-203",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 203,
+      "propertyName": "Serial Number: Part 3",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial Number: Part 3",
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 2147483647,
+      "list": false,
+      "value": 2147483647,
+      "lastUpdate": 1783877031667,
+      "newValue": 2147483647
+    },
+    {
+      "id": "100-112-0-7",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 7,
+      "propertyName": "SW1 Detached mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 not detached, 1 detached",
+      "label": "SW1 Detached mode",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877031817,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-8",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 8,
+      "propertyName": "SW2 Detached mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "0 not detached, 1 detached",
+      "label": "SW2 Detached mode",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877032107,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-117",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 117,
+      "propertyName": "Reboot Device",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Reboot Ddvice",
+      "label": "Reboot Device",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877032542,
+      "newValue": 0
+    },
+    {
+      "id": "100-112-0-118",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 118,
+      "propertyName": "Enable SW exclusion",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "1 Enabled, 0 Disabled",
+      "label": "Enable SW exclusion",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877032588,
+      "newValue": 0
+    },
+    {
+      "id": "100-114-0-productId",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productId",
+      "propertyName": "productId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 129,
+      "lastUpdate": 1783877005308,
+      "newValue": 129
+    },
+    {
+      "id": "100-114-0-productType",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productType",
+      "propertyName": "productType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product type",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 2,
+      "lastUpdate": 1783877005309,
+      "newValue": 2
+    },
+    {
+      "id": "100-114-0-manufacturerId",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "manufacturerId",
+      "propertyName": "manufacturerId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Manufacturer ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 1120,
+      "lastUpdate": 1783877005309,
+      "newValue": 1120
+    },
+    {
+      "id": "100-134-0-hardwareVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hardwareVersion",
+      "propertyName": "hardwareVersion",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip hardware version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1783877005417,
+      "newValue": 1
+    },
+    {
+      "id": "100-134-0-firmwareVersions",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "firmwareVersions",
+      "propertyName": "firmwareVersions",
+      "type": "string[]",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip firmware versions",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": [
+        "16.5",
+        "3.0"
+      ],
+      "lastUpdate": 1783877005418,
+      "newValue": [
+        "16.5",
+        "3.0"
+      ]
+    },
+    {
+      "id": "100-134-0-protocolVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "protocolVersion",
+      "propertyName": "protocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23",
+      "lastUpdate": 1783877005419,
+      "newValue": "7.23"
+    },
+    {
+      "id": "100-134-0-libraryType",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "libraryType",
+      "propertyName": "libraryType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Library type",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Unknown",
+          "value": 0
+        },
+        {
+          "text": "Static Controller",
+          "value": 1
+        },
+        {
+          "text": "Controller",
+          "value": 2
+        },
+        {
+          "text": "Enhanced Slave",
+          "value": 3
+        },
+        {
+          "text": "Slave",
+          "value": 4
+        },
+        {
+          "text": "Installer",
+          "value": 5
+        },
+        {
+          "text": "Routing Slave",
+          "value": 6
+        },
+        {
+          "text": "Bridge Controller",
+          "value": 7
+        },
+        {
+          "text": "Device under Test",
+          "value": 8
+        },
+        {
+          "text": "N/A",
+          "value": 9
+        },
+        {
+          "text": "AV Remote",
+          "value": 10
+        },
+        {
+          "text": "AV Device",
+          "value": 11
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1783877005420,
+      "newValue": 3
+    },
+    {
+      "id": "100-134-0-applicationBuildNumber",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationBuildNumber",
+      "propertyName": "applicationBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 43981,
+      "lastUpdate": 1783877006591,
+      "newValue": 43981
+    },
+    {
+      "id": "100-134-0-applicationVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationVersion",
+      "propertyName": "applicationVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "16.5.0",
+      "lastUpdate": 1783877006591,
+      "newValue": "16.5.0"
+    },
+    {
+      "id": "100-134-0-zWaveProtocolBuildNumber",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolBuildNumber",
+      "propertyName": "zWaveProtocolBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 562,
+      "lastUpdate": 1783877006591,
+      "newValue": 562
+    },
+    {
+      "id": "100-134-0-zWaveProtocolVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolVersion",
+      "propertyName": "zWaveProtocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23.4",
+      "lastUpdate": 1783877006591,
+      "newValue": "7.23.4"
+    },
+    {
+      "id": "100-134-0-hostInterfaceBuildNumber",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceBuildNumber",
+      "propertyName": "hostInterfaceBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877006592,
+      "newValue": 0
+    },
+    {
+      "id": "100-134-0-hostInterfaceVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceVersion",
+      "propertyName": "hostInterfaceVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "unused",
+      "lastUpdate": 1783877006592,
+      "newValue": "unused"
+    },
+    {
+      "id": "100-134-0-applicationFrameworkBuildNumber",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkBuildNumber",
+      "propertyName": "applicationFrameworkBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 43981,
+      "lastUpdate": 1783877006592,
+      "newValue": 43981
+    },
+    {
+      "id": "100-134-0-applicationFrameworkAPIVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkAPIVersion",
+      "propertyName": "applicationFrameworkAPIVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "10.23.4",
+      "lastUpdate": 1783877006592,
+      "newValue": "10.23.4"
+    },
+    {
+      "id": "100-134-0-sdkVersion",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "sdkVersion",
+      "propertyName": "sdkVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "SDK version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.23.4",
+      "lastUpdate": 1783877006592,
+      "newValue": "7.23.4"
+    },
+    {
+      "id": "100-135-0-value",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "value",
+      "propertyName": "value",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Indicator value",
+      "ccSpecific": {
+        "indicatorId": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-135-0-identify",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "identify",
+      "propertyName": "identify",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Identify",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Identify",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-37-1-duration",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 1,
+      "property": "duration",
+      "propertyName": "duration",
+      "type": "duration",
+      "readable": true,
+      "writeable": false,
+      "label": "Remaining duration",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": {
+        "value": 0,
+        "unit": "seconds"
+      },
+      "lastUpdate": 1784294633500,
+      "newValue": {
+        "value": 0,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "100-37-1-targetValue",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 1,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": true,
+      "lastUpdate": 1784365177238,
+      "newValue": true
+    },
+    {
+      "id": "100-37-1-currentValue",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 1,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": true,
+      "isCurrentValue": true,
+      "targetValue": "37-1-targetValue",
+      "lastUpdate": 1784365177239,
+      "newValue": true
+    },
+    {
+      "id": "100-50-1-value-65537",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 65537,
+      "propertyKeyName": "Electric_kWh_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 0,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "kWh",
+      "list": false,
+      "value": 0.47,
+      "lastUpdate": 1784407229024,
+      "newValue": 0.47
+    },
+    {
+      "id": "100-50-1-value-66049",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 66049,
+      "propertyKeyName": "Electric_W_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [W]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 2,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "W",
+      "list": false,
+      "value": 5.2,
+      "lastUpdate": 1784383207603,
+      "newValue": 5.2
+    },
+    {
+      "id": "100-50-1-reset-65537",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "reset",
+      "propertyName": "reset",
+      "propertyKey": 65537,
+      "propertyKeyName": "UNKNOWN (0x010001)",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "rateType": 1,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-50-1-reset",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 1,
+      "property": "reset",
+      "propertyName": "reset",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset accumulated values",
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-113-1-alarmType",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877015243,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-1-alarmLevel",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877015244,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-1-Heat Alarm-Heat sensor status",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Heat Alarm",
+      "propertyName": "Heat Alarm",
+      "propertyKey": "Heat sensor status",
+      "propertyKeyName": "Heat sensor status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Heat sensor status",
+      "ccSpecific": {
+        "notificationType": 4
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Overheat detected",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877015293,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-1-Power Management-Over-current status",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 1,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-current status",
+      "propertyKeyName": "Over-current status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-current status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-current detected",
+          "value": 6
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877015345,
+      "newValue": 0
+    },
+    {
+      "id": "100-37-2-duration",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 2,
+      "property": "duration",
+      "propertyName": "duration",
+      "type": "duration",
+      "readable": true,
+      "writeable": false,
+      "label": "Remaining duration",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": {
+        "value": 0,
+        "unit": "seconds"
+      },
+      "lastUpdate": 1784408686983,
+      "newValue": {
+        "value": 0,
+        "unit": "seconds"
+      }
+    },
+    {
+      "id": "100-37-2-targetValue",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 2,
+      "property": "targetValue",
+      "propertyName": "targetValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": true,
+      "label": "Target value",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": true,
+      "lastUpdate": 1784408686983,
+      "newValue": true
+    },
+    {
+      "id": "100-37-2-currentValue",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 37,
+      "commandClassName": "Binary Switch",
+      "endpoint": 2,
+      "property": "currentValue",
+      "propertyName": "currentValue",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Current value",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "list": false,
+      "value": true,
+      "isCurrentValue": true,
+      "targetValue": "37-2-targetValue",
+      "lastUpdate": 1784408686984,
+      "newValue": true
+    },
+    {
+      "id": "100-50-2-value-65537",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 2,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 65537,
+      "propertyKeyName": "Electric_kWh_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 0,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "kWh",
+      "list": false,
+      "value": 1.52,
+      "lastUpdate": 1784410492856,
+      "newValue": 1.52
+    },
+    {
+      "id": "100-50-2-value-66049",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 2,
+      "property": "value",
+      "propertyName": "value",
+      "propertyKey": 66049,
+      "propertyKeyName": "Electric_W_Consumed",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Electric Consumption [W]",
+      "ccSpecific": {
+        "meterType": 1,
+        "scale": 2,
+        "rateType": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "unit": "W",
+      "list": false,
+      "value": 45.6,
+      "lastUpdate": 1784408684313,
+      "newValue": 45.6
+    },
+    {
+      "id": "100-50-2-reset-65537",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 2,
+      "property": "reset",
+      "propertyName": "reset",
+      "propertyKey": 65537,
+      "propertyKeyName": "UNKNOWN (0x010001)",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset Electric Consumption [kWh]",
+      "ccSpecific": {
+        "meterType": 1,
+        "rateType": 1,
+        "scale": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-50-2-reset",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 50,
+      "commandClassName": "Meter",
+      "endpoint": 2,
+      "property": "reset",
+      "propertyName": "reset",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Reset accumulated values",
+      "stateless": false,
+      "commandClassVersion": 6,
+      "list": true,
+      "states": [
+        {
+          "text": "Reset",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1783881407205
+    },
+    {
+      "id": "100-113-2-alarmType",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877019437,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-2-alarmLevel",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1783877019438,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-2-Heat Alarm-Heat sensor status",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Heat Alarm",
+      "propertyName": "Heat Alarm",
+      "propertyKey": "Heat sensor status",
+      "propertyKeyName": "Heat sensor status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Heat sensor status",
+      "ccSpecific": {
+        "notificationType": 4
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Overheat detected",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877019707,
+      "newValue": 0
+    },
+    {
+      "id": "100-113-2-Power Management-Over-current status",
+      "nodeId": 100,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 2,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Over-current status",
+      "propertyKeyName": "Over-current status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Over-current status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Over-current detected",
+          "value": 6
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1783877020212,
+      "newValue": 0
+    }
+  ],
+  "groups": [
+    {
+      "title": "Lifeline",
+      "endpoint": 0,
+      "value": 1,
+      "maxNodes": 9,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "SW1: On/Off",
+      "endpoint": 0,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "SW1: Start/Stop Level Change",
+      "endpoint": 0,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "SW2: On/Off",
+      "endpoint": 0,
+      "value": 4,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "SW2: Start/Stop Level Change",
+      "endpoint": 0,
+      "value": 5,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "SW1: On/Off",
+      "endpoint": 1,
+      "value": 1,
+      "maxNodes": 1,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "SW1: Start/Stop Level Change",
+      "endpoint": 1,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Start/stop set level [SW1]",
+      "endpoint": 1,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "SW2: On/Off",
+      "endpoint": 2,
+      "value": 1,
+      "maxNodes": 1,
+      "isLifeline": true,
+      "multiChannel": true
+    },
+    {
+      "title": "SW2: Start/Stop Level Change",
+      "endpoint": 2,
+      "value": 2,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    },
+    {
+      "title": "Start/stop set level [SW2]",
+      "endpoint": 2,
+      "value": 3,
+      "maxNodes": 9,
+      "isLifeline": false,
+      "multiChannel": true
+    }
+  ],
+  "neighbors": [],
+  "ready": true,
+  "available": true,
+  "hassDevices": {},
+  "failed": false,
+  "inited": true,
+  "eventsQueue": [
+    {
+      "time": "2026-07-17T13:23:42.237Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:44.239Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 9.4,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:44.788Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:44.789Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:44.789Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:46.242Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 9.4,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:47.319Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:47.319Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:47.320Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:49.243Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:51.247Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 8.5,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:53.501Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:53.501Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:53.502Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T13:23:55.252Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 8.5,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:37:46.282Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:37:46.282Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:37:50.714Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 44.5,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:13.024Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:13.025Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:13.111Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 44.5,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:26.832Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:26.832Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:28.412Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:28.412Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:28.413Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:28.462Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 44.8,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:48.434Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:48.434Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T17:38:53.241Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 44.8,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T19:51:45.236Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.35,
+          "prevValue": 0.35,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T19:51:45.390Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T19:54:11.988Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T19:54:11.988Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T19:54:16.457Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 45.4,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T20:05:38.081Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.38,
+          "prevValue": 1.37,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T20:18:22.050Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.39,
+          "prevValue": 1.38,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T20:31:02.402Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.4,
+          "prevValue": 1.39,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T20:43:41.099Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.41,
+          "prevValue": 1.4,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T20:56:19.116Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.42,
+          "prevValue": 1.41,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:05:56.031Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:05:56.033Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:05:57.046Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 45.4,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:06:00.293Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:06:00.293Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:06:00.293Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:10:21.409Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T21:10:21.410Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T02:32:43.186Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.35,
+          "prevValue": 0.35,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T02:32:43.238Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T03:30:00.317Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.42,
+          "prevValue": 1.42,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T03:30:01.873Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:34:05.626Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:34:05.626Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:34:13.925Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:34:13.925Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:34:20.283Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 8.7,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T07:50:24.372Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.36,
+          "prevValue": 0.35,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T08:59:36.645Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T08:59:36.646Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T08:59:37.239Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T08:59:37.239Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 1,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T09:00:58.329Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.37,
+          "prevValue": 0.36,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T10:10:59.134Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.42,
+          "prevValue": 1.42,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T10:10:59.313Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T10:11:49.113Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.38,
+          "prevValue": 0.37,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T11:22:22.848Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.39,
+          "prevValue": 0.38,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T12:32:45.569Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.4,
+          "prevValue": 0.39,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T13:42:58.234Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.41,
+          "prevValue": 0.4,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T14:00:07.603Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 5.2,
+          "prevValue": 8.7,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T14:52:45.810Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.42,
+          "prevValue": 0.41,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T16:02:35.644Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.43,
+          "prevValue": 0.42,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T16:51:58.971Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.42,
+          "prevValue": 1.42,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T16:51:59.619Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T17:12:41.189Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.44,
+          "prevValue": 0.43,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T18:23:02.584Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.45,
+          "prevValue": 0.44,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:33:21.256Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.46,
+          "prevValue": 0.45,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:38:14.000Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:38:14.001Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:38:15.549Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 43.8,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:41:25.810Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.43,
+          "prevValue": 1.42,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T19:54:14.917Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.44,
+          "prevValue": 1.43,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:06:52.273Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.45,
+          "prevValue": 1.44,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:19:26.661Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.46,
+          "prevValue": 1.45,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:31:58.267Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.47,
+          "prevValue": 1.46,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:40:29.025Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 1,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 0.47,
+          "prevValue": 0.46,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:44:29.376Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.48,
+          "prevValue": 1.47,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T20:57:00.516Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.49,
+          "prevValue": 1.48,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:27.720Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:27.720Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": false,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:38.602Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 0,
+          "prevValue": 43.8,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:38.721Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:38.722Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": false,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:44.314Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 66049,
+          "newValue": 45.6,
+          "prevValue": 0,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_W_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:46.983Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "duration",
+          "newValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "prevValue": {
+            "value": 0,
+            "unit": "seconds"
+          },
+          "propertyName": "duration"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:46.984Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "targetValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "targetValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:04:46.984Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Binary Switch",
+          "commandClass": 37,
+          "endpoint": 2,
+          "property": "currentValue",
+          "newValue": true,
+          "prevValue": true,
+          "propertyName": "currentValue"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:09:45.610Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.5,
+          "prevValue": 1.49,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:22:20.763Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.51,
+          "prevValue": 1.5,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-18T21:34:52.856Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Meter",
+          "commandClass": 50,
+          "endpoint": 2,
+          "property": "value",
+          "propertyKey": 65537,
+          "newValue": 1.52,
+          "prevValue": 1.51,
+          "propertyName": "value",
+          "propertyKeyName": "Electric_kWh_Consumed"
+        }
+      ]
+    }
+  ],
+  "status": "Alive",
+  "interviewStage": "Complete",
+  "priorityReturnRoute": {},
+  "customReturnRoute": {},
+  "prioritySUCReturnRoute": false,
+  "customSUCReturnRoutes": [],
+  "availableFirmwareUpdates": [],
+  "firmwareUpdatesDismissed": {},
+  "lastFirmwareUpdateCheck": 1784399918597,
+  "hexId": "0x0460 0x0002-0x0081",
+  "dbLink": "https://devices.zwave-js.io/?jumpTo=0x0460:0x0002:0x0081:16.5.0",
+  "manufacturerId": 1120,
+  "productId": 129,
+  "productType": 2,
+  "deviceConfig": {
+    "filename": "/var/snap/zwave-js-ui/829/.ext-config/devices/0x0460/wave_2pm.json",
+    "isEmbedded": true,
+    "manufacturer": "Shelly Europe Ltd.",
+    "manufacturerId": 1120,
+    "label": "QNSW-002P16EU / QLSW-002P14US",
+    "description": "Wave 2PM",
+    "devices": [
+      {
+        "productType": 2,
+        "productId": 129
+      }
+    ],
+    "firmwareVersion": {
+      "min": "0.0",
+      "max": "255.255"
+    },
+    "preferred": false,
+    "endpoints": {},
+    "paramInformation": {
+      "_map": {}
+    },
+    "metadata": {
+      "inclusion": "6.1 Adding the Device to a Z-Wave™ network (inclusion)\nNote! All Device outputs (O, O1, O2, etc. - depending on the Device type) will turn the load 1s on/1s off /1s on/1s off if the Device is successfully added to/removed from a Z-Wave™ network.\n\n6.1.1 SmartStart adding (inclusion)\nSmartStart enabled products can be added into a Z-Wave™ network by scanning the Z-Wave™ QR Code present on the Device with a gateway providing SmartStart inclusion. No further action is required, and the SmartStart device will be added automatically within 10 minutes of being switched on in the network vicinity.\n1. With the gateway application scan the QR code on the Device label and add the Security 2 (S2) Device Specific Key (DSK) to the provisioning list in the gateway.\n2. Connect the Device to a power supply.\n3. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n4. Adding will be initiated automatically within a few seconds after connecting the Device to a power supply, and the Device will be added to a Z-Wave™ network automatically.\n5. The blue LED will be blinking in Mode 2 during the adding process.\n6. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\n\n6.1.2 Adding (inclusion) with a switch/push-button\n1. Connect the Device to a power supply.\n2. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2, etc.) 3 times within 3 seconds (this procedure puts the Device in Learn mode*). The Device must receive on/off signal 3 times, which means pressing the momentary switch 3 times, or toggling the switch on and off 3 times.\n5. The blue LED will be blinking in Mode 2 during the adding process.\n6. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\n*Learn mode - a state that allows the Device to receive network information from the gateway.\n\n6.1.3 Adding (inclusion) with the S button\n1. Connect the Device to a power supply.\n2. Check if the blue LED is blinking in Mode 1. If so, the Device is not added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n5. Quickly release and then press and hold (> 2s) the S button on the Device until the blue LED starts blinking in Mode 3. Releasing the S button will start the Learn mode.\n6. The blue LED will be blinking in Mode 2 during the adding process.\n7. The green LED will be blinking in Mode 1 if the Device is successfully added to a Z-Wave™ network.\nNote! In Setting mode, the Device has a timeout of 10s before entering again into Normal mode",
+      "exclusion": "Removing the Device from a Z-Wave™ network (exclusion)\nNote! The Device will be removed from your Z-wave™ network, but any custom configuration parameters will not be erased.\nNote! All Device outputs (O, O1, O2, etc. - depending on the Device type) will turn the load 1s on/1s off /1s on/1s off if the Device is successfully added to/removed from a Z-Wave™ network.\n\n6.2.1 Removing (exclusion) with a switch/push-button\n1. Connect the Device to a power supply.\n2. Check if the green LED is blinking in Mode 1. If so, the Device is added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2,…) 3 times within 3 seconds (this procedure puts the Device in Learn mode). The Device must receive on/off signal 3 times, which means pressing the momentary switch 3 times, or toggling the switch on and off 3 times.\n5. The blue LED will be blinking in Mode 2 during the removing process.\n6. The blue LED will be blinking in Mode 1 if the Device is successfully removed from a Z-Wave™ network.\n\n6.2.2 Removing (exclusion) with the S button\n1. Connect the Device to a power supply.\n2. Check if the green LED is blinking in Mode 1. If so, the Device is added to a Z-Wave™ network.\n3. Enable add/remove mode on the gateway.\n4. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n5. Quickly release and then press and hold (> 2s) the S button on the Device until the blue LED starts blinking in Mode 3. Releasing the S button will start the Learn mode.\n6. The blue LED will be blinking in Mode 2 during the removing process.\n7. The blue LED will be blinking in Mode 1 if the Device is successfully removed from a Z-Wave™ network.\nNote! In Setting mode, the Device has a timeout of 10s before entering again into Normal mode",
+      "reset": "6.3 Factory reset\n6.3.1 Factory reset general\nAfter Factory reset, all custom parameters and stored values (kWh, associations, routings, etc.) will return to their default state. HOME ID and NODE ID assigned to the Device will be deleted. Use this reset procedure only when the gateway is missing or otherwise inoperable.\n\n6.3.2 Factory reset with a switch/push-button\nNote! Factory reset with a switch/push-button is only possible within the first minute after the Device is connected to a power supply.\n1. Connect the Device to a power supply.\n2. Toggle the switch/push-button connected to any of the SW terminals (SW, SW1, SW2,…) 5 times within 3 seconds. The Device must receive on/off signal 5 times, which means pressing the push-button 5 times, or toggling the switch on and off 5 times.\n3. During factory reset, the LED will turn solid green for about 1s, then the blue and red LED will start blinking in Mode 3 for approx. 2s.\n4. The blue LED will be blinking in Mode 1 if the Factory reset is successful.\n\n6.3.3 Factory reset with the S button\nNote! Factory reset with the S button is possible anytime.\n1. To enter the Setting mode, quickly press and hold the S button on the Device until the LED turns solid blue.\n2. Press the S button multiple times until the LED turns solid red.\n3. Press and hold (> 2s) S button on the Device until the red LED starts blinking in Mode 3. Releasing the S button will start the factory reset.\n4. During factory reset, the LED will turn solid green for about 1s, then the blue and red LED will start blinking in Mode 3 for approx. 2s.\n5. The blue LED will be blinking in Mode 1 if the Factory reset is successful.\n\n6.3.4 Remote factory reset with parameter with the gateway\nFactory reset can be done remotely with the settings in Parameter No. 120",
+      "manual": "https://kb.shelly.cloud/knowledge-base/shelly-qubino-wave-devices"
+    }
+  },
+  "productLabel": "QNSW-002P16EU / QLSW-002P14US",
+  "productDescription": "Wave 2PM",
+  "manufacturer": "Shelly Europe Ltd.",
+  "firmwareVersion": "16.5.0",
+  "sdkVersion": "7.23.4",
+  "protocolVersion": 3,
+  "zwavePlusVersion": 2,
+  "zwavePlusNodeType": 0,
+  "zwavePlusRoleType": 5,
+  "nodeType": 1,
+  "endpointsCount": 2,
+  "endpoints": [
+    {
+      "index": 0,
+      "label": "Root Endpoint",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 16,
+        "specific": 0
+      }
+    },
+    {
+      "index": 1,
+      "label": "Endpoint 1",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 16,
+        "specific": 0
+      }
+    },
+    {
+      "index": 2,
+      "label": "Endpoint 2",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 16,
+        "specific": 0
+      }
+    }
+  ],
+  "isSecure": true,
+  "security": "S2_Authenticated",
+  "supportsSecurity": false,
+  "supportsBeaming": true,
+  "isControllerNode": false,
+  "isListening": true,
+  "isFrequentListening": false,
+  "isRouting": true,
+  "keepAwake": false,
+  "maxDataRate": 100000,
+  "deviceClass": {
+    "basic": 4,
+    "generic": 16,
+    "specific": 0
+  },
+  "lastActive": 1784410492855,
+  "firmwareCapabilities": {
+    "firmwareUpgradable": true,
+    "firmwareTargets": [
+      0,
+      1
+    ]
+  },
+  "protocol": 0,
+  "deviceId": "1120-129-2",
+  "hasDeviceConfigChanged": false,
+  "statistics": {
+    "commandsTX": 184,
+    "commandsRX": 610,
+    "commandsDroppedRX": 342,
+    "commandsDroppedTX": 0,
+    "timeoutResponse": 12,
+    "rtt": 208,
+    "lastSeen": "2026-07-18T21:34:52.855Z",
+    "lwr": {
+      "repeaters": [],
+      "protocolDataRate": 3
+    }
+  },
+  "supportsTime": false,
+  "rebuildRoutesProgress": "done",
+  "_name": "Ben LED ep1 neon / ep2 led (Ben)",
+  "applicationRoute": false
+}

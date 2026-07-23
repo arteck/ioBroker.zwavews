@@ -40,7 +40,7 @@ runDeviceTests('rollo-node_5', {
             assert.strictEqual(call.val, 98);
         });
 
-        it('Meter value kWh → parsePath nodeID_005.Meter.value.ElectrickWh', async () => {
+        it('Meter value kWh → parsePath nodeID_005.Meter.Electric_kWh_50_65536', async () => {
             const inst = buildMockInstance();
             const assert = require('assert');
             const msg = JSON.stringify({
@@ -60,8 +60,8 @@ runDeviceTests('rollo-node_5', {
             await inst.messageParse(msg);
             const call = inst._helperCalls.find(c => c.method === 'parse');
             assert.ok(call, 'parse nicht aufgerufen');
-            // propertyKeyName "Electric_kWh" enthält _ (Sonderzeichen _ wird gefiltert → "ElectrickWh")
-            assert.ok(call.path.startsWith(`${nodeId}.Meter.value`));
+            // Meter: nodeId.Meter.propertyKeyName_commandClass_endpoint_propertyKey
+            assert.strictEqual(call.path, `${nodeId}.Meter.Electric_kWh_50_65536`);
         });
 
         it('firmwareVersions bekommt _value-Suffix → nodeID_005.Version.firmwareVersions_value', async () => {

@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "news": {
+      "1.0.4": {
+        "en": "reconnect optimization\nnotification handling\nfix energy values",
+        "de": "reconnect optimierung\nmeldungsverarbeitung\nfeste energiewerte",
+        "ru": "оптимизация подключения\nобработка уведомлений\nфиксировать энергетические ценности",
+        "pt": "optimização da reconexão\ntratamento da notificação\nfixar valores de energia",
+        "nl": "reconnect optimalisatie\nnotificatiebehandeling\nvaste energiewaarden",
+        "fr": "reconnecter l'optimisation\ntraitement des notifications\nvaleurs d'énergie fixes",
+        "it": "ricollegare l'ottimizzazione\ngestione delle notifiche\nfissare i valori energetici",
+        "es": "reconnect optimization\nsolicitud de notificación\nfijar valores energéticos",
+        "pl": "optymalizacja ponownego połączenia\nobsługa powiadomień\nustala wartości energii",
+        "uk": "оптимізація підключення\nобробка повідомлень\nфіксувати значення енергії",
+        "zh-cn": "重新连接优化\n通知处理\n固定能量值"
+      },
       "1.0.3": {
         "en": "fix thermostat set point",
         "de": "Thermostat-Sollwert",
@@ -80,19 +93,6 @@
         "pl": "del przestarzała funkcja setStateAsync",
         "uk": "del застарілий setStateAsync",
         "zh-cn": "del deprectated setStateAsync"
-      },
-      "0.1.6": {
-        "en": "add test",
-        "de": "test hinzufügen",
-        "ru": "добавить тест",
-        "pt": "adicionar teste",
-        "nl": "test toevoegen",
-        "fr": "ajouter un essai",
-        "it": "aggiungere test",
-        "es": "agregar la prueba",
-        "pl": "dodać test",
-        "uk": "додати тест",
-        "zh-cn": "添加测试"
       }
     },
     "titleLang": {

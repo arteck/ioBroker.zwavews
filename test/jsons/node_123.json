@@ -1,0 +1,5328 @@
+{
+  "id": 123,
+  "name": "Keypad",
+  "loc": "Gäste WC",
+  "values": [
+    {
+      "id": "123-111-0-keyCacheTimeout",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 111,
+      "commandClassName": "Entry Control",
+      "endpoint": 0,
+      "property": "keyCacheTimeout",
+      "propertyName": "keyCacheTimeout",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "How long the key cache must wait for additional characters",
+      "label": "Key cache timeout",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 1,
+      "max": 30,
+      "unit": "seconds",
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1781876746966,
+      "newValue": 5
+    },
+    {
+      "id": "123-111-0-keyCacheSize",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 111,
+      "commandClassName": "Entry Control",
+      "endpoint": 0,
+      "property": "keyCacheSize",
+      "propertyName": "keyCacheSize",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Number of character that must be stored before sending",
+      "label": "Key cache size",
+      "stateless": false,
+      "commandClassVersion": 1,
+      "min": 4,
+      "max": 10,
+      "list": false,
+      "value": 8,
+      "lastUpdate": 1781876746966,
+      "newValue": 8
+    },
+    {
+      "id": "123-112-0-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 1,
+      "propertyName": "Heartbeat Interval",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Heartbeat Interval",
+      "default": 70,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 70,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 70
+        }
+      ],
+      "unit": "minutes",
+      "list": false,
+      "value": 70,
+      "lastUpdate": 1781876744974,
+      "newValue": 70
+    },
+    {
+      "id": "123-112-0-2",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 2,
+      "propertyName": "Message Retry Attempt Limit",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Message Retry Attempt Limit",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 5,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 5
+        }
+      ],
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876745029,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-3",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 3,
+      "propertyName": "Delay Between Retry Attempts",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Delay Between Retry Attempts",
+      "default": 5,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 60,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 60
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1781876745101,
+      "newValue": 5
+    },
+    {
+      "id": "123-112-0-4",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 4,
+      "propertyName": "Announcement Audio Volume",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Announcement Audio Volume",
+      "default": 7,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 10,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 10
+        }
+      ],
+      "list": false,
+      "value": 7,
+      "lastUpdate": 1781876745183,
+      "newValue": 7
+    },
+    {
+      "id": "123-112-0-5",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 5,
+      "propertyName": "Key Tone Volume",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Key Tone Volume",
+      "default": 6,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 10,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 10
+        }
+      ],
+      "list": false,
+      "value": 6,
+      "lastUpdate": 1781876745238,
+      "newValue": 6
+    },
+    {
+      "id": "123-112-0-6",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 6,
+      "propertyName": "Siren Volume",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Siren Volume",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 10,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 10
+        }
+      ],
+      "list": false,
+      "value": 10,
+      "lastUpdate": 1781876745296,
+      "newValue": 10
+    },
+    {
+      "id": "123-112-0-7",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 7,
+      "propertyName": "Long Press Duration: Emergency Buttons",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Hold time required to capture a long press",
+      "label": "Long Press Duration: Emergency Buttons",
+      "default": 3,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 2,
+      "max": 5,
+      "allowed": [
+        {
+          "from": 2,
+          "to": 5
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 3,
+      "lastUpdate": 1781876745439,
+      "newValue": 3
+    },
+    {
+      "id": "123-112-0-8",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 8,
+      "propertyName": "Long Press Duration: Number Pad",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Hold time required to capture a long press",
+      "label": "Long Press Duration: Number Pad",
+      "default": 3,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 2,
+      "max": 5,
+      "allowed": [
+        {
+          "from": 2,
+          "to": 5
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 3,
+      "lastUpdate": 1781876745520,
+      "newValue": 3
+    },
+    {
+      "id": "123-112-0-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 9,
+      "propertyName": "Timeout: Proximity Display",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Timeout: Proximity Display",
+      "default": 5,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 30,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 30
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1781876745575,
+      "newValue": 5
+    },
+    {
+      "id": "123-112-0-10",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 10,
+      "propertyName": "Timeout: Display on Button Press",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Timeout: Display on Button Press",
+      "default": 5,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 30,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 30
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1781876745628,
+      "newValue": 5
+    },
+    {
+      "id": "123-112-0-11",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 11,
+      "propertyName": "Timeout: Display on Status Change",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Timeout: Display on Status Change",
+      "default": 5,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 30,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 30
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 5,
+      "lastUpdate": 1781876745683,
+      "newValue": 5
+    },
+    {
+      "id": "123-112-0-12",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 12,
+      "propertyName": "Brightness: Security Mode",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Brightness: Security Mode",
+      "default": 100,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 100,
+      "lastUpdate": 1781876745737,
+      "newValue": 100
+    },
+    {
+      "id": "123-112-0-13",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 13,
+      "propertyName": "Brightness: Key Backlight",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Brightness: Key Backlight",
+      "default": 100,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 100,
+      "lastUpdate": 1781876745791,
+      "newValue": 100
+    },
+    {
+      "id": "123-112-0-14",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 14,
+      "propertyName": "Key Backlight Ambient Light Sensor Level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Key Backlight Ambient Light Sensor Level",
+      "default": 20,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 20,
+      "lastUpdate": 1781876745845,
+      "newValue": 20
+    },
+    {
+      "id": "123-112-0-15",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 15,
+      "propertyName": "Proximity Detection",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Proximity Detection",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        },
+        {
+          "text": "Enable",
+          "value": 1
+        }
+      ],
+      "value": 1,
+      "lastUpdate": 1781876745902,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-16",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 16,
+      "propertyName": "LED Ramp Time",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "LED Ramp Time",
+      "default": 50,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 255
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 50,
+      "lastUpdate": 1781876745955,
+      "newValue": 50
+    },
+    {
+      "id": "123-112-0-17",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "Battery Low Threshold",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Battery Low Threshold",
+      "default": 15,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 30,
+      "lastUpdate": 1781876746011,
+      "newValue": 30
+    },
+    {
+      "id": "123-112-0-19",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 19,
+      "propertyName": "Battery Warning Threshold",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Battery Warning Threshold",
+      "default": 5,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 100,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 100
+        }
+      ],
+      "unit": "%",
+      "list": false,
+      "value": 10,
+      "lastUpdate": 1781876746067,
+      "newValue": 10
+    },
+    {
+      "id": "123-112-0-18",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "Keypad Language",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Keypad Language",
+      "default": 30,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 31,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 31
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "English",
+          "value": 0
+        },
+        {
+          "text": "French",
+          "value": 2
+        },
+        {
+          "text": "Spanish",
+          "value": 5
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1781876746124,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-20",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 20,
+      "propertyName": "System Security Mode Blink Duration",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "System Security Mode Blink Duration",
+      "default": 2,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 1,
+      "max": 60,
+      "allowed": [
+        {
+          "from": 1,
+          "to": 60
+        }
+      ],
+      "list": false,
+      "value": 2,
+      "lastUpdate": 1781876746181,
+      "newValue": 2
+    },
+    {
+      "id": "123-112-0-21",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 21,
+      "propertyName": "Supervision Report Timeout",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Supervision Report Timeout",
+      "default": 10000,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 500,
+      "max": 30000,
+      "allowed": [
+        {
+          "from": 500,
+          "to": 30000
+        }
+      ],
+      "unit": "ms",
+      "list": false,
+      "value": 10000,
+      "lastUpdate": 1781876746239,
+      "newValue": 10000
+    },
+    {
+      "id": "123-112-0-22",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 22,
+      "propertyName": "System Security Mode Display",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "System Security Mode Display",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 601,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 601
+        }
+      ],
+      "list": true,
+      "allowManualEntry": true,
+      "states": [
+        {
+          "text": "Always off",
+          "value": 0
+        },
+        {
+          "text": "Always on",
+          "value": 601
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1781876746314,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_1",
+      "propertyKey": 1,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_1 (property)",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746443,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-2",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_2",
+      "propertyKey": 2,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_2 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746449,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-4",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_4",
+      "propertyKey": 4,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_4 (property)",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746450,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-8",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_8",
+      "propertyKey": 8,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_8 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746454,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-16",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_16",
+      "propertyKey": 16,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_16 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746455,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-32",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_32",
+      "propertyKey": 32,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_32 (property)",
+      "default": 1,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746456,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-64",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_64",
+      "propertyKey": 64,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_64 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746456,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-128",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_128",
+      "propertyKey": 128,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_128 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746456,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-256",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_256",
+      "propertyKey": 256,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_256 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746458,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-512",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_512",
+      "propertyKey": 512,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_512 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746463,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-1024",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_1024",
+      "propertyKey": 1024,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_1024 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746463,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-2048",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_2048",
+      "propertyKey": 2048,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_2048 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746463,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-4096",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_4096",
+      "propertyKey": 4096,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_4096 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746463,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-8192",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_8192",
+      "propertyKey": 8192,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_8192 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 1,
+      "lastUpdate": 1781876746463,
+      "newValue": 1
+    },
+    {
+      "id": "123-112-0-23-16384",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_16384",
+      "propertyKey": 16384,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_16384 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746465,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-32768",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_32768",
+      "propertyKey": 32768,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_32768 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746465,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-65536",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_65536",
+      "propertyKey": 65536,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_65536 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-131072",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_131072",
+      "propertyKey": 131072,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_131072 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-262144",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_262144",
+      "propertyKey": 262144,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_262144 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-524288",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_524288",
+      "propertyKey": 524288,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_524288 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-1048576",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_1048576",
+      "propertyKey": 1048576,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_1048576 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-2097152",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_2097152",
+      "propertyKey": 2097152,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_2097152 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-4194304",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_4194304",
+      "propertyKey": 4194304,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_4194304 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-8388608",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_8388608",
+      "propertyKey": 8388608,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_8388608 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746466,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-16777216",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_16777216",
+      "propertyKey": 16777216,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_16777216 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746467,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-33554432",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_33554432",
+      "propertyKey": 33554432,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_33554432 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746467,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-67108864",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_67108864",
+      "propertyKey": 67108864,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_67108864 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746468,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-134217728",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_134217728",
+      "propertyKey": 134217728,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_134217728 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746468,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-268435456",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_268435456",
+      "propertyKey": 268435456,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_268435456 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746468,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-536870912",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_536870912",
+      "propertyKey": 536870912,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_536870912 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746468,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-1073741824",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_1073741824",
+      "propertyKey": 1073741824,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_1073741824 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746468,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23-2147483648",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "param023_2147483648",
+      "propertyKey": 2147483648,
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "param023_2147483648 (property)",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746469,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-24",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 24,
+      "propertyName": "Calibrate Speaker",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Calibrate Speaker",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 1,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 1
+        }
+      ],
+      "list": true,
+      "allowManualEntry": false,
+      "states": [
+        {
+          "text": "Disable",
+          "value": 0
+        },
+        {
+          "text": "Enable",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1781876746525,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-26",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 26,
+      "propertyName": "Motion Sensor Timeout",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Motion Sensor Timeout",
+      "default": 3,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 60,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 60
+        }
+      ],
+      "unit": "seconds",
+      "list": false,
+      "value": 2,
+      "lastUpdate": 1781876746581,
+      "newValue": 2
+    },
+    {
+      "id": "123-112-0-25",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 25,
+      "propertyName": "Z-Wave Sleep Timeout",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Secs FLiRS device stays awake after last comms",
+      "label": "Z-Wave Sleep Timeout",
+      "default": 10,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 15,
+      "list": false,
+      "value": 10,
+      "lastUpdate": 1781876746636,
+      "newValue": 10
+    },
+    {
+      "id": "123-112-0-27",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 27,
+      "propertyName": "Vol Offset TFA9896",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Vol Reduction 0.5 dB steps",
+      "label": "Vol Offset TFA9896",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746728,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-28",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 28,
+      "propertyName": "Vol Offset AW8896",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "Vol Reduction 0.5 dB steps",
+      "label": "Vol Offset AW8896",
+      "default": 0,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 200,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876746786,
+      "newValue": 0
+    },
+    {
+      "id": "123-112-0-23",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 112,
+      "commandClassName": "Configuration",
+      "endpoint": 0,
+      "property": 23,
+      "propertyName": "Languages Supported Report",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "description": "This parameter reports a bitmask of supported languages",
+      "label": "Languages Supported Report",
+      "default": 37,
+      "stateless": false,
+      "commandClassVersion": 4,
+      "min": 0,
+      "max": 4294967295,
+      "allowed": [
+        {
+          "from": 0,
+          "to": 4294967295
+        }
+      ],
+      "list": false,
+      "lastUpdate": 1784268323819
+    },
+    {
+      "id": "123-113-0-alarmType",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "alarmType",
+      "propertyName": "alarmType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Type",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1784270561777,
+      "newValue": 0
+    },
+    {
+      "id": "123-113-0-alarmLevel",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "alarmLevel",
+      "propertyName": "alarmLevel",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Alarm Level",
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1784270561779,
+      "newValue": 0
+    },
+    {
+      "id": "123-113-0-Home Security-Motion sensor status",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Home Security",
+      "propertyName": "Home Security",
+      "propertyKey": "Motion sensor status",
+      "propertyKeyName": "Motion sensor status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Motion sensor status",
+      "ccSpecific": {
+        "notificationType": 7
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Motion detection",
+          "value": 8
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1784270561781,
+      "newValue": 0
+    },
+    {
+      "id": "123-113-0-Power Management-Power status",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Power status",
+      "propertyKeyName": "Power status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Power status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "Power has been applied",
+          "value": 1
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1781876747963,
+      "newValue": 0
+    },
+    {
+      "id": "123-113-0-System-Software status",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "System",
+      "propertyName": "System",
+      "propertyKey": "Software status",
+      "propertyKeyName": "Software status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Software status",
+      "ccSpecific": {
+        "notificationType": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "idle",
+          "value": 0
+        },
+        {
+          "text": "System software failure (with failure code)",
+          "value": 4
+        }
+      ],
+      "value": 4,
+      "lastUpdate": 1784269933696,
+      "newValue": 4
+    },
+    {
+      "id": "123-113-0-Power Management-Mains status",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 113,
+      "commandClassName": "Notification",
+      "endpoint": 0,
+      "property": "Power Management",
+      "propertyName": "Power Management",
+      "propertyKey": "Mains status",
+      "propertyKeyName": "Mains status",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Mains status",
+      "ccSpecific": {
+        "notificationType": 8
+      },
+      "stateless": false,
+      "commandClassVersion": 8,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "AC mains disconnected",
+          "value": 2
+        },
+        {
+          "text": "AC mains re-connected",
+          "value": 3
+        }
+      ],
+      "lastUpdate": 1784268323819
+    },
+    {
+      "id": "123-114-0-productId",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productId",
+      "propertyName": "productId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 1025,
+      "lastUpdate": 1781876736050,
+      "newValue": 1025
+    },
+    {
+      "id": "123-114-0-productType",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "productType",
+      "propertyName": "productType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Product type",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 257,
+      "lastUpdate": 1781876736052,
+      "newValue": 257
+    },
+    {
+      "id": "123-114-0-manufacturerId",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 114,
+      "commandClassName": "Manufacturer Specific",
+      "endpoint": 0,
+      "property": "manufacturerId",
+      "propertyName": "manufacturerId",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Manufacturer ID",
+      "stateless": false,
+      "commandClassVersion": 2,
+      "min": 0,
+      "max": 65535,
+      "list": false,
+      "value": 838,
+      "lastUpdate": 1781876736052,
+      "newValue": 838
+    },
+    {
+      "id": "123-128-0-lowTemperatureStatus",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "lowTemperatureStatus",
+      "propertyName": "lowTemperatureStatus",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Battery temperature is low",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1784247625026,
+      "newValue": false
+    },
+    {
+      "id": "123-128-0-disconnected",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "disconnected",
+      "propertyName": "disconnected",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Battery is disconnected",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1784247625027,
+      "newValue": false
+    },
+    {
+      "id": "123-128-0-rechargeOrReplace",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "rechargeOrReplace",
+      "propertyName": "rechargeOrReplace",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Recharge or replace",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "No",
+          "value": 0
+        },
+        {
+          "text": "Soon",
+          "value": 1
+        },
+        {
+          "text": "Now",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1784247625028,
+      "newValue": 0
+    },
+    {
+      "id": "123-128-0-lowFluid",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "lowFluid",
+      "propertyName": "lowFluid",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Fluid is low",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1784247625030,
+      "newValue": false
+    },
+    {
+      "id": "123-128-0-overheating",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "overheating",
+      "propertyName": "overheating",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Overheating",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1784247625035,
+      "newValue": false
+    },
+    {
+      "id": "123-128-0-backup",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "backup",
+      "propertyName": "backup",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Used as backup",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": false,
+      "lastUpdate": 1784247625037,
+      "newValue": false
+    },
+    {
+      "id": "123-128-0-rechargeable",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "rechargeable",
+      "propertyName": "rechargeable",
+      "type": "boolean",
+      "readable": true,
+      "writeable": false,
+      "label": "Rechargeable",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": true,
+      "lastUpdate": 1784247625038,
+      "newValue": true
+    },
+    {
+      "id": "123-128-0-chargingStatus",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "chargingStatus",
+      "propertyName": "chargingStatus",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Charging status",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": true,
+      "states": [
+        {
+          "text": "Discharging",
+          "value": 0
+        },
+        {
+          "text": "Charging",
+          "value": 1
+        },
+        {
+          "text": "Maintaining",
+          "value": 2
+        }
+      ],
+      "value": 0,
+      "lastUpdate": 1784247625038,
+      "newValue": 0
+    },
+    {
+      "id": "123-128-0-level",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "level",
+      "propertyName": "level",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Battery level",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "list": false,
+      "value": 100,
+      "lastUpdate": 1784247625039,
+      "newValue": 100
+    },
+    {
+      "id": "123-128-0-temperature",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "temperature",
+      "propertyName": "temperature",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Temperature",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": -128,
+      "max": 127,
+      "unit": "°C",
+      "list": false,
+      "lastUpdate": 1784268323819
+    },
+    {
+      "id": "123-128-0-maximumCapacity",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 128,
+      "commandClassName": "Battery",
+      "endpoint": 0,
+      "property": "maximumCapacity",
+      "propertyName": "maximumCapacity",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Maximum capacity",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 100,
+      "unit": "%",
+      "list": false,
+      "lastUpdate": 1784268323819
+    },
+    {
+      "id": "123-134-0-hardwareVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hardwareVersion",
+      "propertyName": "hardwareVersion",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip hardware version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 4,
+      "lastUpdate": 1781876736172,
+      "newValue": 4
+    },
+    {
+      "id": "123-134-0-firmwareVersions",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "firmwareVersions",
+      "propertyName": "firmwareVersions",
+      "type": "string[]",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave chip firmware versions",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": [
+        "2.0",
+        "1.1"
+      ],
+      "lastUpdate": 1781876736173,
+      "newValue": [
+        "2.0",
+        "1.1"
+      ]
+    },
+    {
+      "id": "123-134-0-protocolVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "protocolVersion",
+      "propertyName": "protocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.16",
+      "lastUpdate": 1781876736174,
+      "newValue": "7.16"
+    },
+    {
+      "id": "123-134-0-libraryType",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "libraryType",
+      "propertyName": "libraryType",
+      "type": "number",
+      "readable": true,
+      "writeable": false,
+      "label": "Library type",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Unknown",
+          "value": 0
+        },
+        {
+          "text": "Static Controller",
+          "value": 1
+        },
+        {
+          "text": "Controller",
+          "value": 2
+        },
+        {
+          "text": "Enhanced Slave",
+          "value": 3
+        },
+        {
+          "text": "Slave",
+          "value": 4
+        },
+        {
+          "text": "Installer",
+          "value": 5
+        },
+        {
+          "text": "Routing Slave",
+          "value": 6
+        },
+        {
+          "text": "Bridge Controller",
+          "value": 7
+        },
+        {
+          "text": "Device under Test",
+          "value": 8
+        },
+        {
+          "text": "N/A",
+          "value": 9
+        },
+        {
+          "text": "AV Remote",
+          "value": 10
+        },
+        {
+          "text": "AV Device",
+          "value": 11
+        }
+      ],
+      "value": 3,
+      "lastUpdate": 1781876736175,
+      "newValue": 3
+    },
+    {
+      "id": "123-134-0-applicationBuildNumber",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationBuildNumber",
+      "propertyName": "applicationBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 24,
+      "lastUpdate": 1781876737661,
+      "newValue": 24
+    },
+    {
+      "id": "123-134-0-applicationVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationVersion",
+      "propertyName": "applicationVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Application version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "2.0.0",
+      "lastUpdate": 1781876737662,
+      "newValue": "2.0.0"
+    },
+    {
+      "id": "123-134-0-zWaveProtocolBuildNumber",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolBuildNumber",
+      "propertyName": "zWaveProtocolBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 297,
+      "lastUpdate": 1781876737662,
+      "newValue": 297
+    },
+    {
+      "id": "123-134-0-zWaveProtocolVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "zWaveProtocolVersion",
+      "propertyName": "zWaveProtocolVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave protocol version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.16.3",
+      "lastUpdate": 1781876737663,
+      "newValue": "7.16.3"
+    },
+    {
+      "id": "123-134-0-hostInterfaceBuildNumber",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceBuildNumber",
+      "propertyName": "hostInterfaceBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876737663,
+      "newValue": 0
+    },
+    {
+      "id": "123-134-0-hostInterfaceVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "hostInterfaceVersion",
+      "propertyName": "hostInterfaceVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Serial API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "unused",
+      "lastUpdate": 1781876737663,
+      "newValue": "unused"
+    },
+    {
+      "id": "123-134-0-applicationFrameworkBuildNumber",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkBuildNumber",
+      "propertyName": "applicationFrameworkBuildNumber",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API build number",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 297,
+      "lastUpdate": 1781876737664,
+      "newValue": 297
+    },
+    {
+      "id": "123-134-0-applicationFrameworkAPIVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "applicationFrameworkAPIVersion",
+      "propertyName": "applicationFrameworkAPIVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "Z-Wave application framework API version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "10.16.3",
+      "lastUpdate": 1781876737665,
+      "newValue": "10.16.3"
+    },
+    {
+      "id": "123-134-0-sdkVersion",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 134,
+      "commandClassName": "Version",
+      "endpoint": 0,
+      "property": "sdkVersion",
+      "propertyName": "sdkVersion",
+      "type": "string",
+      "readable": true,
+      "writeable": false,
+      "label": "SDK version",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "7.16.3",
+      "lastUpdate": 1781876737666,
+      "newValue": "7.16.3"
+    },
+    {
+      "id": "123-135-0-3-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 3,
+      "propertyName": "Ready",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Ready - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 3,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739614,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-3-timeout",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 3,
+      "propertyName": "Ready",
+      "propertyKey": "timeout",
+      "propertyKeyName": "Timeout",
+      "type": "string",
+      "readable": true,
+      "writeable": true,
+      "label": "Ready - Timeout",
+      "ccSpecific": {
+        "indicatorId": 3
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "",
+      "lastUpdate": 1781876739617,
+      "newValue": ""
+    },
+    {
+      "id": "123-135-0-2-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 2,
+      "propertyName": "Not armed / disarmed",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Not armed / disarmed - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 2,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739729,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-2-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 2,
+      "propertyName": "Not armed / disarmed",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Not armed / disarmed - Sound level",
+      "ccSpecific": {
+        "indicatorId": 2,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739747,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-9-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 9,
+      "propertyName": "Code not accepted",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Code not accepted - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 9,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739878,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-9-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 9,
+      "propertyName": "Code not accepted",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Code not accepted - Sound level",
+      "ccSpecific": {
+        "indicatorId": 9,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739881,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-10-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 10,
+      "propertyName": "Armed Stay",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Armed Stay - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 10,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739960,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-10-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 10,
+      "propertyName": "Armed Stay",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Armed Stay - Sound level",
+      "ccSpecific": {
+        "indicatorId": 10,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876739963,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-11-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 11,
+      "propertyName": "Armed Away",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Armed Away - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 11,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740037,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-11-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 11,
+      "propertyName": "Armed Away",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Armed Away - Sound level",
+      "ccSpecific": {
+        "indicatorId": 11,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740038,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-12-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 12,
+      "propertyName": "Alarming",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming - Sound level",
+      "ccSpecific": {
+        "indicatorId": 12,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740100,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-13-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 13,
+      "propertyName": "Alarming: Burglar",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Burglar - Sound level",
+      "ccSpecific": {
+        "indicatorId": 13,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740165,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-14-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 14,
+      "propertyName": "Alarming: Smoke / Fire",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Smoke / Fire - Sound level",
+      "ccSpecific": {
+        "indicatorId": 14,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740225,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-15-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 15,
+      "propertyName": "Alarming: Carbon Monoxide",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Carbon Monoxide - Sound level",
+      "ccSpecific": {
+        "indicatorId": 15,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740287,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-16-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 16,
+      "propertyName": "Bypass challenge",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Bypass challenge - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 16,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740351,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-16-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 16,
+      "propertyName": "Bypass challenge",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Bypass challenge - Sound level",
+      "ccSpecific": {
+        "indicatorId": 16,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740351,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-17-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "Entry Delay",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Entry Delay - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 17,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740413,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-17-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "Entry Delay",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Entry Delay - Sound level",
+      "ccSpecific": {
+        "indicatorId": 17,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740414,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-17-timeout",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 17,
+      "propertyName": "Entry Delay",
+      "propertyKey": "timeout",
+      "propertyKeyName": "Timeout",
+      "type": "string",
+      "readable": true,
+      "writeable": true,
+      "label": "Entry Delay - Timeout",
+      "ccSpecific": {
+        "indicatorId": 17
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "",
+      "lastUpdate": 1781876740414,
+      "newValue": ""
+    },
+    {
+      "id": "123-135-0-18-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "Exit Delay",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Exit Delay - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 18,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740480,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-18-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "Exit Delay",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Exit Delay - Sound level",
+      "ccSpecific": {
+        "indicatorId": 18,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740481,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-18-timeout",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 18,
+      "propertyName": "Exit Delay",
+      "propertyKey": "timeout",
+      "propertyKeyName": "Timeout",
+      "type": "string",
+      "readable": true,
+      "writeable": true,
+      "label": "Exit Delay - Timeout",
+      "ccSpecific": {
+        "indicatorId": 18
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "",
+      "lastUpdate": 1781876740482,
+      "newValue": ""
+    },
+    {
+      "id": "123-135-0-19-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 19,
+      "propertyName": "Alarming: Medical",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Medical - Sound level",
+      "ccSpecific": {
+        "indicatorId": 19,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740548,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-80-timeout",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 80,
+      "propertyName": "Node Identify",
+      "propertyKey": "timeout",
+      "propertyKeyName": "Timeout",
+      "type": "string",
+      "readable": true,
+      "writeable": true,
+      "label": "Node Identify - Timeout",
+      "ccSpecific": {
+        "indicatorId": 80
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": "",
+      "lastUpdate": 1781876740618,
+      "newValue": ""
+    },
+    {
+      "id": "123-135-0-96-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 96,
+      "propertyName": "Generic event sound notification 1",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Generic event sound notification 1 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 96,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740686,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-97-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 97,
+      "propertyName": "Generic event sound notification 2",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Generic event sound notification 2 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 97,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740747,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-98-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 98,
+      "propertyName": "Generic event sound notification 3",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Generic event sound notification 3 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 98,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740812,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-99-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 99,
+      "propertyName": "Generic event sound notification 4",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Generic event sound notification 4 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 99,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740878,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-100-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 100,
+      "propertyName": "Generic event sound notification 5",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Generic event sound notification 5 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 100,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876740943,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-21-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 21,
+      "propertyName": "Alarming: Water leak",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Alarming: Water leak - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 21,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741007,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-21-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 21,
+      "propertyName": "Alarming: Water leak",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Water leak - Sound level",
+      "ccSpecific": {
+        "indicatorId": 21,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741008,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-20-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 20,
+      "propertyName": "Alarming: Freeze warning",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Alarming: Freeze warning - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 20,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741070,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-20-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 20,
+      "propertyName": "Alarming: Freeze warning",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Alarming: Freeze warning - Sound level",
+      "ccSpecific": {
+        "indicatorId": 20,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741071,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-129-1",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 129,
+      "propertyName": "Manufacturer defined 2",
+      "propertyKey": 1,
+      "propertyKeyName": "Multilevel",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Manufacturer defined 2 - Multilevel",
+      "ccSpecific": {
+        "indicatorId": 129,
+        "propertyId": 1
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741133,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-129-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 129,
+      "propertyName": "Manufacturer defined 2",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Manufacturer defined 2 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 129,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741133,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-130-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 130,
+      "propertyName": "Manufacturer defined 3",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Manufacturer defined 3 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 130,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741197,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-131-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 131,
+      "propertyName": "Manufacturer defined 4",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Manufacturer defined 4 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 131,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741260,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-132-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 132,
+      "propertyName": "Manufacturer defined 5",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Manufacturer defined 5 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 132,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741325,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-133-9",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": 133,
+      "propertyName": "Manufacturer defined 6",
+      "propertyKey": 9,
+      "propertyKeyName": "Sound level",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "description": "This property is used to set the volume of a indicator. 0 means off/mute.",
+      "label": "Manufacturer defined 6 - Sound level",
+      "ccSpecific": {
+        "indicatorId": 133,
+        "propertyId": 9
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "max": 100,
+      "list": false,
+      "value": 0,
+      "lastUpdate": 1781876741390,
+      "newValue": 0
+    },
+    {
+      "id": "123-135-0-value",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "value",
+      "propertyName": "value",
+      "type": "number",
+      "readable": true,
+      "writeable": true,
+      "label": "Indicator value",
+      "ccSpecific": {
+        "indicatorId": 0
+      },
+      "stateless": false,
+      "commandClassVersion": 3,
+      "min": 0,
+      "max": 255,
+      "list": false,
+      "lastUpdate": 1784268323819
+    },
+    {
+      "id": "123-135-0-identify",
+      "nodeId": 123,
+      "toUpdate": false,
+      "commandClass": 135,
+      "commandClassName": "Indicator",
+      "endpoint": 0,
+      "property": "identify",
+      "propertyName": "identify",
+      "type": "boolean",
+      "readable": false,
+      "writeable": true,
+      "label": "Identify",
+      "stateless": false,
+      "commandClassVersion": 3,
+      "list": true,
+      "states": [
+        {
+          "text": "Identify",
+          "value": true
+        }
+      ],
+      "lastUpdate": 1784268323819
+    }
+  ],
+  "groups": [
+    {
+      "title": "Lifeline",
+      "endpoint": 0,
+      "value": 1,
+      "maxNodes": 5,
+      "isLifeline": true,
+      "multiChannel": true
+    }
+  ],
+  "neighbors": [],
+  "ready": true,
+  "available": true,
+  "hassDevices": {},
+  "failed": false,
+  "inited": true,
+  "eventsQueue": [
+    {
+      "time": "2026-07-17T06:52:38.287Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:41.252Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:41.253Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:41.256Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:43.888Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:43.888Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:43.889Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:51.131Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:51.131Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:52:51.133Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:00.597Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:00.598Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:00.599Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:05.542Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:05.544Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:05.545Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:09.318Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:09.319Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:09.321Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:11.295Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:11.296Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:11.297Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:16.093Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:16.094Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:16.095Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:19.054Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:19.054Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:19.054Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:21.523Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:21.524Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:21.524Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:30.912Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:30.914Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:30.915Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:32.027Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:32.027Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:32.028Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:36.840Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:36.841Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:53:36.842Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:11.860Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:11.860Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:11.861Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:16.800Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:16.800Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:16.802Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:17.745Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:17.745Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:17.745Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:22.728Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:22.729Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:22.729Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:26.667Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:26.667Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:26.667Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:31.612Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:31.613Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:31.613Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:37.224Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:37.225Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:37.225Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:41.176Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:41.177Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:41.177Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:42.294Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:42.294Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:42.295Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:45.130Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:45.133Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:45.135Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:49.449Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:49.450Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:49.450Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:57.359Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:57.360Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:54:57.362Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:29.198Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:29.198Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:29.203Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:33.151Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:33.151Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:33.152Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:34.837Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:34.839Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:34.840Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:38.095Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:38.096Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:38.098Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:50.866Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:50.867Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:50.870Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:54.818Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:54.821Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:55:54.822Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:17.349Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:17.350Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:17.351Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 8,
+          "prevValue": 0,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:20.317Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmType",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmType"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:20.319Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "alarmLevel",
+          "newValue": 0,
+          "prevValue": 0,
+          "propertyName": "alarmLevel"
+        }
+      ]
+    },
+    {
+      "time": "2026-07-17T06:56:20.320Z",
+      "event": "value updated",
+      "args": [
+        {
+          "commandClassName": "Notification",
+          "commandClass": 113,
+          "endpoint": 0,
+          "property": "Home Security",
+          "propertyKey": "Motion sensor status",
+          "newValue": 0,
+          "prevValue": 8,
+          "propertyName": "Home Security",
+          "propertyKeyName": "Motion sensor status"
+        }
+      ]
+    }
+  ],
+  "status": "Alive",
+  "interviewStage": "Complete",
+  "priorityReturnRoute": {},
+  "customReturnRoute": {},
+  "prioritySUCReturnRoute": false,
+  "customSUCReturnRoutes": [],
+  "availableFirmwareUpdates": [],
+  "firmwareUpdatesDismissed": {},
+  "lastFirmwareUpdateCheck": 1781876748333,
+  "appliedTemplateContentHashes": [],
+  "hexId": "0x0346 0x0101-0x0401",
+  "dbLink": "https://devices.zwave-js.io/?jumpTo=0x0346:0x0101:0x0401:2.0.0",
+  "manufacturerId": 838,
+  "productId": 1025,
+  "productType": 257,
+  "deviceConfig": {
+    "filename": "/var/zwavejs/.config-db/devices/0x0346/keypad_v2.json",
+    "isEmbedded": true,
+    "manufacturer": "Ring",
+    "manufacturerId": 838,
+    "label": "4AK1SZ",
+    "description": "Keypad v2",
+    "devices": [
+      {
+        "productType": 257,
+        "productId": 769
+      },
+      {
+        "productType": 257,
+        "productId": 1025
+      }
+    ],
+    "firmwareVersion": {
+      "min": "0.0",
+      "max": "255.255"
+    },
+    "preferred": false,
+    "paramInformation": {
+      "_map": {}
+    },
+    "compat": {
+      "disableStrictEntryControlDataValidation": true
+    },
+    "metadata": {
+      "inclusion": "Classic Inclusion should be used if the controller does not support SmartStart.\n1. Initiate add flow for Security Devices in the Ring mobile application – Follow the guided add flow instructions provided in the Ring mobile application.\n2. Select add manually and enter the 5-digit DSK PIN found on the package of the Ring Alarm Keypad or the 5-digit DSK PIN found under the QR code on the device.\n3. After powering on the device, press and hold the #1 button for ~3 seconds. Release the button and the device will enter Classic inclusion mode which implements both classic inclusion with a Node Information Frame, and Network Wide Inclusion. During Classic Inclusion mode, the green Connection LED will blink three times followed by a brief pause, repeatedly. When Classic inclusion times-out, the device will blink alternating red and green a few times",
+      "exclusion": "1. Initiate remove 'Ring Alarm Keypad' flow in the Ring Alarm mobile application – Select the settings icon from device details page and choose 'Remove Device' to remove the device. This will place the controller into Remove or 'Z-Wave Exclusion' mode.\n2. Locate the pinhole reset button on the back of the device.\n3. With the controller in Remove (Z-Wave Exclusion) mode, use a paper clip or similar object and tap the pinhole button. The device's Connection LED turns on solid red to indicate the device was removed from the network.",
+      "reset": "Factory Default Instructions\n1. To restore Ring Alarm Keypad to factory default settings, locate the pinhole reset button on the device. This is found on the back of the device after removing the back bracket.\n2. Using a paperclip or similar object, insert it into the pinhole, press and hold the button down for 10 seconds.\n3. The device's Connection icon LED will rapidly blink green continuously for 10 seconds. After about 10 seconds, when the green blinking stops, release the button. The red LED will turn on solid to indicate the device was removed from the network.\nNote\nUse this procedure only in the event that the network primary controller is missing or otherwise inoperable",
+      "manual": "https://products.z-wavealliance.org/ProductManual/File?folder=&filename=product_documents/4150/Ring%20Alarm%20Keypad%20Zwave.pdf"
+    }
+  },
+  "productLabel": "4AK1SZ",
+  "productDescription": "Keypad v2",
+  "manufacturer": "Ring",
+  "firmwareVersion": "2.0.0",
+  "sdkVersion": "7.16.3",
+  "protocolVersion": 3,
+  "zwavePlusVersion": 2,
+  "zwavePlusNodeType": 0,
+  "zwavePlusRoleType": 7,
+  "nodeType": 1,
+  "endpointsCount": 0,
+  "endpoints": [
+    {
+      "index": 0,
+      "label": "Root Endpoint",
+      "deviceClass": {
+        "basic": 4,
+        "generic": 64,
+        "specific": 11
+      }
+    }
+  ],
+  "isSecure": true,
+  "security": "S2_AccessControl",
+  "supportsSecurity": false,
+  "supportsBeaming": true,
+  "isControllerNode": false,
+  "isListening": false,
+  "isFrequentListening": "250ms",
+  "isRouting": true,
+  "keepAwake": false,
+  "maxDataRate": 100000,
+  "deviceClass": {
+    "basic": 4,
+    "generic": 64,
+    "specific": 11
+  },
+  "lastActive": 1784271380357,
+  "firmwareCapabilities": {
+    "firmwareUpgradable": true,
+    "firmwareTargets": [
+      0,
+      1
+    ]
+  },
+  "protocol": 0,
+  "deviceId": "838-1025-257",
+  "hasDeviceConfigChanged": false,
+  "statistics": {
+    "commandsTX": 285,
+    "commandsRX": 289,
+    "commandsDroppedRX": 10,
+    "commandsDroppedTX": 0,
+    "timeoutResponse": 0,
+    "lastSeen": "2026-07-17T06:56:20.357Z",
+    "rtt": 32.9,
+    "rssi": -79,
+    "lwr": {
+      "protocolDataRate": 2,
+      "repeaters": [],
+      "rssi": -84,
+      "repeaterRSSI": []
+    }
+  },
+  "batteryLevels": {
+    "0": 100
+  },
+  "minBatteryLevel": 100,
+  "supportsTime": false,
+  "_name": "Keypad (Gäste WC)",
+  "applicationRoute": false,
+  "lastReceive": 1784271380357,
+  "lastTransmit": 1784271380357,
+  "errorReceive": false,
+  "errorTransmit": false
+}

@@ -42,6 +42,11 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 
 ## Changelog
+### 1.0.4 (2026-07-23)
+* (arteck) reconnect optimization
+* (arteck) notification handling
+* (arteck) fix energy values
+
 ### 1.0.3 (2026-07-15)
 * (arteck) fix thermostat set point
 
@@ -54,10 +59,6 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 
 ### 1.0.0 (2026-07-08)
 * (arteck) add notification
-
-### 0.2.1 (2026-05-25)
-- (copilot) Adapter requires node.js >= 22 now
-* (arteck) fix new event
 
 [Older changelogs can be found there](CHANGELOG_OLD.md)
 

@@ -32,8 +32,27 @@ function calcExpectedPath(nodeId, valueEntry) {
         commandClass,
         propertyName,
         propertyKeyName,
+        propertyKey,
         endpoint,
     } = valueEntry;
+
+    // Meter: propertyName/propertyKeyName_commandClass_endpoint_propertyKey
+    if (commandClassName?.toLowerCase() === 'meter') {
+        const parts = [];
+        if (propertyKeyName != null && propertyKeyName !== '') {
+            parts.push(propertyKeyName);
+        } else if (propertyName != null && propertyName !== '') {
+            parts.push(propertyName);
+        }
+        parts.push(commandClass);
+        if (endpoint != null && endpoint > 0) {
+            parts.push(endpoint);
+        }
+        if (propertyKey != null && propertyKey !== '') {
+            parts.push(propertyKey);
+        }
+        return `${nodeId}.Meter.${parts.join('_')}`;
+    }
 
     // Schritt 1: Basis-Pfad
     let parsePath = `${nodeId}.${commandClassName}.${propertyName
@@ -186,51 +205,80 @@ function buildMockInstance() {
                                     this.log.warn(`--->>> fromZ2W_RAW2-> ${JSON.stringify(eventTyp)}`);
                                 }
 
-                                let parsePath = `${nodeId}.${nodeArg.commandClassName}.${nodeArg.propertyName
-                                    .replace(/[^\p{L}\p{N}\s]/gu, '')
-                                    .replace(/\s+/g, ' ')
-                                    .trim()}`;
+                                if (nodeArg.commandClassName?.toLowerCase() === 'meter') {
+                                    // Meter: propertyName/propertyKeyName_commandClass_endpoint_propertyKey
+                                    if (nodeArg.propertyKeyName && typeof nodeArg.propertyKeyName === 'string' && nodeArg.propertyKeyName.includes('UNKNOWN')) {
+                                        this.log.warn(`<zwavews> Node ${eventTyp.nodeId}: Unknown propertyKeyName "${nodeArg.propertyKeyName}" for ${nodeArg.commandClassName}.${nodeArg.propertyName}`);
+                                    }
 
-                                if (nodeArg?.propertyKeyName) {
-                                    parsePath = `${parsePath}.${nodeArg.propertyKeyName
+                                    const meterParts = [];
+                                    if (nodeArg.propertyKeyName != null && nodeArg.propertyKeyName !== '') {
+                                        meterParts.push(nodeArg.propertyKeyName);
+                                    } else if (nodeArg.propertyName != null && nodeArg.propertyName !== '') {
+                                        meterParts.push(nodeArg.propertyName);
+                                    }
+                                    meterParts.push(nodeArg.commandClass);
+                                    if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
+                                        meterParts.push(nodeArg.endpoint);
+                                    }
+                                    if (nodeArg.propertyKey != null && nodeArg.propertyKey !== '') {
+                                        meterParts.push(nodeArg.propertyKey);
+                                    }
+
+                                    let parsePath = `${nodeId}.Meter.${meterParts.join('_')}`;
+
+                                    if (eventTyp.event === 'value notification' || eventTyp.event === 'notification') {
+                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
+                                    } else {
+                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
+                                    }
+                                } else {
+                                    let parsePath = `${nodeId}.${nodeArg.commandClassName}.${nodeArg.propertyName
                                         .replace(/[^\p{L}\p{N}\s]/gu, '')
                                         .replace(/\s+/g, ' ')
                                         .trim()}`;
-                                    if (constant.RGB.includes(nodeArg.propertyKeyName)) {
-                                        parsePath = utils.replaceLastDot(parsePath);
+
+                                    if (nodeArg?.propertyKeyName) {
+                                        parsePath = `${parsePath}.${nodeArg.propertyKeyName
+                                            .replace(/[^\p{L}\p{N}\s]/gu, '')
+                                            .replace(/\s+/g, ' ')
+                                            .trim()}`;
+                                        if (constant.RGB.includes(nodeArg.propertyKeyName)) {
+                                            parsePath = utils.replaceLastDot(parsePath);
+                                        }
                                     }
-                                }
 
-                                parsePath = utils.deleteLastDot(utils.formatObject(parsePath));
+                                    parsePath = utils.deleteLastDot(utils.formatObject(parsePath));
 
-                                if (nodeArg.commandClass === 119) {
-                                    switch (nodeArg.property) {
-                                        case 'name':
-                                            await this.helper.updateDevice(nodeId, nodeArg);
-                                            parsePath = `${nodeId}.info.${nodeArg.property}`;
-                                            break;
-                                        case 'location':
-                                            break;
-                                        default:
-                                            parsePath = `${nodeId}.info.${nodeArg.property}`;
-                                            break;
+                                    if (nodeArg.commandClass === 119) {
+                                        switch (nodeArg.property) {
+                                            case 'name':
+                                                await this.helper.updateDevice(nodeId, nodeArg);
+                                                parsePath = `${nodeId}.info.${nodeArg.property}`;
+                                                break;
+                                            case 'location':
+                                                break;
+                                            default:
+                                                parsePath = `${nodeId}.info.${nodeArg.property}`;
+                                                break;
+                                        }
                                     }
-                                }
 
-                                if (parsePath.includes('firmwareVersions')) {
-                                    parsePath = `${parsePath}_value`;
-                                }
+                                    if (parsePath.includes('firmwareVersions')) {
+                                        parsePath = `${parsePath}_value`;
+                                    }
 
-                                if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
-                                    parsePath = `${parsePath}_${nodeArg.endpoint}`;
-                                }
+                                    if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
+                                        parsePath = `${parsePath}_${nodeArg.endpoint}`;
+                                    }
 
-                                parsePath = utils.deleteLastDot(parsePath);
+                                    parsePath = utils.deleteLastDot(parsePath);
 
-                                if (eventTyp.event === 'value notification' || eventTyp.event === 'notification') {
-                                    await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
-                                } else {
-                                    await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
+                                    if (eventTyp.event === 'value notification' || eventTyp.event === 'notification') {
+                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
+                                    } else {
+                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
+                                    }
                                 }
                                 break;
                             }

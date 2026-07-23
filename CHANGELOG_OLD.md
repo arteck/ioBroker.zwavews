@@ -1,4 +1,8 @@
 # Older changes
+## 0.2.1 (2026-05-25)
+- (copilot) Adapter requires node.js >= 22 now
+* (arteck) fix new event
+
 ## 0.2.0 (2026-04-26)
 * (arteck) del deprectated setStateAsync
 
