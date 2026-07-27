@@ -353,84 +353,24 @@ class zwavews extends core.Adapter {
                                     this.log.warn(`--->>> fromZ2W_RAW_3-> ${JSON.stringify(eventTyp)}`);
                                 }
 
-                                if (nodeArg.commandClassName?.toLowerCase() === 'meter') {
-                                    // Meter: propertyKeyName_commandClass_endpoint_propertyKey
-                                    if (nodeArg.propertyKeyName && typeof nodeArg.propertyKeyName === 'string' && nodeArg.propertyKeyName.includes('UNKNOWN')) {
-                                        this.log.warn(`<zwavews> Node ${nodeId}: Unknown propertyKeyName "${nodeArg.propertyKeyName}" for ${nodeArg.commandClassName}.${nodeArg.propertyName}`);
-                                        break;
-                                    }
+                                const {path: parsePath, skip, updateDevice} =
+                                    utils.buildValueEventPath(formattedNodeId, nodeArg, constant);
 
-                                    const meterParts = [];
-                                    if (nodeArg.propertyKeyName != null && nodeArg.propertyKeyName !== '') {
-                                        meterParts.push(nodeArg.propertyKeyName);
-                                    } else if (nodeArg.propertyName != null && nodeArg.propertyName !== '') {
-                                        meterParts.push(nodeArg.propertyName);
-                                    }
-                                    meterParts.push(nodeArg.commandClass);
-                                    if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
-                                        meterParts.push(nodeArg.endpoint);
-                                    }
-                                    if (nodeArg.propertyKey != null && nodeArg.propertyKey !== '') {
-                                        meterParts.push(nodeArg.propertyKey);
-                                    }
-
-                                    let parsePath = `${formattedNodeId}.Meter.${meterParts.join('_')}`;
-
-                                    this.log.debug(`${parsePath} ->> ${nodeArg.newValue}`);
-
-                                    if (eventTyp.event === 'value notification') {
-                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
-                                    } else {
-                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
-                                    }
-                                } else {
-                                    let parsePath = `${formattedNodeId}.${nodeArg.commandClassName}.${nodeArg.propertyName
-                                        .replace(/[^\p{L}\p{N}\s]/gu, '')
-                                        .replace(/\s+/g, ' ')
-                                        .trim()}`;
-
-                                    const meaningfulKeysMain = constant.MEANINGFUL_PROPERTY_KEYS[nodeArg.commandClassName];
-                                    if (nodeArg?.propertyKeyName && meaningfulKeysMain && (meaningfulKeysMain.includes('*') || meaningfulKeysMain.includes(nodeArg.propertyName ?? nodeArg.property))) {
-                                        parsePath = `${parsePath}.${nodeArg.propertyKeyName.toLowerCase()
-                                            .replace(/[^\p{L}\p{N}\s]/gu, '')
-                                            .replace(/\s+/g, ' ')
-                                            .trim()}`;
-                                    }
-
-                                    parsePath = utils.deleteLastDot(utils.formatObject(parsePath));
-
-                                    if (nodeArg.commandClass === 119) {
-                                        switch (nodeArg.property) {
-                                            case 'name':
-                                                await this.helper.updateDevice(formattedNodeId, nodeArg);
-                                                parsePath = `${formattedNodeId}.info.${nodeArg.property}`;
-                                                break;
-                                            case 'location':
-                                                break;
-                                            default:
-                                                parsePath = `${formattedNodeId}.info.${nodeArg.property}`;
-                                                break;
-                                        }
-                                    }
-
-                                    this.log.debug(`${parsePath} ->> ${nodeArg.newValue}`);
-
-                                    if (parsePath.includes('firmwareVersions')) {
-                                        parsePath = `${parsePath}_value`;
-                                    }
-
-                                    if (nodeArg.endpoint != null && nodeArg.endpoint > 0) {
-                                        parsePath = `${parsePath}_${nodeArg.endpoint}`;
-                                    }
-
-                                    parsePath = utils.deleteLastDot(parsePath);
-
-                                    if (eventTyp.event === 'value notification') {
-                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, true);
-                                    } else {
-                                        await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
-                                    }
+                                if (skip) {
+                                    // z.B. Meter mit UNKNOWN propertyKeyName
+                                    this.log.warn(`<zwavews> Node ${nodeId}: Unknown propertyKeyName "${nodeArg.propertyKeyName}" for ${nodeArg.commandClassName}.${nodeArg.propertyName}`);
+                                    break;
                                 }
+
+                                if (updateDevice) {
+                                    // CC 119 name → zusätzlich Gerätenamen aktualisieren
+                                    await this.helper.updateDevice(formattedNodeId, nodeArg);
+                                }
+
+                                this.log.debug(`${parsePath} ->> ${nodeArg.newValue}`);
+
+                                const change = eventTyp.event === 'value notification';
+                                await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, change);
 
                                 break;
                             }
@@ -524,7 +464,7 @@ class zwavews extends core.Adapter {
                                     const newNode = eventTyp.args[0];
                                     const addedNodeId = newNode?.id;
                                     if (addedNodeId) {
-                                        this.helper.createNode(addedNodeId, newNode);
+                                        await this.helper.createNode(addedNodeId, newNode);
                                         this.log.info(`<zwavews> Node ${addedNodeId} added`);
                                     }
                                 }

@@ -133,7 +133,7 @@ runDeviceTests('keypad-node_48', {
     extraTests: (buildMockInstance, nodeData, nodeId) => {
         const assert = require('assert');
 
-        it('value notification userCode slot 0 (entered code) → notif=true', async () => {
+        it('value notification userCode slot 0 (entered code) → notif=true, Slot bleibt erhalten', async () => {
             const inst = buildMockInstance();
             const msg = JSON.stringify({
                 type: 'event',
