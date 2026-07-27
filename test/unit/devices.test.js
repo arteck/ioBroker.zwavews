@@ -228,6 +228,59 @@ runDeviceTests('ring-keypad-node_123', {
             assert.strictEqual(call.notif, true);
             assert.strictEqual(call.val.eventData, '1234');
         });
+
+        it('Notification CC (113) mit userId → parameters landen unter .Notification', async () => {
+            const inst = buildMockInstance();
+            const msg = JSON.stringify({
+                type: 'event',
+                event: {
+                    event: 'notification',
+                    nodeId: nodeData.id,
+                    ccId: 113,
+                    args: {
+                        type: 6,
+                        event: 5,
+                        label: 'Access Control',
+                        eventLabel: 'Keypad lock operation',
+                        parameters: { userId: 5, userIdStatus: 1 },
+                    },
+                },
+            });
+            await inst.messageParse(msg);
+            const call = inst._helperCalls.find(c => c.method === 'parse');
+            assert.ok(call, 'parse nicht aufgerufen');
+            assert.strictEqual(call.path, `${nodeId}.Notification`);
+            assert.strictEqual(call.notif, true);
+            // userId wird im verschachtelten parameters-Objekt übergeben
+            assert.strictEqual(call.val.parameters.userId, 5);
+        });
+
+        it('userId wird durch Helper unter .Notification.parameters.user_id abgelegt', async () => {
+            const { Helper } = require('../../lib/helper');
+            const created = {};
+            const stateVals = {};
+            const adapterMock = {
+                name: 'zwavews', instance: 0,
+                log: { info() {}, warn() {}, error() {}, debug() {} },
+                setObjectNotExistsAsync: async (id, o) => { created[id] = o; },
+                extendObjectAsync:       async (id, o) => { created[id] = o; },
+                getObjectAsync:          async (id) => created[id] || null,
+                setStateChanged:         () => {},
+                setState:                () => {},
+                setStateAsync:           async (id, v) => { stateVals[id] = v; },
+                setStateChangedAsync:    async (id, v) => { stateVals[id] = v; },
+                subscribeStates:         () => {},
+            };
+            const helper = new Helper(adapterMock, {});
+            await helper.parse(
+                `${nodeId}.Notification`,
+                { type: 6, event: 5, label: 'Access Control', parameters: { userId: 5, userIdStatus: 1 } },
+                { write: false },
+                true,
+            );
+            assert.strictEqual(stateVals[`${nodeId}.Notification.parameters.user_id`], 5);
+            assert.strictEqual(stateVals[`${nodeId}.Notification.parameters.user_id_status`], 1);
+        });
     },
 });
 
