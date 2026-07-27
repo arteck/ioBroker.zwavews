@@ -341,13 +341,14 @@ class zwavews extends core.Adapter {
 
                         const eventTyp = messageObj.event;
                         const nodeId = eventTyp.nodeId; // undefined für Controller/Driver-Events
+                        // Zentral berechnet – nodeId kann bei Controller/Driver-Events undefined sein
+                        const formattedNodeId = nodeId != null ? utils.formatNodeId(nodeId) : null;
 
                         switch (eventTyp.event) {
                             case 'value updated':
                             case 'value added':
                             case 'value notification': {
                                 const nodeArg = eventTyp.args;
-                                const formattedNodeId = utils.formatNodeId(nodeId);
 
                                 if (debugDevicesState?.val && String(debugDevicesState.val).includes(formattedNodeId)) {
                                     this.log.warn(`--->>> fromZ2W_RAW_3-> ${JSON.stringify(eventTyp)}`);
@@ -375,8 +376,7 @@ class zwavews extends core.Adapter {
                                 break;
                             }
 
-                            case  'notification': {
-                                const formattedNodeId = utils.formatNodeId(nodeId);
+                            case 'notification': {
                                 const parsePath = `${formattedNodeId}.Notification`;
 
                                 let notifMessage = {};
@@ -401,7 +401,6 @@ class zwavews extends core.Adapter {
                             }
 
                             case 'firmware update progress': {
-                                const formattedNodeId = utils.formatNodeId(nodeId);
                                 const total = Number(eventTyp.totalFragments) || 0;
                                 const sent = Number(eventTyp.sentFragments) || 0;
                                 const progress = total > 0 ? Math.min(100, Math.max(0, (sent / total) * 100)) : 0;
@@ -413,7 +412,6 @@ class zwavews extends core.Adapter {
                             }
 
                             case 'firmware update finished': {
-                                const formattedNodeId = utils.formatNodeId(nodeId);
                                 this.log.info(`${formattedNodeId} --> ${eventTyp.event}`);
                                 break;
                             }
@@ -423,7 +421,6 @@ class zwavews extends core.Adapter {
                             case 'wake up':
                             case 'alive':
                             case 'dead': {
-                                const formattedNodeId = utils.formatNodeId(nodeId);
                                 await this.helper.parse(`${formattedNodeId}.status`, eventTyp.event.toLowerCase(), this.parseOptions);
 
                                 if (eventTyp.event === 'dead') {
@@ -439,7 +436,6 @@ class zwavews extends core.Adapter {
                             }
 
                             case 'node removed': {
-                                const formattedNodeId = utils.formatNodeId(nodeId);
                                 if (this.config.useEventInDesc) {
                                     await this.helper.updateDevice(formattedNodeId, {desc: 'Node is Deleted'}, false);
                                 } else {
@@ -453,7 +449,7 @@ class zwavews extends core.Adapter {
                             case 'interview stage completed':
                             case 'interview failed':
                             case 'interview completed':
-                                this.log.info(`${utils.formatNodeId(nodeId)} --> ${eventTyp.event}`);
+                                this.log.info(`${formattedNodeId} --> ${eventTyp.event}`);
                                 break;
 
                             // ── Neue Event-Handler ──
@@ -475,7 +471,6 @@ class zwavews extends core.Adapter {
                                 if (eventTyp.args && eventTyp.args.length >= 2) {
                                     const progress = eventTyp.args[1];
                                     if (progress && typeof progress.progress === 'number') {
-                                        const formattedNodeId = utils.formatNodeId(nodeId);
                                         this.log.info(`<zwavews> Node ${formattedNodeId} interview progress: ${progress.progress}% (${progress.stage || 'unknown'})`);
                                     }
                                 }
@@ -485,7 +480,6 @@ class zwavews extends core.Adapter {
                                 if (eventTyp.args && eventTyp.args.length >= 2) {
                                     const valueArgs = eventTyp.args[1];
                                     if (valueArgs) {
-                                        const formattedNodeId = utils.formatNodeId(nodeId);
                                         const commandClassName = valueArgs.commandClassName || valueArgs.commandClass;
 
                                         if (commandClassName?.toLowerCase() === 'meter') {
@@ -537,50 +531,15 @@ class zwavews extends core.Adapter {
                                 break;
 
                             case 'user added':
-                                if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const user = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} user added: ${JSON.stringify(user)}`);
-                                }
-                                break;
-
                             case 'user modified':
-                                if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const user = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} user modified: ${JSON.stringify(user)}`);
-                                }
-                                break;
-
                             case 'user deleted':
-                                if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const user = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} user deleted: ${JSON.stringify(user)}`);
-                                }
-                                break;
-
                             case 'credential added':
-                                if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const credential = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} credential added: ${JSON.stringify(credential)}`);
-                                }
-                                break;
-
                             case 'credential modified':
-                                if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const credential = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} credential modified: ${JSON.stringify(credential)}`);
-                                }
-                                break;
-
                             case 'credential deleted':
+                                // Node-Events – args: [zwaveNode, user|credential]
                                 if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
-                                    const credential = eventTyp.args[1];
-                                    this.log.info(`<zwavews> Node ${formattedNodeId} credential deleted: ${JSON.stringify(credential)}`);
+                                    const payload = eventTyp.args[1];
+                                    this.log.info(`<zwavews> Node ${formattedNodeId} ${eventTyp.event}: ${JSON.stringify(payload)}`);
                                 }
                                 break;
 
@@ -701,7 +660,6 @@ class zwavews extends core.Adapter {
                             case 'credential learn progress':
                                 // Node-Event (Schema 48)
                                 if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
                                     const learnProgress = eventTyp.args[1];
                                     this.log.info(`<zwavews> Node ${formattedNodeId} credential learn progress: ${JSON.stringify(learnProgress)}`);
                                 }
@@ -710,7 +668,6 @@ class zwavews extends core.Adapter {
                             case 'credential learn completed':
                                 // Node-Event (Schema 48)
                                 if (eventTyp.args && eventTyp.args.length >= 2) {
-                                    const formattedNodeId = utils.formatNodeId(nodeId);
                                     const learnResult = eventTyp.args[1];
                                     this.log.info(`<zwavews> Node ${formattedNodeId} credential learn completed: ${JSON.stringify(learnResult)}`);
                                 }
@@ -719,7 +676,7 @@ class zwavews extends core.Adapter {
                             case 'statistics updated':
                                 // Node-Event (hat nodeId) – Controller-Event (kein nodeId) auch möglich
                                 if (nodeId) {
-                                    this.log.debug(`<zwavews> Node ${utils.formatNodeId(nodeId)}: statistics updated`);
+                                    this.log.debug(`<zwavews> Node ${formattedNodeId}: statistics updated`);
                                 } else {
                                     this.log.debug('<zwavews> Statistics updated');
                                 }
@@ -727,7 +684,7 @@ class zwavews extends core.Adapter {
 
                             case 'metadata updated':
                                 if (nodeId) {
-                                    this.log.debug(`<zwavews> Node ${utils.formatNodeId(nodeId)}: metadata updated`);
+                                    this.log.debug(`<zwavews> Node ${formattedNodeId}: metadata updated`);
                                 } else {
                                     this.log.debug('<zwavews> Metadata updated');
                                 }
@@ -735,7 +692,7 @@ class zwavews extends core.Adapter {
 
                             case 'node info received':
                                 if (nodeId) {
-                                    this.log.debug(`<zwavews> Node ${utils.formatNodeId(nodeId)}: node info received`);
+                                    this.log.debug(`<zwavews> Node ${formattedNodeId}: node info received`);
                                 } else {
                                     this.log.debug('<zwavews> Node info received');
                                 }
@@ -831,7 +788,7 @@ class zwavews extends core.Adapter {
                 const nodeId = Number(m[1]);
 
                 const message = {
-                    messageId: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+                    messageId: utils.genMessageId(),
                     command: 'node.set_value',
                     nodeId,
                     valueId: nativeObj.valueId,
