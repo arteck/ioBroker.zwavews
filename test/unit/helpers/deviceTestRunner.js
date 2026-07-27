@@ -196,8 +196,7 @@ function buildMockInstance() {
 
                             case 'value updated':
                             case 'value added':
-                            case 'value notification':
-                            case 'notification': {
+                            case 'value notification': {
                                 const nodeArg = eventTyp.args;
                                 const nodeId  = utils.formatNodeId(eventTyp.nodeId);
 
@@ -280,6 +279,27 @@ function buildMockInstance() {
                                         await this.helper.parse(parsePath, nodeArg.newValue, this.parseOptions, false);
                                     }
                                 }
+                                break;
+                            }
+
+                            case 'notification': {
+                                const nodeId = utils.formatNodeId(eventTyp.nodeId);
+                                const parsePath = `${nodeId}.Notification`;
+
+                                let notifMessage = {};
+
+                                if (eventTyp?.args) {
+                                    notifMessage = eventTyp.args;
+                                } else {
+                                    // Fallback: ws-server sendet immer args, dies dient als Sicherheitsnetz
+                                    this.log.debug(`<zwavews> notification without args, using fallback for node ${nodeId}`);
+                                    notifMessage = {
+                                        name: eventTyp.notificationLabel,
+                                        parameters: eventTyp.parameters,
+                                    };
+                                }
+
+                                await this.helper.parse(parsePath, notifMessage, this.parseOptions, true);
                                 break;
                             }
 

@@ -154,7 +154,7 @@ runDeviceTests('keypad-node_48', {
             assert.strictEqual(call.notif, true);
         });
 
-        it('Notification Home Security Cover status → parsePath mit Cover_status', async () => {
+        it('Notification Home Security Cover status → parsePath .Notification (args-Objekt)', async () => {
             const inst = buildMockInstance();
             const msg = JSON.stringify({
                 type: 'event',
@@ -171,7 +171,8 @@ runDeviceTests('keypad-node_48', {
             });
             await inst.messageParse(msg);
             const call = inst._helperCalls.find(c => c.method === 'parse');
-            assert.strictEqual(call.path, `${nodeId}.Notification.Home_Security.Cover_status`);
+            assert.strictEqual(call.path, `${nodeId}.Notification`);
+            assert.strictEqual(call.notif, true);
         });
 
         it('Battery level=86 → parsePath nodeID_048.Battery.level', async () => {
@@ -192,6 +193,40 @@ runDeviceTests('keypad-node_48', {
             const call = inst._helperCalls.find(c => c.method === 'parse');
             assert.strictEqual(call.path, `${nodeId}.Battery.level`);
             assert.strictEqual(call.val, 86);
+        });
+    },
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Ring Keypad V2 (Node 123)
+// ─────────────────────────────────────────────────────────────────────────────
+runDeviceTests('ring-keypad-node_123', {
+    extraTests: (buildMockInstance, nodeData, nodeId) => {
+        const assert = require('assert');
+
+        it('Entry Control notification (CC 111) → lädt unter .Notification', async () => {
+            const inst = buildMockInstance();
+            const msg = JSON.stringify({
+                type: 'event',
+                event: {
+                    event: 'notification',
+                    nodeId: nodeData.id,
+                    ccId: 111,
+                    args: {
+                        eventType: 5,
+                        eventTypeLabel: 'Arm All',
+                        dataType: 2,
+                        dataTypeLabel: 'ASCII',
+                        eventData: '1234',
+                    },
+                },
+            });
+            await inst.messageParse(msg);
+            const call = inst._helperCalls.find(c => c.method === 'parse');
+            assert.ok(call, 'parse nicht aufgerufen');
+            assert.strictEqual(call.path, `${nodeId}.Notification`);
+            assert.strictEqual(call.notif, true);
+            assert.strictEqual(call.val.eventData, '1234');
         });
     },
 });
