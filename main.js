@@ -163,6 +163,52 @@ class zwavews extends core.Adapter {
             return;
         }
 
+        if (obj.command === 'reInterviewNode') {
+            try {
+                const nodeId = obj.message?.nodeId;
+                if (!nodeId) {
+                    this.log.error('reInterviewNode: No nodeId provided');
+                    if (obj.callback) {
+                        this.sendTo(obj.from, obj.command, {error: 'No nodeId provided'}, obj.callback);
+                    }
+                    return;
+                }
+                this.log.info(`reInterviewNode: Re-interviewing node ${nodeId}...`);
+
+                const message = {
+                    messageId: utils.genMessageId(),
+                    command: 'node.refresh_info',
+                    nodeId,
+                };
+
+                const sendMessageAllowed = await this.getStateAsync('info.sendMessageAllowed');
+                if (sendMessageAllowed && sendMessageAllowed.val === true) {
+                    if (this.websocketController) {
+                        this.websocketController.send(JSON.stringify(message));
+                        this.log.info(`reInterviewNode: Re-interview command sent for node ${nodeId}`);
+                        if (obj.callback) {
+                            this.sendTo(obj.from, obj.command, {result: `Re-interview started for node ${nodeId}`}, obj.callback);
+                        }
+                    } else {
+                        this.log.error('reInterviewNode: WebSocket controller not available');
+                        if (obj.callback) {
+                            this.sendTo(obj.from, obj.command, {error: 'WebSocket controller not available'}, obj.callback);
+                        }
+                    }
+                } else {
+                    this.log.warn('reInterviewNode: Send message is not allowed (info.sendMessageAllowed is false)');
+                    if (obj.callback) {
+                        this.sendTo(obj.from, obj.command, {error: 'Send message is not allowed'}, obj.callback);
+                    }
+                }
+            } catch (e) {
+                this.log.error(`reInterviewNode: Error: ${e.message}`);
+                if (obj.callback) {
+                    this.sendTo(obj.from, obj.command, {error: e.message}, obj.callback);
+                }
+            }
+        }
+
         if (obj.command === 'deleteNullStates') {
             try {
                 const allStates = await this.getStatesAsync('*');
@@ -759,6 +805,7 @@ class zwavews extends core.Adapter {
             }
 
             this.setStateChanged('info.connection', false, true);
+            this.setStateChanged('info.zwave_gateway_status', false, true);
         } finally {
             callback();
         }
@@ -773,6 +820,40 @@ class zwavews extends core.Adapter {
         if (state && state.ack === false) {
             if (id.endsWith('info.debugId')) {
                 this.setStateChanged(id, state.val, true);
+                return;
+            }
+
+            if (id.endsWith('.reInterview')) {
+                if (state.val === true) {
+                    const m = id.match(/nodeID_0*(\d+)/i);
+                    if (!m) {
+                        this.log.warn(`<zwavews> Could not extract nodeId from reInterview state id: ${id}`);
+                        return;
+                    }
+                    const nodeId = Number(m[1]);
+
+                    const message = {
+                        messageId: utils.genMessageId(),
+                        command: 'node.refresh_info',
+                        nodeId,
+                    };
+
+                    const sendMessageAllowed = await this.getStateAsync('info.sendMessageAllowed');
+
+                    if (sendMessageAllowed && sendMessageAllowed.val === true) {
+                        if (this.websocketController) {
+                            this.websocketController.send(JSON.stringify(message));
+                            this.log.info(`Re-interview triggered for node ${nodeId} via state button`);
+                        } else {
+                            this.log.warn('<zwavews> websocketController not initialised, cannot send re-interview.');
+                        }
+                    }
+
+                    this.setStateChanged('info.debugmessages', JSON.stringify(message), true);
+                }
+
+                // Always reset the button to false
+                await this.setStateChangedAsync(id, false, true);
                 return;
             }
 
