@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "news": {
+      "1.1.0": {
+        "en": "fix reconnect ws\nadd re-interview button\nfix admin",
+        "de": "Fix Reconnect WS\nSchaltfläche „Erneutes Vorstellungsgespräch hinzufügen“\nAdministrator reparieren",
+        "ru": "исправить переподключение ws\nдобавить кнопку повторного интервью\nисправить администратора",
+        "pt": "corrigir reconexão ws\nAdicionar botão de reentrevista\ncorrigir administrador",
+        "nl": "reconnect ws repareren\nVoeg een knop voor hernieuwd interview toe\nfix admin",
+        "fr": "corriger la reconnexion ws\najouter un bouton de réentretien\ncorriger l'administrateur",
+        "it": "risolvere il problema di riconnessione ws\naggiungi il pulsante per il secondo colloquio\ncorreggere l'amministratore",
+        "es": "solucionar reconexión ws\nagregar botón de reentrevista\narreglar administrador",
+        "pl": "napraw ponownie połącz ws\ndodaj przycisk ponownego wywiadu\nnapraw administratora",
+        "uk": "виправити перепідключення ws\nдодати кнопку повторної співбесіди\nвиправити адміністратора",
+        "zh-cn": "修复重新连接 ws\n添加重新面试按钮\n修复管理员"
+      },
       "1.0.4": {
         "en": "reconnect optimization\nnotification handling\nfix energy values",
         "de": "reconnect optimierung\nmeldungsverarbeitung\nfeste energiewerte",
@@ -80,19 +93,6 @@
         "pl": "Adapter wymaga node.js > = 22\nnaprawić nowe zdarzenie",
         "uk": "Адаптер вимагає node.js >= 22 тепер\nвиправити новий захід",
         "zh-cn": "适配器需要节点.js 现在22\n修复新事件"
-      },
-      "0.2.0": {
-        "en": "del deprectated setStateAsync",
-        "de": "del veraltete Methode „setStateAsync“",
-        "ru": "del устаревшая функция setStateAsync",
-        "pt": "del setStateAsync (descontinuado)",
-        "nl": "del verouderde setStateAsync",
-        "fr": "Supprimer la méthode obsolète `setStateAsync`",
-        "it": "del setStateAsync (funzione deprecata)",
-        "es": "del método obsoleto `setStateAsync`",
-        "pl": "del przestarzała funkcja setStateAsync",
-        "uk": "del застарілий setStateAsync",
-        "zh-cn": "del deprectated setStateAsync"
       }
     },
     "titleLang": {
@@ -253,7 +253,7 @@
     "wsServerIP": "0.0.0.0",
     "wsServerPort": 3000,
     "wsTokenEnabled": false,
-    "wsToken": "",    
+    "wsToken": "",
     "webUIScheme": "http",
     "webUIServer": "",
     "webUIPort": 8091,
