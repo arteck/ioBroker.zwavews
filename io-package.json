@@ -264,11 +264,9 @@
     "wsOnStart": true
   },
   "protectedNative": [
-    "externalMqttServerPassword",
     "wsToken"
   ],
   "encryptedNative": [
-    "externalMqttServerPassword",
     "wsToken"
   ],
   "objects": [],

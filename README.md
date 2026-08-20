@@ -18,12 +18,12 @@
 The `zwavews` adapter connects a [`zwave-js-ui`](https://zwave-js.github.io/zwave-js-ui/#/) to ioBroker and creates corresponding data points for devices, values, and statuses. This allows Z-Wave devices to be conveniently used in visualizations, logic, and automations.
 
 ### Features
-* **Real-time communication**: Instantly receives updates of device values and statuses via WebSocket or MQTT.
+* **Real-time communication**: Instantly receives updates of device values and statuses via WebSocket.
 * **Auto-Discovery**: Automatically creates and updates the device and state structure in ioBroker from the `zwave-js-ui` nodes.
 * **Device Management**: View battery levels, connection status, and detailed device metrics right from the ioBroker interface.
 * **Firmware Updates**: Observe firmware update progress directly via the adapter's logs and states.
 * **State Control**: Send commands and update values natively through the ioBroker object tree.
-* **Support for multiple protocols**: You can connect to `zwave-js-ui` using WebSocket, External MQTT, or an Internal Dummy MQTT server.
+* **Support for WebSocket**: You can connect to `zwave-js-ui` using WebSocket.
 
 ## Adapter Documentation
 
@@ -43,7 +43,7 @@ Activate WS Server Settings in `zwave-js-ui` we use the Home Assistant Settings 
 ### **WORK IN PROGRESS**
 * (arteck) fix reconnect ws
 * (arteck) add re-interview button
-* (arteck) fix admin 
+* (arteck) fix admin
 
 ## Changelog
 ### 1.0.4 (2026-07-23)

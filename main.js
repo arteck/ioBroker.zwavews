@@ -1,7 +1,6 @@
 'use strict';
 
 const core = require('@iobroker/adapter-core');
-const mqtt = require('mqtt');
 const utils = require('./lib/utils');
 const constant = require('./lib/constants');
 const dmZwave = require('./lib/devicemgmt.js');
@@ -10,7 +9,6 @@ const {adapterInfo} = require('./lib/messages');
 const {StatesController} = require('./lib/statesController');
 const {WebsocketController} = require('./lib/websocketController');
 const {Helper} = require('./lib/helper');
-const {MqttServerController} = require('./lib/mqttServerController');
 
 class zwavews extends core.Adapter {
     constructor(options) {
@@ -20,10 +18,8 @@ class zwavews extends core.Adapter {
         });
 
         // Instanz-State statt Modul-globale Variablen
-        this.mqttClient = null;
         this.deviceCache = {};
         this.websocketController = null;
-        this.mqttServerController = null;
         this.statesController = null;
         this.helper = null;
         this.messageParseMutex = Promise.resolve();
@@ -62,95 +58,10 @@ class zwavews extends core.Adapter {
 
         this.setStateChanged('info.debugmessages', '', true);
 
-        // MQTT-Verbindungstypen
-        if (['exmqtt', 'intmqtt'].includes(this.config.connectionType)) {
-            if (this.config.connectionType === 'exmqtt') {
-                if (!this.config.externalMqttServerIP) {
-                    this.log.warn('Please configure the External MQTT-Server connection!');
-                    return;
-                }
-
-                const mqttClientOptions = {
-                    clientId: `ioBroker.zwavews_${Math.random().toString(16).slice(2, 8)}`,
-                    clean: false,
-                    protocolVersion: 4,
-                    reconnectPeriod: 5000,
-                    connectTimeout: 30000,
-                    keepalive: 30,
-                    resubscribe: true,
-                };
-
-                if (this.config.externalMqttServerCredentials === true) {
-                    mqttClientOptions.username = this.config.externalMqttServerUsername;
-                    mqttClientOptions.password = this.config.externalMqttServerPassword;
-                }
-
-                this.mqttClient = mqtt.connect(
-                    `mqtt://${this.config.externalMqttServerIP}:${this.config.externalMqttServerPort}`,
-                    mqttClientOptions,
-                );
-            } else {
-                // Interner MQTT-Server
-                this.mqttServerController = new MqttServerController(this);
-                await this.mqttServerController.createMQTTServer();
-                await this.delay(1500);
-                this.mqttClient = mqtt.connect(
-                    `mqtt://${this.config.mqttServerIPBind}:${this.config.mqttServerPort}`,
-                    {
-                        clientId: `ioBroker.zwavews_${Math.random().toString(16).slice(2, 8)}`,
-                        clean: true,
-                        reconnectPeriod: 500,
-                    },
-                );
-            }
-
-            // FIX: subscribe innerhalb des connect-Events, nicht außerhalb
-            this.mqttClient.on('connect', () => {
-                const connType = this.config.connectionType === 'exmqtt' ? 'external mqtt' : 'internal mqtt';
-                this.log.info(`Connect to zwavews over ${connType} connection.`);
-                this.setStateChanged('info.connection', true, true);
-
-                this.mqttClient.subscribe(`${this.config.baseTopic}/#`, (err) => {
-                    if (err) {
-                        this.log.error(`<zwavews> MQTT subscribe error: ${err.message}`);
-                    }
-                });
-            });
-
-            this.mqttClient.on('error', (err) => {
-                this.log.error(`<zwavews> MQTT client error: ${err.message}`);
-            });
-
-            this.mqttClient.on('offline', () => {
-                this.log.warn('<zwavews> MQTT client offline.');
-                this.setStateChanged('info.connection', false, true);
-            });
-
-            this.mqttClient.on('message', (topic, payload) => {
-                const rawPayload = payload.toString();
-                let parsedPayload;
-                try {
-                    parsedPayload = rawPayload === '' ? null : JSON.parse(rawPayload);
-                } catch {
-                    parsedPayload = rawPayload;
-                }
-                const newMessage = JSON.stringify({
-                    payload: parsedPayload,
-                    topic: topic.slice(topic.indexOf('/') + 1),
-                });
-                this.messageParse(newMessage);
-            });
-        } else if (this.config.connectionType === 'ws') {
+        if (this.config.connectionType === 'ws') {
             if (!this.config.wsServerIP) {
                 this.log.warn('Please configure the Websocket connection!');
                 return;
-            }
-
-            if (this.config.dummyMqtt === true) {
-                this.mqttServerController = new MqttServerController(this);
-                await this.mqttServerController.createDummyMQTTServer();
-                this.setStateChanged('info.connection', true, true);
-                await this.delay(1500);
             }
 
             this.startWebsocket();
@@ -767,26 +678,6 @@ class zwavews extends core.Adapter {
 
     async onUnload(callback) {
         try {
-            if (['exmqtt', 'intmqtt'].includes(this.config.connectionType)) {
-                if (this.mqttClient && !this.mqttClient.closed) {
-                    try {
-                        this.mqttClient.end();
-                    } catch (e) {
-                        this.log.error(e);
-                    }
-                }
-            }
-
-            if (this.config.connectionType === 'intmqtt' || this.config.dummyMqtt === true) {
-                try {
-                    if (this.mqttServerController) {
-                        this.mqttServerController.closeServer();
-                    }
-                } catch (e) {
-                    this.log.error(e);
-                }
-            }
-
             if (this.websocketController) {
                 try {
                     await this.websocketController.allTimerClear();

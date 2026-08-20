@@ -217,14 +217,4 @@ describe('utils', () => {
         });
     });
 
-    // ─── formatMQTT ──────────────────────────────────────────────────────────────
-    describe('formatMQTT', () => {
-        it('should replace dots with slashes', () => {
-            assert.strictEqual(utils.formatMQTT('a.b.c'), 'a/b/c');
-        });
-
-        it('should return empty string for non-string input', () => {
-            assert.strictEqual(utils.formatMQTT(null), '');
-        });
-    });
 });

@@ -19,7 +19,6 @@ class MockAdapter {
             wsScheme: 'ws',
             wsTokenEnabled: false,
             wsOnStart: false,
-            dummyMqtt: false,
             showNodeInfoMessage: false,
             newTypeEvent: true,
             wakeUpInfo: false,
