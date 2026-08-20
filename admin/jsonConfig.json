@@ -176,17 +176,7 @@
           "xl": 4,
           "hidden": "data.wsTokenEnabled != true || data.connectionType != 'ws'"
         },
-        "dummyMqtt": {
-          "type": "checkbox",
-          "label": "Create a dummy MQTT-Server for Zigbee2MQTT",
-          "newLine": true,
-          "xs": 12,
-          "sm": 12,
-          "md": 6,
-          "lg": 4,
-          "xl": 4,
-          "hidden": "data.connectionType != 'ws'"
-        },
+        
         "externalMqttServerIP": {
           "type": "text",
           "label": "External MQTT-Server IP-Address",
