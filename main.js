@@ -378,6 +378,11 @@ class zwavews extends core.Adapter {
                             case 'wake up':
                             case 'alive':
                             case 'dead': {
+                                if (eventTyp.event === 'ready' && eventTyp.nodeState && nodeId) {
+                                    await this.helper.createNode(nodeId, eventTyp.nodeState);
+                                    break;
+                                }
+
                                 await this.helper.parse(`${formattedNodeId}.status`, eventTyp.event.toLowerCase(), this.parseOptions);
 
                                 if (eventTyp.event === 'dead') {
