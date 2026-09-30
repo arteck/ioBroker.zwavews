@@ -24,5 +24,6 @@
 	"allow start send WS message directly after adapter start": "allow start send WS message directly after adapter start",
   "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.": "This allows you to decide whether messages are sent immediately after the adapter starts. If the checkbox is false, the last status is taken from the info.sendMessageAllowed DP.",
   "devices": "Devices",
-  "Main Settings" : "Main Settings"
+  "Main Settings": "Main Settings",
+  "Delete null states": "Delete null states"
 }
