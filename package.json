@@ -28,7 +28,7 @@
     "@iobroker/adapter-core": "^3.4.3",
     "@iobroker/dm-utils": "^3.2.1",
     "@iobroker/plugin-docker": "^1.2.1",
-    "humanize-duration": "^3.34.1",
+    "humanize-duration": "^3.35.0",
     "ws": "^8.22.0"
   },
   "devDependencies": {
