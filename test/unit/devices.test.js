@@ -259,6 +259,7 @@ runDeviceTests('ring-keypad-node_123', {
             const { Helper } = require('../../lib/helper');
             const created = {};
             const stateVals = {};
+            const stateWrites = [];
             const adapterMock = {
                 name: 'zwavews', instance: 0,
                 log: { info() {}, warn() {}, error() {}, debug() {} },
@@ -267,19 +268,48 @@ runDeviceTests('ring-keypad-node_123', {
                 getObjectAsync:          async (id) => created[id] || null,
                 setStateChanged:         () => {},
                 setState:                () => {},
-                setStateAsync:           async (id, v) => { stateVals[id] = v; },
-                setStateChangedAsync:    async (id, v) => { stateVals[id] = v; },
+                setStateAsync:           async (id, v) => {
+                    stateVals[id] = v;
+                    stateWrites.push({id, value: v, forced: true});
+                },
+                setStateChangedAsync:    async (id, v) => {
+                    stateVals[id] = v;
+                    stateWrites.push({id, value: v, forced: false});
+                },
                 subscribeStates:         () => {},
             };
             const helper = new Helper(adapterMock, {});
-            await helper.parse(
-                `${nodeId}.Notification`,
-                { type: 6, event: 5, label: 'Access Control', parameters: { userId: 5, userIdStatus: 1 } },
-                { write: false },
-                true,
-            );
-            assert.strictEqual(stateVals[`${nodeId}.Notification.parameters.user_id`], 5);
+            const notificationPath = `${nodeId}.Notification`;
+            await helper.parse(notificationPath, {
+                eventType: 0,
+                eventTypeLabel: 'Caching',
+                dataType: 0,
+                dataTypeLabel: 'None',
+            }, { write: false }, true);
+            await helper.parse(notificationPath, {
+                eventType: 3,
+                eventTypeLabel: 'Disarm all',
+                dataType: 2,
+                dataTypeLabel: 'ASCII',
+                eventData: '552559',
+                parameters: { userId: 5, userIdStatus: 1 },
+            }, { write: false }, true);
+            await helper.parse(notificationPath, {
+                eventType: 3,
+                eventTypeLabel: 'Disarm all',
+                dataType: 2,
+                dataTypeLabel: 'ASCII',
+                eventData: '9876',
+                parameters: { userId: 6, userIdStatus: 1 },
+            }, { write: false }, true);
+
+            assert.strictEqual(stateVals[`${nodeId}.Notification.parameters.user_id`], 6);
             assert.strictEqual(stateVals[`${nodeId}.Notification.parameters.user_id_status`], 1);
+            assert.strictEqual(stateVals[`${nodeId}.Notification.event_data`], '9876');
+            assert.strictEqual(stateVals[`${nodeId}.Notification.event_type_label`], 'Disarm all');
+            const eventDataWrites = stateWrites.filter(w => w.id === `${nodeId}.Notification.event_data`);
+            assert.strictEqual(eventDataWrites.length, 2);
+            assert.ok(eventDataWrites.every(w => w.forced));
         });
     },
 });
