@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "zwavews",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "news": {
+      "1.2.0": {
+        "en": "fix https://github.com/arteck/ioBroker.zwavews/issues/123\nfix eventData",
+        "de": "fix https://github.com/arteck/ioBroker.zwavews/issues/123\nfix EventData",
+        "ru": "исправить https://github.com/arteck/ioBroker.zwavews/issues/123\nисправить данные событий",
+        "pt": "fixe https://github.com/arteck/ioBroker.zwavews/issues/123\nfix EventData",
+        "nl": "https://github.com/arteck/ioBroker.zwavews/issues/123 repareren\nEventData repareren",
+        "fr": "fix https://github.com/arteck/ioBroker.zwavews/issues/123\nfix EventData",
+        "it": "https://github.com/arteck/ioBroker.zwavews/issues/123\nfix EventData",
+        "es": "arreglar https://github.com/arteck/ioBroker.zwavews/issues/123\narreglar EventData",
+        "pl": "naprawić https://github.com/arteck/ioBroker.zwavews/issues/123\nnaprawić EventData",
+        "uk": "виправлення https://github.com/arteck/ioBroker.zwavews/issues/123\nвиправлення даних подій",
+        "zh-cn": "修复 https://github.com/arteck/ioBroker.zwavews/issues/123\n修复事件数据"
+      },
       "1.1.0": {
         "en": "fix reconnect ws\nadd re-interview button\nfix admin",
         "de": "Fix Reconnect WS\nSchaltfläche „Erneutes Vorstellungsgespräch hinzufügen“\nAdministrator reparieren",
@@ -80,19 +93,6 @@
         "pl": "dodaj powiadomienie",
         "uk": "додати сповіщення",
         "zh-cn": "添加通知"
-      },
-      "0.2.1": {
-        "en": "Adapter requires node.js >= 22 now\nfix new event",
-        "de": "Adapter benötigt node.js >= 22 jetzt\nneue veranstaltung",
-        "ru": "Адаптер требует node.js >= 22 сейчас\nремонт нового события",
-        "pt": "Adaptador requer nod.js >= 22 agora\ncorrigir novo evento",
-        "nl": "Voor de adapter zijn node.js < 22 nu nodig\nnieuwe gebeurtenis herstellen",
-        "fr": "Adaptateur nécessite node.js >= 22 maintenant\ncorrection du nouvel événement",
-        "it": "Adattatore richiede node.js >= 22 ora\nfix nuovo evento",
-        "es": "Adaptador requiere node.js ю= 22 ahora\nnuevo evento",
-        "pl": "Adapter wymaga node.js > = 22\nnaprawić nowe zdarzenie",
-        "uk": "Адаптер вимагає node.js >= 22 тепер\nвиправити новий захід",
-        "zh-cn": "适配器需要节点.js 现在22\n修复新事件"
       }
     },
     "titleLang": {

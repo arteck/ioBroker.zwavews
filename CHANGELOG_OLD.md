@@ -1,4 +1,8 @@
 # Older changes
+## 1.0.1 (2026-07-15)
+* (arteck) fix bulb set color
+* (arteck) add delete null states button into adapter settings
+
 ## 1.0.0 (2026-07-08)
 * (arteck) add notification
 
